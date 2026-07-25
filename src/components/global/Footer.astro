@@ -5,62 +5,60 @@ import { COMMERCE_CONFIG } from '../../config/commerce';
 const accountUrl = ExternalCommerceAdapter.getAccountUrl();
 ---
 
-<footer class="bg-dark-surface border-t border-dark-border text-gray-400 text-sm mt-auto">
+<footer class="bg-gray-100 dark:bg-dark-surface border-t border-gray-200 dark:border-dark-border text-gray-600 dark:text-gray-400 text-sm mt-auto transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
       
       <!-- Brand Column -->
       <div class="lg:col-span-2 space-y-6">
-        <a href="/" class="flex items-center gap-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center font-display font-black text-xl text-white">
-            FF
-          </div>
-          <span class="font-display text-2xl uppercase font-black text-white tracking-wide">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/images/foodiefit-logo.png" alt="Foodie Fit Logo" class="h-10 w-auto object-contain" />
+          <span class="font-display text-2xl uppercase font-black text-slate-900 dark:text-white tracking-wide">
             FOODIE <span class="text-brand-500">FIT</span>
           </span>
         </a>
-        <p class="text-gray-300 text-base leading-relaxed max-w-sm">
+        <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed max-w-sm">
           Healthy Never Tasted This Good. Chef-crafted meals made fresh daily in Las Vegas. Delivered as early as tomorrow or ready at one of three local stores.
         </p>
-        <div class="flex items-center gap-4 text-white font-medium">
+        <div class="flex items-center gap-4 text-slate-800 dark:text-white font-medium">
           <span class="flex items-center gap-2">
             <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
             </svg>
             (702) 844-8848
           </span>
-          <span class="text-dark-muted">•</span>
+          <span class="text-gray-400">•</span>
           <span>Daily 8:00 AM – 8:00 PM</span>
         </div>
       </div>
 
       <!-- Quick Navigation -->
       <div>
-        <h3 class="font-display text-white text-base tracking-wider uppercase mb-4">Explore</h3>
+        <h3 class="font-display text-slate-900 dark:text-white text-base tracking-wider uppercase mb-4">Explore</h3>
         <ul class="space-y-3">
-          <li><a href="/menu/" class="hover:text-white transition-colors">Current Menu</a></li>
-          <li><a href="/how-it-works/" class="hover:text-white transition-colors">How It Works</a></li>
-          <li><a href="/delivery/" class="hover:text-white transition-colors">Las Vegas Delivery</a></li>
-          <li><a href="/subscriptions/" class="hover:text-white transition-colors">Meal Subscriptions</a></li>
-          <li><a href="/custom-meals/" class="hover:text-white transition-colors">Custom Meal Prep</a></li>
-          <li><a href="/by-the-pound/" class="hover:text-white transition-colors">By The Pound</a></li>
+          <li><a href="/menu/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Current Menu</a></li>
+          <li><a href="/how-it-works/" class="hover:text-brand-500 dark:hover:text-white transition-colors">How It Works</a></li>
+          <li><a href="/delivery/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Las Vegas Delivery</a></li>
+          <li><a href="/subscriptions/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Meal Subscriptions</a></li>
+          <li><a href="/custom-meals/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Custom Meal Prep</a></li>
+          <li><a href="/by-the-pound/" class="hover:text-brand-500 dark:hover:text-white transition-colors">By The Pound</a></li>
         </ul>
       </div>
 
       <!-- Retail Stores -->
       <div>
-        <h3 class="font-display text-white text-base tracking-wider uppercase mb-4">Store Locations</h3>
+        <h3 class="font-display text-slate-900 dark:text-white text-base tracking-wider uppercase mb-4">Store Locations</h3>
         <ul class="space-y-3">
           {COMMERCE_CONFIG.storeLocations.map((store) => (
             <li>
               <a href={`/locations/${store.slug}/`} class="group block">
-                <span class="font-semibold text-gray-200 group-hover:text-brand-400 transition-colors">{store.name}</span>
-                <span class="block text-xs text-dark-muted">{store.address}</span>
+                <span class="font-semibold text-slate-800 dark:text-gray-200 group-hover:text-brand-500 transition-colors">{store.name}</span>
+                <span class="block text-xs text-gray-500 dark:text-dark-muted">{store.address}</span>
               </a>
             </li>
           ))}
           <li class="pt-2">
-            <a href="/locations/" class="text-brand-500 hover:text-brand-400 font-semibold text-xs inline-flex items-center gap-1">
+            <a href="/locations/" class="text-brand-500 hover:text-brand-600 font-semibold text-xs inline-flex items-center gap-1">
               View All 3 Stores &rarr;
             </a>
           </li>
@@ -69,20 +67,20 @@ const accountUrl = ExternalCommerceAdapter.getAccountUrl();
 
       <!-- Customer Help & B2B -->
       <div>
-        <h3 class="font-display text-white text-base tracking-wider uppercase mb-4">Help & Corporate</h3>
+        <h3 class="font-display text-slate-900 dark:text-white text-base tracking-wider uppercase mb-4">Help & Corporate</h3>
         <ul class="space-y-3">
-          <li><a href="/corporate-meals/" class="hover:text-white transition-colors">Corporate Meals</a></li>
-          <li><a href="/faq/" class="hover:text-white transition-colors">Frequently Asked Questions</a></li>
-          <li><a href="/about/" class="hover:text-white transition-colors">About Foodie Fit</a></li>
-          <li><a href="/blog/" class="hover:text-white transition-colors">Nutrition Blog</a></li>
-          <li><a href="/contact/" class="hover:text-white transition-colors">Contact Support</a></li>
-          <li><a href={accountUrl} class="hover:text-white transition-colors">My Account</a></li>
+          <li><a href="/corporate-meals/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Corporate Meals</a></li>
+          <li><a href="/faq/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Frequently Asked Questions</a></li>
+          <li><a href="/about/" class="hover:text-brand-500 dark:hover:text-white transition-colors">About Foodie Fit</a></li>
+          <li><a href="/blog/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Nutrition Blog</a></li>
+          <li><a href="/contact/" class="hover:text-brand-500 dark:hover:text-white transition-colors">Contact Support</a></li>
+          <li><a href={accountUrl} class="hover:text-brand-500 dark:hover:text-white transition-colors">My Account</a></li>
         </ul>
       </div>
     </div>
 
     <!-- Store Locations Grid Bar -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-2xl bg-dark-bg border border-dark-border mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-2xl bg-white dark:bg-dark-bg border border-gray-200 dark:border-dark-border mb-12 shadow-sm">
       {COMMERCE_CONFIG.storeLocations.map((store) => (
         <div class="flex items-start gap-4">
           <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 flex-shrink-0 mt-1">
@@ -92,27 +90,30 @@ const accountUrl = ExternalCommerceAdapter.getAccountUrl();
             </svg>
           </div>
           <div>
-            <div class="font-bold text-white text-sm">{store.name} Store</div>
-            <div class="text-xs text-gray-400">{store.address}, {store.city}, {store.state} {store.zip}</div>
-            <div class="text-[11px] text-brand-400 mt-1 font-medium">Daily 8 AM – 8 PM • (702) 844-8848</div>
+            <div class="font-bold text-slate-900 dark:text-white text-sm">{store.name} Store</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">{store.address}, {store.city}, {store.state} {store.zip}</div>
+            <div class="text-[11px] text-brand-500 mt-1 font-medium">Daily 8 AM – 8 PM • (702) 844-8848</div>
           </div>
         </div>
       ))}
     </div>
 
     <!-- Legal & Copyright Bar -->
-    <div class="pt-8 border-t border-dark-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+    <div class="pt-8 border-t border-gray-200 dark:border-dark-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
       <div>
         © {new Date().getFullYear()} Foodie Fit Las Vegas. All rights reserved. Healthy Never Tasted This Good.
       </div>
-      <div class="flex flex-wrap items-center gap-6 text-gray-400">
-        <a href="/privacy/" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="/terms/" class="hover:text-white transition-colors">Terms of Service</a>
-        <a href="/accessibility/" class="hover:text-white transition-colors">Accessibility</a>
-        <a href="/nutrition-allergen-disclaimer/" class="hover:text-white transition-colors">Allergen Disclaimer</a>
-        <a href="/delivery-policy/" class="hover:text-white transition-colors">Delivery Policy</a>
-        <a href="/refund-cancellation-policy/" class="hover:text-white transition-colors">Refund Policy</a>
+      <div class="flex flex-wrap items-center gap-6 text-gray-500 dark:text-gray-400">
+        <a href="/privacy/" class="hover:text-slate-900 dark:hover:text-white transition-colors">Privacy Policy</a>
+        <a href="/terms/" class="hover:text-slate-900 dark:hover:text-white transition-colors">Terms of Service</a>
+        <a href="/accessibility/" class="hover:text-slate-900 dark:hover:text-white transition-colors">Accessibility</a>
+        <a href="/nutrition-allergen-disclaimer/" class="hover:text-slate-900 dark:hover:text-white transition-colors">Allergen Disclaimer</a>
+        <a href="/delivery-policy/" class="hover:text-slate-900 dark:hover:text-white transition-colors">Delivery Policy</a>
+        <a href="/refund-cancellation-policy/" class="hover:text-slate-900 dark:hover:text-white transition-colors">Refund Policy</a>
       </div>
     </div>
+
+    <!-- Designed By FourAK Block -->
+    <div class="mt-8 flex items-center justify-center gap-2"><span class="text-[9px] uppercase tracking-[2px] text-neutral-700">Designed By</span><a href="https://fourak.com" target="_blank" rel="noopener noreferrer" class="focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded group block" title="FourAK" aria-label="Visit FourAK website (opens in a new window)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.027 194.027" class="h-10 w-auto fill-neutral-700 group-hover:fill-[#ff6700] transition-colors duration-300"><g><path d="M140.566,75.764c1.545,0,2.877.493,3.997,1.472,1.125.983,1.684,2.246,1.684,3.788v3.586s24.406,0,24.406,0v-10.109c0-3.083-.664-5.996-1.999-8.731-1.331-2.735-3.156-5.155-5.47-7.259-2.313-2.104-4.977-3.75-7.995-4.944-3.014-1.189-6.206-1.789-9.572-1.789h-37.002s0,23.986,0,23.986h31.952Z"></path><path d="M53.462,118.264c-1.684,0-3.051-.491-4.103-1.473-1.052-.979-1.577-2.242-1.577-3.787v-3.588s-24.407,0-24.407,0v10.32c0,3.087.667,5.997,1.999,8.732,1.334,2.735,3.156,5.121,5.47,7.153,2.315,2.035,4.981,3.65,7.995,4.839,3.018,1.194,6.206,1.789,9.574,1.789h35.396s0-23.985,0-23.985h-30.346Z"></path><path d="M47.781,81.024c0-1.542.526-2.805,1.577-3.788,1.053-.979,2.42-1.472,4.103-1.472h30.346s0-23.986,0-23.986h-35.396c-3.367,0-6.556.599-9.574,1.789-3.014,1.194-5.681,2.84-7.995,4.944s-4.136,4.524-5.47,7.259c-1.332,2.735-1.999,5.648-1.999,8.731v10.109s24.407,0,24.407,0v-3.586Z"></path><path d="M146.247,113.004c0,1.545-.558,2.808-1.684,3.787-1.12.983-2.452,1.473-3.997,1.473h-31.952s0,23.985,0,23.985h37.002c3.366,0,6.558-.595,9.572-1.789,3.018-1.189,5.682-2.804,7.995-4.839,2.315-2.032,4.14-4.418,5.47-7.153,1.336-2.735,1.999-5.645,1.999-8.732v-10.32s-24.406,0-24.406,0v3.588Z"></path></g></svg></a></div>
   </div>
 </footer>
