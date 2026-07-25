@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+---
+
+<BaseLayout
+  title="Corporate Meal Program Case Studies | Foodie Fit Las Vegas"
+  description="Explore case studies showing how Las Vegas employers increase workplace wellness and employee retention with Foodie Fit corporate fridges."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Corporate Meals', href: '/corporate-meals/' },
+      { name: 'Case Studies' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        B2B Workplace Wellness Reports
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Corporate Case Studies
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        How Las Vegas businesses boost employee productivity and wellness with subsidized weekly Foodie Fit meal drops.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="How do Foodie Fit corporate meal programs work for Las Vegas offices?"
+      answer="Foodie Fit stocks dedicated breakroom refrigerators weekly or biweekly with fresh individual meals. Employers can fully subsidize, partially subsidize, or offer group order pricing to staff."
+    />
+
+    <div class="space-y-8 my-12">
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-4">
+        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest block">Case Study #1 • Tech Firm (Summerlin)</span>
+        <h2 class="font-display font-bold text-2xl text-white uppercase">120-Employee Software Team</h2>
+        <p class="text-sm text-gray-300">Replaced traditional fast-food catering trays with twice-weekly individual meal drops. Employee lunch satisfaction increased by 84% while eliminating mid-afternoon sugar crashes.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-4">
+        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest block">Case Study #2 • Logistics Center (North Las Vegas)</span>
+        <h2 class="font-display font-bold text-2xl text-white uppercase">3-Shift Warehouse Staffing</h2>
+        <p class="text-sm text-gray-300">Provided 24/7 access to fresh high-protein meals in breakroom smart fridges, supporting night shift workers who previously had no healthy food options nearby.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

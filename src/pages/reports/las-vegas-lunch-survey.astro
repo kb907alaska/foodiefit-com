@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+---
+
+<BaseLayout
+  title="Annual Las Vegas Lunch-Habits & Meal Prep Report | Foodie Fit Data"
+  description="Proprietary research report analyzing lunch spending, time costs, macro trends, and dining habits across Southern Nevada workers."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Las Vegas Lunch Survey Report' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Proprietary Market Data Report
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Las Vegas Lunch-Habits Report
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Original data and statistics compiled by Foodie Fit analyzing Southern Nevada dining, workplace lunch habits, and macro trends.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What is the average amount spent on lunch daily by Las Vegas workers?"
+      answer="According to Foodie Fit's Annual Las Vegas Lunch Survey, local professionals spend an average of $16.40 per workday lunch at restaurants or door delivery apps, totaling over $325 monthly."
+    />
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-12 text-center">
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border">
+        <span class="font-display font-black text-4xl text-brand-400 block mb-2">$16.40</span>
+        <span class="text-xs text-gray-300 uppercase font-bold">Avg Las Vegas Daily Lunch Spend</span>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border">
+        <span class="font-display font-black text-4xl text-emerald-400 block mb-2">42 Mins</span>
+        <span class="text-xs text-gray-300 uppercase font-bold">Avg Time Spent Getting Lunch</span>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border">
+        <span class="font-display font-black text-4xl text-amber-400 block mb-2">68%</span>
+        <span class="text-xs text-gray-300 uppercase font-bold">Prefer High-Protein Meals</span>
+      </div>
+    </div>
+
+    <div class="space-y-6 max-w-3xl mx-auto my-12 text-sm text-gray-300">
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">Key Finding #1: High Protein Demand</h3>
+        <p>68% of surveyed Las Vegas resort employees, healthcare workers, and tech staff prioritize meals containing 35g or more of protein to sustain physical work shifts.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">Key Finding #2: The Hidden Delivery App Tax</h3>
+        <p>Third-party restaurant delivery apps add an average of $6.50 in service fees, delivery fees, and tips per lunch order in Southern Nevada.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

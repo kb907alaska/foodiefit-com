@@ -48,7 +48,20 @@ const staticPages = [
   '/guides/ingredient-allergen-center/',
   '/guides/freshness-and-storage/',
   '/calculators/meal-prep-cost-calculator/',
-  '/calculators/protein-per-dollar/'
+  '/calculators/protein-per-dollar/',
+  '/new-this-week/',
+  '/customer-favorites/',
+  '/high-protein-30g/',
+  '/under-500-calories/',
+  '/gluten-free-options/',
+  '/dairy-free-options/',
+  '/guides/first-order-guide/',
+  '/calculators/how-many-meals/',
+  '/about/team/',
+  '/guides/nutrition-methodology/',
+  '/glossary/',
+  '/corporate-meals/case-studies/',
+  '/reports/las-vegas-lunch-survey/'
 ];
 
 export const GET: APIRoute = async () => {

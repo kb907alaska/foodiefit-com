@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Interactive Meal Quantity Calculator | How Many Meals to Order"
+  description="Calculate how many meal prep containers you need weekly based on household size, workdays, lunches, and dinner schedules."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Quantity Calculator' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Interactive Order Sizing Tool
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        How Many Meals Should I Order?
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Find the exact number of meals to order for your week based on work schedules and household size.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="How many prepared meals does an average person need per week?"
+      answer="Most customers order 10 meals per week (5 work lunches + 5 weekday dinners). Couples and active individuals typically order 14 to 20 meals weekly."
+    />
+
+    <div class="bg-dark-card border border-dark-border rounded-3xl p-8 sm:p-12 max-w-2xl mx-auto my-12 shadow-2xl space-y-6">
+      <div>
+        <label for="people-count" class="block text-xs font-bold uppercase text-gray-300 mb-2">Number of People</label>
+        <select id="people-count" class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-white font-bold">
+          <option value="1">1 Person</option>
+          <option value="2">2 People (Couple)</option>
+          <option value="3">3 People</option>
+          <option value="4">4+ Household</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="days-count" class="block text-xs font-bold uppercase text-gray-300 mb-2">Days Per Week Covered</label>
+        <select id="days-count" class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-white font-bold">
+          <option value="5" selected>5 Days (Work Week)</option>
+          <option value="7">7 Days (Full Week)</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="meals-per-day" class="block text-xs font-bold uppercase text-gray-300 mb-2">Meals Per Day Per Person</label>
+        <select id="meals-per-day" class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-white font-bold">
+          <option value="1">1 Meal / Day (Lunch or Dinner)</option>
+          <option value="2" selected>2 Meals / Day (Lunch + Dinner)</option>
+          <option value="3">3 Meals / Day (Breakfast + Lunch + Dinner)</option>
+        </select>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-950/20 border border-brand-500/40 text-center">
+        <span class="text-xs text-gray-300 font-semibold block uppercase">Recommended Weekly Order</span>
+        <span id="calc-result-count" class="font-display text-4xl font-bold text-brand-400 my-2 block">10 Meals / Week</span>
+        <span id="calc-result-estimate" class="text-xs text-gray-400">Estimated total: ~$109.90 / week</span>
+      </div>
+
+      <div class="text-center pt-2">
+        <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+          Order This Quantity &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const peopleSel = document.getElementById('people-count') as HTMLSelectElement;
+  const daysSel = document.getElementById('days-count') as HTMLSelectElement;
+  const mealsSel = document.getElementById('meals-per-day') as HTMLSelectElement;
+  const countEl = document.getElementById('calc-result-count');
+  const estEl = document.getElementById('calc-result-estimate');
+
+  function updateCalc() {
+    const people = parseInt(peopleSel.value, 10) || 1;
+    const days = parseInt(daysSel.value, 10) || 5;
+    const meals = parseInt(mealsSel.value, 10) || 2;
+
+    const totalMeals = people * days * meals;
+    const estCost = totalMeals * 10.99;
+
+    if (countEl) countEl.textContent = `${totalMeals} Meals / Week`;
+    if (estEl) estEl.textContent = `Estimated total: ~$${estCost.toFixed(2)} / week`;
+  }
+
+  peopleSel?.addEventListener('change', updateCalc);
+  daysSel?.addEventListener('change', updateCalc);
+  mealsSel?.addEventListener('change', updateCalc);
+</script>

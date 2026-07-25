@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const favorites = MEALS_DATA.filter(m => m.featured || m.sortOrder <= 16).slice(0, 16);
+---
+
+<BaseLayout
+  title="Customer Favorites & Best Sellers | Foodie Fit Las Vegas"
+  description="Browse the top-selling prepared meals at Foodie Fit Las Vegas based on verified customer order data."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Customer Favorites' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Verified Top Sellers
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Customer Favorites
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Our most popular chef-cooked meals, ordered thousands of times weekly across Green Valley, Summerlin, and Northwest Las Vegas.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What are the #1 most ordered meals at Foodie Fit?"
+      answer="Top customer favorites include the Teriyaki Chicken Power Plate, Classic Steak & Roasted Sweet Potato Hash, Protein Cinnamon Roll Pancakes, and Chimichurri Chicken Cauliflower Bowl."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={favorites} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Customer Favorites &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

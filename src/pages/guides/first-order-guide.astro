@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="First-Order Beginner Guide | Foodie Fit Las Vegas"
+  description="Step-by-step beginner guide to ordering Foodie Fit meals: choosing portion sizes, selecting delivery or pickup, and reheating."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'First-Order Guide' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        New Customer Onboarding
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        First-Order Guide
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Everything you need to know about placing your first Foodie Fit order in Southern Nevada.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What is the easiest way to place your first Foodie Fit order?"
+      answer="Browse our live menu, select your preferred portion size (Lean or Bulk), choose between home delivery or in-store pickup at 1 of our 3 Las Vegas locations, and check out without any subscription lock-in."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-12 text-sm text-gray-300">
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-3">
+        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest block">Step 1</span>
+        <h3 class="font-display font-bold text-xl text-white uppercase">Choose Portions & Color</h3>
+        <p>Pick Lean portions (35g–48g protein) for fat loss or Bulk (+50% meat) for strength training. Filter by Red (Low Carb), Green (Active), Yellow (Breakfast), or Blue (Snack).</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-3">
+        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest block">Step 2</span>
+        <h3 class="font-display font-bold text-xl text-white uppercase">Select Delivery or Pickup</h3>
+        <p>Choose doorstep delivery (ordered before 6 PM for next-day morning delivery) or free store pickup at Green Valley, Summerlin, or Northwest.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-3">
+        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest block">Step 3</span>
+        <h3 class="font-display font-bold text-xl text-white uppercase">Heat & Enjoy</h3>
+        <p>Keep refrigerated at 38°F. When ready to eat, vent the container lid and microwave on High for 90 to 120 seconds.</p>
+      </div>
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Start Your First Order &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const protein30gMeals = MEALS_DATA.filter(m => m.protein >= 30).slice(0, 16);
+---
+
+<BaseLayout
+  title="Meals With 30g+ Protein | Foodie Fit Las Vegas"
+  description="Explore fresh prepared meals packed with 30g or more protein per serving. Chef-cooked steak, chicken, turkey, and salmon meals in Las Vegas."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: '30g+ Protein Meals' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        High Protein Density
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Meals With 30g+ Protein
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Guaranteed minimum of 30 grams of protein per container for athletic recovery and daily protein target tracking.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Why is 30g of protein per meal recommended for muscle synthesis?"
+      answer="Consuming at least 30g of high-quality protein per meal supplies approximately 2.5g to 3g of leucine, triggering optimal muscle protein synthesis (MPS) for body composition and recovery."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={protein30gMeals} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order 30g+ Protein Meals &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

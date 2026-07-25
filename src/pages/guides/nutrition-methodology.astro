@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+---
+
+<BaseLayout
+  title="Nutrition Data & Macro Calculation Methodology | Foodie Fit"
+  description="Learn how Foodie Fit calculates, tests, and verifies calories, protein, carbs, fat, and sodium across all meals."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Nutrition Methodology' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Data Verification Standards
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Nutrition Methodology
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        How Foodie Fit measures, verifies, and calculates macro values for every container.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Are Foodie Fit macro values calculated before or after cooking?"
+      answer="All Foodie Fit meat weights and macro values are measured and calculated based on cooked yields. This ensures your tracked protein grams accurately reflect what you consume."
+    />
+
+    <div class="space-y-6 max-w-3xl mx-auto my-12 text-sm text-gray-300">
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">1. Cooked Yield Weight Verification</h3>
+        <p>Raw meats lose 20% to 30% moisture during cooking. We scale all protein portions using post-cook weight standards.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">2. USDA Food Data Central Database Integration</h3>
+        <p>Macro calculations utilize official USDA nutritional reference data for lean steak, boneless chicken breast, turkey breast, and salmon.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

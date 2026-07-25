@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+---
+
+<BaseLayout
+  title="Leadership & Executive Culinary Team | Foodie Fit Las Vegas"
+  description="Meet the founders, executive chefs, and culinary directors behind Foodie Fit Las Vegas. 100% fresh daily kitchen operations."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'About Us', href: '/about/' },
+      { name: 'Culinary Team' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Culinary Leadership
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Our Kitchen & Team
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Foodie Fit was founded in Las Vegas by passion-driven fitness professionals and executive chefs dedicated to making fresh, transparent nutrition accessible.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Who cooks Foodie Fit meals?"
+      answer="Foodie Fit meals are prepared fresh daily by our in-house culinary team in our Southern Nevada commercial kitchen under strict food safety and macro accuracy controls."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-4">
+        <h2 class="font-display font-bold text-2xl text-white uppercase">Executive Chef Leadership</h2>
+        <p class="text-sm text-gray-300 leading-relaxed">Our culinary directors bring over 15 years of fine-dining experience to mass healthy meal preparation, ensuring every dish delivers restaurant-grade texture, moisture, and seasoning.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-4">
+        <h2 class="font-display font-bold text-2xl text-white uppercase">Macro Precision & Nutrition Staff</h2>
+        <p class="text-sm text-gray-300 leading-relaxed">Our kitchen team weighs cooked ingredients in portion-controlled batches so that every container strictly matches its printed nutrition panel.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

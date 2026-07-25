@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const gfMeals = MEALS_DATA.filter(m => m.dietaryTags.includes('gluten-free')).slice(0, 16);
+---
+
+<BaseLayout
+  title="Gluten-Free Prepared Meals Las Vegas | Foodie Fit"
+  description="Discover prepared meals made without gluten ingredients in Las Vegas. Fresh jasmine rice, sweet potatoes, lean meats, and veggies."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Gluten-Free Options' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-emerald-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Ingredient Policy & Transparency
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Gluten-Free Options
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Prepared meals crafted using naturally gluten-free ingredients, premium lean proteins, and unrefined starches.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Are Foodie Fit Gluten-Free meals prepared in a certified gluten-free kitchen?"
+      answer="Our Gluten-Free options use recipes made entirely without wheat or gluten ingredients. However, they are cooked in a shared commercial facility that handles wheat products. Individuals with severe Celiac Disease should review our allergen policy."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={gfMeals} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Gluten-Free Meals &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

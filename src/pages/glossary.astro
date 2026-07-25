@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+
+const terms = [
+  { term: 'Lean Portion', def: 'Standard meal portion providing 35g–48g protein and 330–520 kcal.' },
+  { term: 'Bulk Portion', def: 'Upgraded meal portion with +50% extra cooked meat, delivering 55g–75g+ protein.' },
+  { term: 'Red Label (Low Carb)', def: 'Meals engineered with 15g or fewer net carbohydrates per serving.' },
+  { term: 'Green Label (Active)', def: 'Balanced meals combining high protein with complex athletic carbohydrates (jasmine rice, sweet potato hash).' },
+  { term: 'Yellow Label (Breakfast)', def: 'High-protein morning meals including pancakes, egg white scrambles, and breakfast burritos.' },
+  { term: 'Blue Label (Snack / Dessert)', def: 'Guilt-free high-protein bites, cookies, cheesecake cups, dips, and smoothies.' },
+  { term: 'Net Carbs', def: 'Digestible carbohydrates calculated as Total Carbs minus Dietary Fiber and Sugar Alcohols.' },
+  { term: 'By-The-Pound', def: 'Bulk 1lb containers of pre-cooked lean meats, jasmine rice, and vegetables for custom meal assembly.' }
+];
+---
+
+<BaseLayout
+  title="Foodie Fit Glossary | Meal Prep & Nutrition Terminology"
+  description="Comprehensive glossary defining Lean, Bulk, Red Label, Green Label, Net Carbs, By-the-Pound, and custom meal terms."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Glossary' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Terminology Index
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Foodie Fit Glossary
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Definitions of key meal prep, macro tracking, and Foodie Fit menu terminology.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What is the Foodie Fit Glossary?"
+      answer="An authoritative reference guide defining meal portion sizes (Lean vs Bulk), color-coded macro categories, net carb calculations, and bulk prep terminology."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+      {terms.map((t) => (
+        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+          <h2 class="font-display font-bold text-xl text-brand-400 uppercase mb-2">{t.term}</h2>
+          <p class="text-sm text-gray-300 leading-relaxed">{t.def}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

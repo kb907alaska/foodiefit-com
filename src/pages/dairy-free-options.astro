@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const dfMeals = MEALS_DATA.filter(m => m.dietaryTags.includes('dairy-free')).slice(0, 16);
+---
+
+<BaseLayout
+  title="Dairy-Free Prepared Meals Las Vegas | Foodie Fit"
+  description="Explore prepared meals made without dairy ingredients in Las Vegas. Zero cheese, milk, or butter in recipe ingredients."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Dairy-Free Options' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Clean Dairy Exclusions
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Dairy-Free Options
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Fresh chef-cooked meals prepared with zero dairy, butter, cream, or milk-derived additives.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="How are Dairy-Free meals identified at Foodie Fit?"
+      answer="Dairy-Free meals are clearly tagged on product containers and online menu listings. They utilize extra virgin olive oil, sesame oil, citrus marinades, and fresh herbs instead of butter or cheese sauces."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={dfMeals} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Dairy-Free Meals &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>
