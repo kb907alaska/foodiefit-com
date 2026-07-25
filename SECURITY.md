@@ -37,3 +37,16 @@ In the event of a suspected security anomaly or compromised dependency:
    - Update `MEALPREP_API_KEY` in Cloudflare Pages Environment Variables and trigger a rebuild.
 3. **Emergency Form & Route Disabling**:
    - API endpoints (`/api/csp-report`, corporate forms) return `503 Service Unavailable` when emergency lock flags are enabled.
+
+---
+
+## 3. Legacy WordPress Vulnerabilities vs. Astro 7 Protections
+
+| Legacy WP / Apache Finding | Risk Level | Astro 7 & Cloudflare Protection |
+| :--- | :--- | :--- |
+| **Public Directory Browsing** (Options -Indexes disabled) | Critical | **Stateless Static Output**: Cloudflare Pages contains zero web-accessible directory indices or `.zip` archives. |
+| **1.34 GB exposed ZIP archives** (`mptwpplugin*.zip`) | Critical | **Zero Source Archives**: Build outputs only pre-rendered HTML/CSS/JS in `dist/`. `.gitignore` blocks all `.zip`, `.env`, and scratch scripts. |
+| **Source Maps & Unminified JS Exposed** (`.map`) | High | **Stripped Production Assets**: Source maps disabled in production build. No internal controller structures exposed. |
+| **XML-RPC / Pingback Attacks** (`xmlrpc.php`) | Medium | **Zero WordPress Engine**: Astro does not run PHP, MySQL, or XML-RPC. Attacks on `xmlrpc.php` or `wp-login.php` are completely ineffective. |
+| **Author Enumeration** (`mptadmin`) | Medium | **No User Database**: Public marketing site contains no login endpoints or author query targets (`?author=1`). |
+| **Exposed Platform Metadata** (WP 7.0, WPBakery) | Low | **Serverless Edge**: Cloudflare Pages returns static edge responses without server version fingerprinting headers. |
