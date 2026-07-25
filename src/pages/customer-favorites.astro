@@ -21,10 +21,10 @@ const favorites = MEALS_DATA.filter(m => m.featured || m.sortOrder <= 16).slice(
       <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
         Verified Top Sellers
       </span>
-      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
         Customer Favorites
       </h1>
-      <p class="text-gray-300 text-lg leading-relaxed">
+      <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed">
         Our most popular chef-cooked meals, ordered thousands of times weekly across Green Valley, Summerlin, and Northwest Las Vegas.
       </p>
     </div>
@@ -39,7 +39,7 @@ const favorites = MEALS_DATA.filter(m => m.featured || m.sortOrder <= 16).slice(
     </div>
 
     <div class="text-center py-8">
-      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+      <a href={orderUrl} class="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red hover:scale-105 transition-all">
         Order Customer Favorites &rarr;
       </a>
     </div>
