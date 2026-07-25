@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import ContactForm from '../components/forms/ContactForm.astro';
+import { COMMERCE_CONFIG } from '../config/commerce';
+---
+
+<BaseLayout
+  title="Contact Us | Foodie Fit Las Vegas Meal Prep"
+  description="Contact Foodie Fit customer support. Call (702) 844-8848 or visit one of our three Las Vegas store locations."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Contact Us' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        We're Here To Help
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Contact Foodie Fit
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Have a question about an existing order, delivery zone, or store pickup? Get in touch with our local Las Vegas customer support team.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 my-12 items-start">
+      <div class="lg:col-span-5 space-y-6">
+        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-4">
+          <h3 class="font-display font-bold text-xl text-white uppercase">Customer Support Line</h3>
+          <div class="flex items-center gap-3 text-brand-400 font-bold text-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+            </svg>
+            <a href="tel:7028448848" class="hover:underline">(702) 844-8848</a>
+          </div>
+          <p class="text-xs text-gray-400">Available 8:00 AM – 8:00 PM PST Daily.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="font-display font-bold text-lg text-white uppercase">Retail Store Direct Phones</h3>
+          {COMMERCE_CONFIG.storeLocations.map(s => (
+            <div class="p-4 rounded-xl bg-dark-card border border-dark-border flex items-center justify-between">
+              <div>
+                <span class="font-bold text-white text-sm block">{s.name} Store</span>
+                <span class="text-xs text-gray-400">{s.address}</span>
+              </div>
+              <a href={`tel:${s.phone.replace(/[^0-9]/g, '')}`} class="text-xs font-bold text-brand-400 hover:underline">{s.phone}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <ContactForm />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

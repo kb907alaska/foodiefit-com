@@ -1,0 +1,29 @@
+---
+import { MEALS_DATA } from '../../data/meals';
+import MealGrid from '../menu/MealGrid.astro';
+
+const featuredMeals = MEALS_DATA.filter(m => m.featured).slice(0, 6);
+---
+
+<section class="py-20 bg-dark-surface border-b border-dark-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+          Las Vegas Favorites
+        </span>
+        <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight">
+          Featured Meals
+        </h2>
+      </div>
+      <a
+        href="/menu/"
+        class="mt-4 md:mt-0 font-display text-sm font-bold text-brand-400 hover:text-brand-300 inline-flex items-center gap-2"
+      >
+        Explore Full 30+ Rotating Menu &rarr;
+      </a>
+    </div>
+
+    <MealGrid meals={featuredMeals} />
+  </div>
+</section>

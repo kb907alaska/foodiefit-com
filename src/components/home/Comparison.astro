@@ -1,0 +1,59 @@
+---
+const rows = [
+  { feature: 'Flavor & Culinary Quality', foodiefit: 'Chef-crafted recipes with bold house sauces & spices', traditional: 'Generic repetitive "diet food" with minimal seasoning' },
+  { feature: 'Freshness Standard', foodiefit: 'Prepared fresh daily in Las Vegas — never intentionally frozen', traditional: 'Shipped frozen in dry ice from distant out-of-state warehouses' },
+  { feature: 'Menu Variety', foodiefit: '30+ gourmet options rotating every 2 weeks', traditional: 'Fixed menu with 8–10 static choices for months' },
+  { feature: 'Fulfillment Options', foodiefit: 'Local delivery, 3 Las Vegas store pickups, or walk-in grab & go', traditional: 'Shipping only with strict multi-day delivery delays' },
+  { feature: 'Ordering Flexibility', foodiefit: 'No minimum order requirements. Order once or subscribe optional', traditional: 'Mandatory weekly subscription lock-ins and auto-billing' },
+  { feature: 'Macro Transparency', foodiefit: 'Exact verified calories, protein, carbs, fat, sodium & fiber listed', traditional: 'Estimated nutrition data with inconsistent portion sizes' }
+];
+---
+
+<section class="py-20 bg-dark-surface border-b border-dark-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        The Difference
+      </span>
+      <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight mb-4">
+        Why Choose Foodie Fit?
+      </h2>
+      <p class="text-gray-300 text-base sm:text-lg">
+        Compare how our fresh local meal service elevates your daily nutrition experience over traditional nationwide shipping services.
+      </p>
+    </div>
+
+    <div class="bg-dark-card border border-dark-border rounded-3xl overflow-hidden shadow-2xl">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm text-gray-300">
+          <thead>
+            <tr class="border-b border-dark-border bg-dark-bg/60">
+              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-white text-base">Key Feature</th>
+              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-brand-400 text-base bg-brand-500/10 border-x border-dark-border">Foodie Fit Las Vegas</th>
+              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-gray-400 text-base">Traditional Meal Services</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-dark-border">
+            {rows.map((r) => (
+              <tr class="hover:bg-dark-surface/50 transition-colors">
+                <td class="py-4 px-6 font-bold text-white text-base">{r.feature}</td>
+                <td class="py-4 px-6 font-medium text-emerald-300 bg-brand-500/5 border-x border-dark-border">
+                  <div class="flex items-start gap-2">
+                    <span class="text-brand-400 font-bold">✓</span>
+                    <span>{r.foodiefit}</span>
+                  </div>
+                </td>
+                <td class="py-4 px-6 text-gray-400">
+                  <div class="flex items-start gap-2">
+                    <span class="text-red-400 font-bold">✕</span>
+                    <span>{r.traditional}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

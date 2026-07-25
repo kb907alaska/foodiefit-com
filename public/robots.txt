@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://foodiefit.com/sitemap-index.xml

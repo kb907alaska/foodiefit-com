@@ -1,0 +1,71 @@
+---
+const features = [
+  {
+    title: 'Made Locally in Las Vegas',
+    desc: 'Prepared in our state-of-the-art commercial Las Vegas kitchen under strict food safety guidelines.'
+  },
+  {
+    title: 'Prepared Fresh Daily',
+    desc: 'Never intentionally frozen. Every meal is rapidly flash-chilled to maintain peak texture and nutrition.'
+  },
+  {
+    title: '30+ Rotating Menu Items',
+    desc: 'Chef Marcus and culinary team update recipes every two weeks to prevent flavor fatigue.'
+  },
+  {
+    title: '100% Transparent Macros',
+    desc: 'Exact protein, carbs, fat, sodium, and fiber printed on every container and listed online.'
+  },
+  {
+    title: 'Lean & Bulk Portion Options',
+    desc: 'Choose standard Lean portions or upgrade to Bulk (+50% protein) to match your physical output.'
+  },
+  {
+    title: 'Flexible & Contract-Free',
+    desc: 'Shop walk-in at 3 stores, order one-time online, or pause/cancel subscriptions with zero hassle.'
+  }
+];
+---
+
+<section class="py-20 bg-dark-surface border-b border-dark-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 space-y-6">
+        <span class="text-brand-500 font-bold uppercase tracking-widest text-xs block">
+          The Foodie Fit Standard
+        </span>
+        <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight">
+          Real Food. <br />
+          Real Convenience.
+        </h2>
+        <p class="text-gray-300 text-base leading-relaxed">
+          We built Foodie Fit because we were tired of choosing between bland health food and overpriced restaurant delivery. Our meals give you exact macros without sacrificing flavor.
+        </p>
+        <div class="pt-4">
+          <a
+            href="/about/"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-display font-bold text-sm text-white bg-brand-600 hover:bg-brand-500 shadow-glow-green transition-colors"
+          >
+            Learn Our Story &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {features.map((f) => (
+          <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 font-bold mb-4">
+              ✓
+            </div>
+            <h3 class="font-display font-bold text-base text-white uppercase mb-2">
+              {f.title}
+            </h3>
+            <p class="text-xs text-gray-300 leading-relaxed">
+              {f.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

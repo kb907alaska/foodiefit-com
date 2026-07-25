@@ -1,0 +1,104 @@
+---
+export interface Props {
+  type?: 'Organization' | 'LocalBusiness' | 'Product' | 'FAQPage' | 'BreadcrumbList';
+  data?: any;
+}
+
+const { type = 'Organization', data } = Astro.props;
+
+let schemaData: any = null;
+
+if (type === 'Organization') {
+  schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Foodie Fit',
+    url: 'https://foodiefit.com',
+    logo: 'https://foodiefit.com/favicon.svg',
+    sameAs: [
+      'https://www.instagram.com/foodiefitmeals',
+      'https://www.facebook.com/foodiefitmeals'
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Las Vegas',
+      addressRegion: 'NV',
+      postalCode: '89123',
+      addressCountry: 'US'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-702-844-8848',
+      contactType: 'customer service'
+    }
+  };
+} else if (type === 'LocalBusiness' && data) {
+  schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'FoodEstablishment',
+    name: `Foodie Fit - ${data.name}`,
+    image: data.image,
+    telephone: data.phone,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: data.address,
+      addressLocality: data.city,
+      addressRegion: data.state,
+      postalCode: data.zip,
+      addressCountry: 'US'
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '08:00',
+        closes: '20:00'
+      }
+    ],
+    priceRange: '$$',
+    servesCuisine: ['Healthy', 'Meal Prep', 'Low Carb', 'High Protein']
+  };
+} else if (type === 'Product' && data) {
+  schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: data.name,
+    image: data.image,
+    description: data.description,
+    sku: data.sku,
+    offers: {
+      '@type': 'Offer',
+      price: data.price,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: `https://foodiefit.com/menu/${data.slug}`
+    }
+  };
+  if (data.protein && data.calories) {
+    schemaData.nutrition = {
+      '@type': 'NutritionInformation',
+      calories: `${data.calories} calories`,
+      proteinContent: `${data.protein} g`,
+      carbohydrateContent: `${data.carbs} g`,
+      fatContent: `${data.fat} g`
+    };
+  }
+} else if (type === 'FAQPage' && data) {
+  schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.map((faq: any) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  };
+}
+---
+
+{schemaData && (
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+)}

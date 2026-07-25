@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { MEALS_DATA } from '../../data/meals';
+import { DemoCommerceAdapter } from '../../lib/commerce/demo-adapter';
+import MenuToolbar from '../../components/menu/MenuToolbar.astro';
+import MenuFilters from '../../components/menu/MenuFilters.astro';
+import MealGrid from '../../components/menu/MealGrid.astro';
+import MacroTable from '../../components/menu/MacroTable.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import type { MealCategory } from '../../lib/commerce/types';
+
+// Parse query params
+const search = Astro.url.searchParams.get('search') || '';
+const category = (Astro.url.searchParams.get('category') || 'all') as MealCategory | 'all';
+const sortBy = (Astro.url.searchParams.get('sortBy') || 'featured') as any;
+
+const filteredMeals = DemoCommerceAdapter.filterMeals(MEALS_DATA, {
+  search,
+  category,
+  sortBy
+});
+---
+
+<BaseLayout
+  title="Menu | Foodie Fit Las Vegas Fresh Meal Prep"
+  description="Explore 30+ rotating chef-crafted meals, high-protein breakfasts, and keto snacks. Filter by macros, calories, protein, and dietary preferences."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Full Menu' }]} />
+
+    <!-- Menu Header -->
+    <div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/30 uppercase tracking-wider mb-2">
+          Rotates Every 2 Weeks • Fresh Daily
+        </div>
+        <h1 class="font-display font-black text-3xl sm:text-5xl text-white uppercase tracking-tight">
+          Explore Our Menu
+        </h1>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-xs text-gray-400">Color System:</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-red-500/20 text-red-400 border border-red-500/30">Low Carb</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Active</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">Breakfast</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">Snacks</span>
+      </div>
+    </div>
+
+    <!-- Main Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- Sidebar Filters -->
+      <div class="hidden lg:block lg:col-span-3">
+        <MenuFilters currentCategory={category} currentSearch={search} currentSort={sortBy} />
+      </div>
+
+      <!-- Main Results Column -->
+      <div class="lg:col-span-9 space-y-8">
+        <MenuToolbar totalCount={filteredMeals.length} currentSort={sortBy} currentSearch={search} />
+        <MealGrid meals={filteredMeals} />
+
+        <!-- Side by Side Comparison Component -->
+        <div class="pt-12">
+          <MacroTable meals={MEALS_DATA.slice(0, 3)} />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

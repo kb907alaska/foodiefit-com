@@ -1,0 +1,51 @@
+---
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<aside 
+  id="announcement-bar" 
+  class="bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 text-white text-xs sm:text-sm font-medium py-2 px-4 relative z-50 border-b border-brand-500/30"
+  aria-label="Announcement"
+>
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="flex-1 text-center flex items-center justify-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+      <span>Order by <strong>6:00 PM</strong> for next-day delivery in Las Vegas & Henderson!</span>
+      <a 
+        href={orderUrl}
+        class="underline underline-offset-2 font-bold hover:text-emerald-100 transition-colors ml-1 hidden sm:inline-block"
+      >
+        Order Now &rarr;
+      </a>
+    </div>
+
+    <button 
+      id="close-announcement"
+      type="button"
+      class="text-white/80 hover:text-white p-1 rounded-md hover:bg-black/20 focus:outline-none focus:ring-2 focus:ring-white transition-colors"
+      aria-label="Dismiss announcement"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</aside>
+
+<script>
+  const bar = document.getElementById('announcement-bar');
+  const closeBtn = document.getElementById('close-announcement');
+  
+  if (localStorage.getItem('foodiefit_announcement_dismissed') === 'true') {
+    if (bar) bar.style.display = 'none';
+  }
+  
+  if (closeBtn && bar) {
+    closeBtn.addEventListener('click', () => {
+      bar.style.display = 'none';
+      localStorage.setItem('foodiefit_announcement_dismissed', 'true');
+    });
+  }
+</script>

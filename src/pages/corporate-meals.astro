@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import CorporateForm from '../components/forms/CorporateForm.astro';
+---
+
+<BaseLayout
+  title="Corporate Meal Catering & Office Lunch Programs | Foodie Fit Las Vegas"
+  description="Office lunch your team looks forward to. Sponsored meal programs, employee-paid group ordering, and one-time drops in Las Vegas."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Corporate Meals' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        B2B Catering & Wellness
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Corporate Meals <br />
+        <span class="text-brand-400">Your Team Loves</span>
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Boost workplace energy and productivity with chef-crafted, high-protein meals delivered directly to your Las Vegas office refrigerator.
+      </p>
+    </div>
+
+    <!-- 3 Corporate Programs -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 uppercase tracking-wider inline-block">
+          Option 1
+        </span>
+        <h3 class="font-display font-bold text-xl text-white uppercase">Sponsored Meal Benefit</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Company pays all or a portion of employee meals as a high-value wellness perk. Consolidated monthly invoicing.
+        </p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 uppercase tracking-wider inline-block">
+          Option 2
+        </span>
+        <h3 class="font-display font-bold text-xl text-white uppercase">Employee-Paid Group Orders</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Employees order and pay for their own preferred meals online; all meals are delivered together in one easy office drop.
+        </p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-400 uppercase tracking-wider inline-block">
+          Option 3
+        </span>
+        <h3 class="font-display font-bold text-xl text-white uppercase">One-Time Event Catering</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Single-day drops for quarterly meetings, team training days, or client lunch-and-learns.
+        </p>
+      </div>
+    </div>
+
+    <!-- Inquiry Form Container -->
+    <div class="my-16 max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="font-display font-bold text-3xl text-white uppercase mb-2">Request Free Team Tasting</h2>
+        <p class="text-sm text-gray-400">Qualifying Las Vegas teams of 15+ employees get a complimentary lunch sample box.</p>
+      </div>
+      <CorporateForm />
+    </div>
+  </div>
+</BaseLayout>

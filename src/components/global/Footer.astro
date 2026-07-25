@@ -1,0 +1,118 @@
+---
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+import { COMMERCE_CONFIG } from '../../config/commerce';
+
+const accountUrl = ExternalCommerceAdapter.getAccountUrl();
+---
+
+<footer class="bg-dark-surface border-t border-dark-border text-gray-400 text-sm mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+      
+      <!-- Brand Column -->
+      <div class="lg:col-span-2 space-y-6">
+        <a href="/" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center font-display font-black text-xl text-white">
+            FF
+          </div>
+          <span class="font-display text-2xl uppercase font-black text-white tracking-wide">
+            FOODIE <span class="text-brand-500">FIT</span>
+          </span>
+        </a>
+        <p class="text-gray-300 text-base leading-relaxed max-w-sm">
+          Healthy Never Tasted This Good. Chef-crafted meals made fresh daily in Las Vegas. Delivered as early as tomorrow or ready at one of three local stores.
+        </p>
+        <div class="flex items-center gap-4 text-white font-medium">
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+            </svg>
+            (702) 844-8848
+          </span>
+          <span class="text-dark-muted">•</span>
+          <span>Daily 8:00 AM – 8:00 PM</span>
+        </div>
+      </div>
+
+      <!-- Quick Navigation -->
+      <div>
+        <h3 class="font-display text-white text-base tracking-wider uppercase mb-4">Explore</h3>
+        <ul class="space-y-3">
+          <li><a href="/menu/" class="hover:text-white transition-colors">Current Menu</a></li>
+          <li><a href="/how-it-works/" class="hover:text-white transition-colors">How It Works</a></li>
+          <li><a href="/delivery/" class="hover:text-white transition-colors">Las Vegas Delivery</a></li>
+          <li><a href="/subscriptions/" class="hover:text-white transition-colors">Meal Subscriptions</a></li>
+          <li><a href="/custom-meals/" class="hover:text-white transition-colors">Custom Meal Prep</a></li>
+          <li><a href="/by-the-pound/" class="hover:text-white transition-colors">By The Pound</a></li>
+        </ul>
+      </div>
+
+      <!-- Retail Stores -->
+      <div>
+        <h3 class="font-display text-white text-base tracking-wider uppercase mb-4">Store Locations</h3>
+        <ul class="space-y-3">
+          {COMMERCE_CONFIG.storeLocations.map((store) => (
+            <li>
+              <a href={`/locations/${store.slug}/`} class="group block">
+                <span class="font-semibold text-gray-200 group-hover:text-brand-400 transition-colors">{store.name}</span>
+                <span class="block text-xs text-dark-muted">{store.address}</span>
+              </a>
+            </li>
+          ))}
+          <li class="pt-2">
+            <a href="/locations/" class="text-brand-500 hover:text-brand-400 font-semibold text-xs inline-flex items-center gap-1">
+              View All 3 Stores &rarr;
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Customer Help & B2B -->
+      <div>
+        <h3 class="font-display text-white text-base tracking-wider uppercase mb-4">Help & Corporate</h3>
+        <ul class="space-y-3">
+          <li><a href="/corporate-meals/" class="hover:text-white transition-colors">Corporate Meals</a></li>
+          <li><a href="/faq/" class="hover:text-white transition-colors">Frequently Asked Questions</a></li>
+          <li><a href="/about/" class="hover:text-white transition-colors">About Foodie Fit</a></li>
+          <li><a href="/blog/" class="hover:text-white transition-colors">Nutrition Blog</a></li>
+          <li><a href="/contact/" class="hover:text-white transition-colors">Contact Support</a></li>
+          <li><a href={accountUrl} class="hover:text-white transition-colors">My Account</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Store Locations Grid Bar -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-2xl bg-dark-bg border border-dark-border mb-12">
+      {COMMERCE_CONFIG.storeLocations.map((store) => (
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 flex-shrink-0 mt-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm">{store.name} Store</div>
+            <div class="text-xs text-gray-400">{store.address}, {store.city}, {store.state} {store.zip}</div>
+            <div class="text-[11px] text-brand-400 mt-1 font-medium">Daily 8 AM – 8 PM • (702) 844-8848</div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Legal & Copyright Bar -->
+    <div class="pt-8 border-t border-dark-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+      <div>
+        © {new Date().getFullYear()} Foodie Fit Las Vegas. All rights reserved. Healthy Never Tasted This Good.
+      </div>
+      <div class="flex flex-wrap items-center gap-6 text-gray-400">
+        <a href="/privacy/" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="/terms/" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="/accessibility/" class="hover:text-white transition-colors">Accessibility</a>
+        <a href="/nutrition-allergen-disclaimer/" class="hover:text-white transition-colors">Allergen Disclaimer</a>
+        <a href="/delivery-policy/" class="hover:text-white transition-colors">Delivery Policy</a>
+        <a href="/refund-cancellation-policy/" class="hover:text-white transition-colors">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>

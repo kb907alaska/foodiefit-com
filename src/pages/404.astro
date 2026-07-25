@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found (404) | Foodie Fit Las Vegas"
+  description="The page you requested could not be found. Explore Foodie Fit's fresh prepared meal menu or find a store."
+  noindex={true}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+    <div class="w-24 h-24 rounded-3xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 font-display font-black text-4xl mx-auto mb-8 shadow-glow-green">
+      404
+    </div>
+    
+    <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-4">
+      Oops! Page Not Found
+    </h1>
+
+    <p class="text-gray-300 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+      Looks like this meal or page has moved. Let's get you back to exploring our fresh daily Las Vegas menu.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="/menu/"
+        class="w-full sm:w-auto px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all text-center"
+      >
+        Explore Menu Items &rarr;
+      </a>
+      <a
+        href="/"
+        class="w-full sm:w-auto px-8 py-4 rounded-2xl font-display font-bold text-base text-gray-300 bg-dark-card border border-dark-border hover:bg-dark-surface transition-all text-center"
+      >
+        Return to Homepage
+      </a>
+    </div>
+  </div>
+</BaseLayout>

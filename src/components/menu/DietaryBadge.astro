@@ -1,0 +1,25 @@
+---
+import type { DietaryTag } from '../../lib/commerce/types';
+
+export interface Props {
+  tag: DietaryTag;
+}
+
+const { tag } = Astro.props;
+
+const labels: Record<DietaryTag, string> = {
+  'gluten-free': 'GF (Gluten-Free)',
+  'dairy-free': 'DF (Dairy-Free)',
+  'nut-free': 'Nut-Free',
+  'soy-free': 'Soy-Free',
+  'high-protein': 'High Protein',
+  'low-carb': 'Low Carb',
+  'keto-friendly': 'Keto'
+};
+
+const label = labels[tag] || tag;
+---
+
+<span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-dark-surface border border-dark-border text-gray-300">
+  {label}
+</span>

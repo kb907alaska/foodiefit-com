@@ -1,0 +1,56 @@
+---
+const steps = [
+  {
+    num: '01',
+    title: 'Select Delivery or Pickup Date',
+    desc: 'Order by 6:00 PM for next-day delivery in Las Vegas, or schedule store pickup at Green Valley, Summerlin, or Northwest.'
+  },
+  {
+    num: '02',
+    title: 'Choose Meals & Portions',
+    desc: 'Select from 30+ rotating low-carb, active, breakfast, and snack options. Pick Lean or Bulk portion sizes to fit your exact macro targets.'
+  },
+  {
+    num: '03',
+    title: 'Enjoy Fresh Chef Quality',
+    desc: 'Delivered in insulated cold packaging or ready inside store coolers. Heat for 90 seconds and enjoy restaurant-quality fresh food.'
+  }
+];
+---
+
+<section class="py-20 bg-dark-bg border-b border-dark-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Simple & Convenient
+      </span>
+      <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight mb-4">
+        How Foodie Fit Works
+      </h2>
+      <p class="text-gray-300 text-base sm:text-lg">
+        No long-term contracts. No mandatory subscriptions. Order once for the week or set your favorites on auto-pilot.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {steps.map((s) => (
+        <div class="bg-dark-card border border-dark-border rounded-2xl p-8 relative flex flex-col justify-between card-hover-effect">
+          <div>
+            <span class="font-display font-black text-5xl text-brand-500/30 block mb-4">
+              {s.num}
+            </span>
+            <h3 class="font-display font-bold text-xl text-white uppercase mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              {s.desc}
+            </p>
+          </div>
+          <div class="pt-6 border-t border-dark-border/50 mt-6 flex items-center text-xs font-semibold text-brand-400">
+            <span>Learn Details &rarr;</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

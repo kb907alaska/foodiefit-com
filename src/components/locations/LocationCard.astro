@@ -1,0 +1,67 @@
+---
+import type { StoreLocation } from '../../lib/commerce/types';
+import { DemoCommerceAdapter } from '../../lib/commerce/demo-adapter';
+
+export interface Props {
+  location: StoreLocation;
+}
+
+const { location } = Astro.props;
+const status = DemoCommerceAdapter.getStoreOpenStatus(location.openHour, location.closeHour);
+---
+
+<div class="bg-dark-card border border-dark-border rounded-2xl overflow-hidden p-6 flex flex-col justify-between card-hover-effect">
+  <div>
+    <div class="flex items-center justify-between mb-3">
+      <span class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold ${
+        status.isOpen ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30' : 'bg-red-500/15 text-red-400 border border-red-500/30'
+      }`}>
+        <span class={`w-2 h-2 rounded-full ${status.isOpen ? 'bg-emerald-400 animate-pulse' : 'bg-red-400'}`}></span>
+        {status.isOpen ? 'Open Now' : 'Closed'}
+      </span>
+
+      <span class="text-xs text-gray-400 font-semibold">Daily 8 AM – 8 PM</span>
+    </div>
+
+    <h3 class="font-display font-bold text-xl text-white uppercase mb-2">
+      {location.name} Store
+    </h3>
+
+    <p class="text-sm text-gray-300 mb-4 leading-snug">
+      {location.address}<br />
+      {location.city}, {location.state} {location.zip}
+    </p>
+
+    <div class="space-y-1.5 text-xs text-gray-400 mb-6">
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+        </svg>
+        <a href={`tel:${location.phone.replace(/[^0-9]/g, '')}`} class="hover:text-white font-semibold">{location.phone}</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>{status.text}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-4 border-t border-dark-border flex items-center gap-3">
+    <a
+      href={`/locations/${location.slug}/`}
+      class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-white bg-dark-surface border border-dark-border hover:bg-dark-border transition-colors"
+    >
+      Store Details
+    </a>
+    <a
+      href={`https://maps.google.com/?q=${encodeURIComponent(`${location.address} ${location.city} ${location.state} ${location.zip}`)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-green transition-colors"
+    >
+      Get Directions
+    </a>
+  </div>
+</div>

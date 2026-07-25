@@ -1,0 +1,11 @@
+/faqs /faq 301
+/faqs/ /faq/ 301
+/store-locations /locations 301
+/store-locations/ /locations/ 301
+/green-valley /locations/green-valley 301
+/summerlin /locations/summerlin 301
+/northwest /locations/northwest 301
+/corporate /corporate-meals 301
+/corporate/ /corporate-meals/ 301
+/menu-item/* /menu/ 301
+/category/* /menu/ 301

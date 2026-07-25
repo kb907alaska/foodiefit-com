@@ -1,0 +1,15 @@
+[
+  { "from": "/faqs", "to": "/faq", "status": 301 },
+  { "from": "/faqs/", "to": "/faq/", "status": 301 },
+  { "from": "/store-locations", "to": "/locations", "status": 301 },
+  { "from": "/store-locations/", "to": "/locations/", "status": 301 },
+  { "from": "/green-valley", "to": "/locations/green-valley", "status": 301 },
+  { "from": "/summerlin", "to": "/locations/summerlin", "status": 301 },
+  { "from": "/northwest", "to": "/locations/northwest", "status": 301 },
+  { "from": "/corporate", "to": "/corporate-meals", "status": 301 },
+  { "from": "/corporate/", "to": "/corporate-meals/", "status": 301 },
+  { "from": "/menu-item/*", "to": "/menu/", "status": 301 },
+  { "from": "/category/*", "to": "/menu/", "status": 301 },
+  { "from": "/wp-content/*", "to": "/", "status": 301 },
+  { "from": "/author/*", "to": "/about", "status": 301 }
+]

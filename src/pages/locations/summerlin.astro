@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import StructuredData from '../../components/seo/StructuredData.astro';
+import { getEntryBySlug } from 'astro:content';
+
+const locationEntry = await getEntryBySlug('locations', 'summerlin');
+const data = locationEntry?.data || {
+  name: "Summerlin",
+  address: "4235 S Fort Apache Rd #220",
+  city: "Las Vegas",
+  state: "NV",
+  zip: "89147",
+  phone: "(702) 844-8848",
+  hours: "8:00 AM – 8:00 PM Daily",
+  openHour: 8,
+  closeHour: 20,
+  googleMapsUrl: "https://maps.google.com/?q=4235+S+Fort+Apache+Rd+%23220+Las+Vegas+NV+89147",
+  image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+  neighborhoods: ["Summerlin South", "Spring Valley", "The Lakes", "Peccole Ranch", "Rhodes Ranch"],
+  description: "Positioned on S Fort Apache Rd near Flamingo, bringing fast, healthy, chef-made meals to West Las Vegas and Summerlin residents."
+};
+---
+
+<BaseLayout
+  title="Summerlin Meal Prep Store | Foodie Fit West Las Vegas"
+  description={`${data.name} Foodie Fit store at ${data.address}, ${data.city}, ${data.state} ${data.zip}. Open daily 8 AM – 8 PM for fresh meal grab & go.`}
+  image={data.image}
+>
+  <StructuredData type="LocalBusiness" data={data} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Locations', href: '/locations/' },
+      { name: `${data.name} Store` }
+    ]} />
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 my-8 items-start">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 text-brand-400 border border-brand-500/30 uppercase tracking-wider">
+          Daily 8:00 AM – 8:00 PM
+        </div>
+
+        <h1 class="font-display font-black text-4xl sm:text-5xl text-white uppercase tracking-tight">
+          Foodie Fit {data.name}
+        </h1>
+
+        <p class="text-gray-300 text-lg leading-relaxed">
+          {data.description}
+        </p>
+
+        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-4">
+          <h3 class="font-display font-bold text-lg text-white uppercase">Store Information</h3>
+          <div class="text-sm text-gray-300 space-y-2">
+            <div><strong class="text-white">Address:</strong> {data.address}, {data.city}, {data.state} {data.zip}</div>
+            <div><strong class="text-white">Phone:</strong> <a href={`tel:${data.phone.replace(/[^0-9]/g, '')}`} class="text-brand-400 underline">{data.phone}</a></div>
+            <div><strong class="text-white">Hours:</strong> {data.hours}</div>
+          </div>
+          <div class="pt-2">
+            <a href={data.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-display text-sm font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-green">
+              Get Directions via Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+          <h3 class="font-display font-bold text-lg text-white uppercase mb-3">Neighborhoods Served</h3>
+          <div class="flex flex-wrap gap-2">
+            {data.neighborhoods.map((n: string) => <span class="px-3 py-1 rounded-lg bg-dark-surface border border-dark-border text-xs font-semibold text-gray-300">{n}</span>)}
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="rounded-3xl overflow-hidden border border-dark-border shadow-2xl">
+          <img src={data.image} alt={`Foodie Fit ${data.name} Store`} class="w-full h-80 object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

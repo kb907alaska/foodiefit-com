@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Meal Subscriptions | Foodie Fit Las Vegas"
+  description="Put your weekly healthy meal prep on autopilot. Save time and money with flexible Foodie Fit meal subscriptions."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Subscriptions' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Autopilot Nutrition
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Flexible Meal Subscriptions
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Set your weekly meal prep routine once and never worry about grocery shopping again. Pause, swap meals, or cancel anytime.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <h3 class="font-display font-bold text-xl text-white uppercase">100% Contract-Free</h3>
+        <p class="text-sm text-gray-300">Skip a week for vacation, swap out meals, or pause your subscription directly inside your account portal without penalties.</p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <h3 class="font-display font-bold text-xl text-white uppercase">Weekly Discount Savings</h3>
+        <p class="text-sm text-gray-300">Subscribers save on every order and get priority access to new seasonal meal releases before walk-in customers.</p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <h3 class="font-display font-bold text-xl text-white uppercase">Customizable Menu</h3>
+        <p class="text-sm text-gray-300">Keep your favorite staple meals or let our chefs automatically select from our 30+ rotating bi-weekly menu items.</p>
+      </div>
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Build Your Subscription Plan &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

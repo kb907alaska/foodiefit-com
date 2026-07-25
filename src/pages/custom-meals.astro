@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Custom Meals | Foodie Fit Las Vegas"
+  description="Build custom meal prep by the ounce. Select exact portions of sirloin steak, chicken breast, jasmine rice, sweet potato, and broccoli."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Custom Meals' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Precision Macro Engineering
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Custom Meal Prep
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Following a strict macro prescription from your coach or dietitian? Build your meals by the ounce down to the exact gram.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-6 text-center space-y-4">
+        <div class="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 font-bold text-xl mx-auto">
+          PRO
+        </div>
+        <h3 class="font-display font-bold text-xl text-white uppercase">1. Pick Protein (4oz – 10oz)</h3>
+        <p class="text-xs text-gray-300">Sirloin Steak, Grilled Chicken, Ground Turkey, Baked Salmon, or Pork Tenderloin.</p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-6 text-center space-y-4">
+        <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xl mx-auto">
+          CARB
+        </div>
+        <h3 class="font-display font-bold text-xl text-white uppercase">2. Pick Carb (0oz – 10oz)</h3>
+        <p class="text-xs text-gray-300">Jasmine Rice, Roasted Sweet Potatoes, Brown Rice, Quinoa, or Soba Noodles.</p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-6 text-center space-y-4">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl mx-auto">
+          VEG
+        </div>
+        <h3 class="font-display font-bold text-xl text-white uppercase">3. Pick Veggies (0oz – 6oz)</h3>
+        <p class="text-xs text-gray-300">Steamed Broccoli, Roasted Asparagus, Green Beans, Zucchini, or Cauliflower Rice.</p>
+      </div>
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Build Custom Meal Now &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,95 @@
+---
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const accountUrl = ExternalCommerceAdapter.getAccountUrl();
+
+const pathname = Astro.url.pathname;
+
+const navLinks = [
+  { name: 'Menu', href: '/menu/' },
+  { name: 'How It Works', href: '/how-it-works/' },
+  { name: 'Locations', href: '/locations/' },
+  { name: 'Corporate Meals', href: '/corporate-meals/' },
+  { name: 'About', href: '/about/' },
+  { name: 'FAQ', href: '/faq/' },
+];
+---
+
+<header class="sticky top-0 z-40 bg-dark-bg/90 backdrop-blur-md border-b border-dark-border transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center shadow-glow-green group-hover:scale-105 transition-transform">
+        <span class="font-display font-black text-xl text-white tracking-tighter">FF</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-display text-2xl tracking-wide uppercase text-white font-black leading-none">
+          FOODIE <span class="text-brand-500">FIT</span>
+        </span>
+        <span class="text-[10px] uppercase font-bold tracking-widest text-dark-muted leading-tight">
+          LAS VEGAS MEAL PREP
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+      {navLinks.map((link) => {
+        const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+        return (
+          <a
+            href={link.href}
+            class={`text-sm font-semibold transition-colors hover:text-brand-400 py-2 border-b-2 ${
+              isActive ? 'text-brand-500 border-brand-500' : 'text-gray-300 border-transparent'
+            }`}
+          >
+            {link.name}
+          </a>
+        );
+      })}
+    </nav>
+
+    <!-- Desktop Actions -->
+    <div class="hidden lg:flex items-center gap-4">
+      <a
+        href={accountUrl}
+        class="text-sm font-semibold text-gray-300 hover:text-white px-3 py-2 rounded-lg hover:bg-dark-surface transition-colors"
+      >
+        Account
+      </a>
+      <a
+        href={orderUrl}
+        class="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-display text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-green hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
+      >
+        Order Now
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger Control -->
+    <div class="flex lg:hidden items-center gap-3">
+      <a
+        href={orderUrl}
+        class="inline-flex items-center justify-center px-4 py-2 rounded-lg font-display text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 transition-colors"
+      >
+        Order Now
+      </a>
+
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        class="p-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-dark-surface focus:outline-none focus:ring-2 focus:ring-brand-500"
+        aria-label="Toggle mobile menu"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

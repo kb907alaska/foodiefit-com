@@ -1,0 +1,57 @@
+---
+import type { MealCategory } from '../../lib/commerce/types';
+
+export interface Props {
+  category: MealCategory;
+  showIcon?: boolean;
+}
+
+const { category, showIcon = true } = Astro.props;
+
+const config = {
+  'low-carb': {
+    label: 'Low Carb',
+    bg: 'bg-red-500/15',
+    border: 'border-red-500/40',
+    text: 'text-red-400',
+    dot: 'bg-red-500',
+    iconPath: 'M13 10V3L4 14h7v7l9-11h-7z' // Lightning / Flame
+  },
+  'active': {
+    label: 'Active',
+    bg: 'bg-emerald-500/15',
+    border: 'border-emerald-500/40',
+    text: 'text-emerald-400',
+    dot: 'bg-emerald-500',
+    iconPath: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V7'
+  },
+  'breakfast': {
+    label: 'Breakfast',
+    bg: 'bg-amber-500/15',
+    border: 'border-amber-500/40',
+    text: 'text-amber-400',
+    dot: 'bg-amber-500',
+    iconPath: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' // Sun
+  },
+  'snack-dessert': {
+    label: 'Snack / Dessert',
+    bg: 'bg-blue-500/15',
+    border: 'border-blue-500/40',
+    text: 'text-blue-400',
+    dot: 'bg-blue-500',
+    iconPath: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' // Star
+  }
+};
+
+const item = config[category] || config['active'];
+---
+
+<span class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-bold border ${item.bg} ${item.border} ${item.text}`}>
+  <span class={`w-1.5 h-1.5 rounded-full ${item.dot}`}></span>
+  {showIcon && (
+    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.iconPath} />
+    </svg>
+  )}
+  <span>{item.label}</span>
+</span>

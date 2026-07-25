@@ -1,0 +1,317 @@
+{
+  "success": true,
+  "companyInfo": {
+    "name": "Foodie Fit",
+    "allowUsersToCancel": true,
+    "allowUsersToEdit": true,
+    "allowUsersToFreeze": true,
+    "allowAnonymousCheckout": false,
+    "checkRulesOnShop": false,
+    "overrideContactForms": true,
+    "finixObject": {
+      "mid": "MU2S8uURiUPwiiSP7EivN66E",
+      "env": "live",
+      "applicationId": "APeLbnkceyrnMKMku7NRKbu2"
+    },
+    "createSubAccountIdentifiers": false,
+    "hasPackages": false,
+    "hasHomeDelivery": true,
+    "multiSelectDeliveryDates": true,
+    "currency": "USD",
+    "country": "US",
+    "region": "NV",
+    "terms": null,
+    "logo": "https://foodiefit.com/wp-content/uploads/2025/01/Foodie-Fit-logo.png",
+    "availableSettings": [
+      {
+        "id": "3f2632aa-0502-4f6a-8cb8-87ca62a6a838",
+        "name": "Delivery Backup",
+        "onCheckout": true,
+        "type": "drop-down",
+        "options": [
+          {
+            "id": "1fd81946-8bc3-4471-b1c6-1f5254d63575",
+            "text": "Leave at door",
+            "default": true,
+            "settings": [],
+            "associations": {}
+          },
+          {
+            "id": "6231d089-aa9c-4e61-b46e-005fc03b93c6",
+            "text": "Bring Back To Kitchen",
+            "default": false,
+            "settings": [],
+            "associations": {}
+          }
+        ],
+        "settings": []
+      },
+      {
+        "id": "3f2632aa-0502-4f6a-8cb8-87ca62a6a839",
+        "name": "Single Delivery Per Cart",
+        "onCheckout": false,
+        "type": "cart",
+        "options": [],
+        "settings": []
+      },
+      {
+        "id": "3f2632aa-0502-4f6a-8cb8-87ca62a6b629",
+        "name": "Feature On Homepage Time Restriction",
+        "onCheckout": false,
+        "type": "cart",
+        "options": [],
+        "settings": []
+      },
+      {
+        "id": "3f2632aa-0502-4f6a-8cb8-87ca62a6b738",
+        "name": "Feature On Checkout",
+        "onCheckout": false,
+        "type": "checkout",
+        "options": [],
+        "settings": []
+      },
+      {
+        "id": "3f2632aa-0502-4f6a-8cb8-87ca62a6a837",
+        "name": "Split Delivery",
+        "onCheckout": false,
+        "type": "delivery",
+        "options": [
+          {
+            "id": "6231d089-aa9c-4e61-b46e-005fc03b94a7",
+            "text": "1",
+            "default": true,
+            "associations": {
+              "max_items": "5",
+              "tag_text": "Switch Staff",
+              "source_timeslot_id": "a8d70b2c-9f51-43cb-ba7b-514c79c0cdde",
+              "dest_skip_days": "3",
+              "location_id": "8442762d-f5ce-41f5-9d81-38c6e9e034ae",
+              "exclude_categories": "[\"4c5de10b-9e4b-4a11-8703-23f43b0483bd\"]"
+            }
+          },
+          {
+            "id": "6231d089-aa9c-4e61-b46e-005fc03b94b8",
+            "text": "1",
+            "default": true,
+            "associations": {
+              "max_items": "5",
+              "tag_text": "Switch Staff",
+              "source_timeslot_id": "a8d70b2c-9f51-43cb-ba7b-514c79c0cdde",
+              "dest_skip_days": "3",
+              "location_id": "c54a985e-f7ed-4721-8be7-bde4d00462db",
+              "exclude_categories": "[\"4c5de10b-9e4b-4a11-8703-23f43b0483bd\"]"
+            }
+          }
+        ],
+        "settings": []
+      }
+    ],
+    "billingSettings": {
+      "weekBasedBillingDOW": 6,
+      "paymentMethods": [
+        {
+          "type": "credit",
+          "required": true
+        }
+      ]
+    },
+    "cutoffs": {
+      "weeklyLocks": [
+        {
+          "lockDOWLocal": 5,
+          "lockTimeLocal": "23:59",
+          "unlockDOWLocal": 6,
+          "unlockTimeLocal": "23:59"
+        }
+      ],
+      "freezeSettings": {
+        "maxFreezeLength": "14-days",
+        "maxFreezeStart": "28-days"
+      },
+      "cancelSettings": {
+        "noticeRequirement": "0-days",
+        "maxCancelation": "3-months"
+      }
+    },
+    "prohibitedRules": [],
+    "modifierRules": [
+      {
+        "variable": "shippingPostal",
+        "comparer": "in-list",
+        "value": [
+          "89005"
+        ],
+        "priceModifier": 5,
+        "message": "Please note, there is a $5 surcharge for Boulder City Deliveries"
+      }
+    ],
+    "homeDeliveryRules": [
+      {
+        "variable": "shippingPostal",
+        "comparer": "not-in-list",
+        "value": [
+          "89166",
+          "89143",
+          "89149",
+          "89131",
+          "89085",
+          "89084",
+          "89086",
+          "89130",
+          "89031",
+          "89081",
+          "89115",
+          "89156",
+          "89110",
+          "89030",
+          "89101",
+          "89106",
+          "89108",
+          "89032",
+          "89129",
+          "89128",
+          "89134",
+          "89138",
+          "89144",
+          "89117",
+          "89135",
+          "89161",
+          "89146",
+          "89145",
+          "89107",
+          "89102",
+          "89109",
+          "89104",
+          "89142",
+          "89121",
+          "89169",
+          "89147",
+          "89103",
+          "89122",
+          "89120",
+          "89119",
+          "89118",
+          "89113",
+          "89148",
+          "89139",
+          "89123",
+          "89014",
+          "89011",
+          "89015",
+          "89074",
+          "89178",
+          "89179",
+          "89141",
+          "89183",
+          "89052",
+          "89012",
+          "89002",
+          "89005",
+          "89044",
+          "89191",
+          "89158",
+          "89019"
+        ],
+        "priceModifier": 0,
+        "message": "Delivery is currently only available in Clark County, Nevada."
+      }
+    ],
+    "uiSettings": {
+      "subscribeAllOnlyMode": true,
+      "showProductTotalInCart": false,
+      "autoAddDelivery": true,
+      "fullProductPages": false,
+      "hideRemoveDelivery": true,
+      "textOverrides": {
+        "displayAddress": "2185 E Windmill Lane #200  Las Vegas, NV 89123",
+        "newDeliveryOverride": " Choose Delivery or Pickup Date",
+        "allSubscribedDescriptionText": "Manage your subscription through your account.",
+        "recurrenceLabelText": null,
+        "editDeliveryText": "Continue Shopping",
+        "subscriptionLabelText": null,
+        "viewAgreementLabelText": null,
+        "addDeliveryText": "Add Another Day",
+        "emptyAddDeliveryText": "Order Now"
+      },
+      "allowSubscriptionCartMatch": true,
+      "hideTip": false,
+      "hideDeliveryInstructions": false,
+      "showAdminLinkOnLogin": null,
+      "autofitImages": false,
+      "serverSideShopPage": false,
+      "preselectCategories": false,
+      "autoPickFirstPickup": false,
+      "preventModalRegeneration": true,
+      "showAdditionalCheckoutButton": false,
+      "slaaskKey": "1d4072d48efcc72a7b8c5060904652fb14ba58c2",
+      "compressNutritionalLabels": true,
+      "cacheDuration": null,
+      "skipSingleTimeSlotSelection": false,
+      "preventAutoFilterGeneration": true,
+      "v3": true,
+      "turnstileValidation": true,
+      "singleDelivery": true,
+      "maxQuickVariation": 2,
+      "checkoutAcknowledgement": true,
+      "orderLinkOnError": [
+        "Switch orders are only available on Mondays and Thursdays from 8AM - 12PM",
+        "Tao orders are only available on Mondays and Thursdays from 8AM - 12PM"
+      ],
+      "customCategoryDesc": [
+        {
+          "id": "ff4dd70c-8fbc-42eb-8145-341a5a51a6f4",
+          "text": "Hand-crafted, everyday favorites reimagined by Foodie Fit to be nutritious and delicious."
+        },
+        {
+          "id": "4c5de10b-9e4b-4a11-8703-23f43b0483bd",
+          "text": "Perfectly paired bites and refreshing drinks to complement any signature or custom meal."
+        },
+        {
+          "id": "7f195d79-7d4f-489b-8fc0-c0f67768a2d7",
+          "text": "Custom, pre-portioned meals crafted by you! Choose your protein, carb, veggie, and even your sauces for a personalized culinary experience."
+        },
+        {
+          "id": "93b252c6-01ec-4693-94e9-7ff13075978b",
+          "text": "From gift cards and stylish apparel to handy cooler bags, perfect for everyday use and special occasions."
+        }
+      ],
+      "tagOverrides": [
+        {
+          "tag": "New",
+          "replace": "New",
+          "color": "#f04c3c"
+        },
+        {
+          "tag": "Active (Green)",
+          "replace": "Active",
+          "color": "#2b9446"
+        },
+        {
+          "tag": "Breakfast (Yellow)",
+          "replace": "Breakfast",
+          "color": "#f9d10a",
+          "fontColor": "#000000"
+        },
+        {
+          "tag": "Low Carb (Red)",
+          "replace": "Low Carb",
+          "color": "#f04c3c"
+        },
+        {
+          "tag": "Snack",
+          "replace": "Snack",
+          "color": "#4294d0"
+        },
+        {
+          "tag": "Plant Based",
+          "replace": "Plant Based",
+          "color": "#5f2da8"
+        }
+      ],
+      "subscriptionWarningHtml": "You've selected a <b>Weekly Subscription</b> with automatic weekly charges. Manage or modify anytime in your Account page. To continue, click <b>Confirm</b>.",
+      "hideSubPrepItemsOnTickets": true,
+      "googleAnalyticsTID": "UA-108044857-1",
+      "logo": "https://foodiefit.com/wp-content/uploads/2025/01/Foodie-Fit-logo.png"
+    }
+  }
+}

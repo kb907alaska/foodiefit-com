@@ -1,0 +1,63 @@
+---
+const faqs = [
+  {
+    q: "When is the deadline for next-day delivery or store pickup?",
+    a: "Place your order by 6:00 PM for next-day delivery or store pickup across Las Vegas and Henderson."
+  },
+  {
+    q: "Are Foodie Fit meals fresh or frozen?",
+    a: "Foodie Fit meals are prepared fresh daily in our commercial Las Vegas kitchen and are never intentionally frozen."
+  },
+  {
+    q: "Is there an order minimum or long-term contract?",
+    a: "No! There are no order minimums or required subscription contracts. Order one meal or twenty whenever you like."
+  },
+  {
+    q: "Where are your stores located and what are the hours?",
+    a: "We operate 3 Las Vegas locations: Green Valley, Summerlin, and Northwest. All stores are open daily from 8:00 AM to 8:00 PM."
+  },
+  {
+    q: "What is the difference between Lean and Bulk portions?",
+    a: "Lean portions provide standard balanced macros, while Bulk portions add +50% extra protein for muscle building goals."
+  },
+  {
+    q: "How are meals kept cold during delivery?",
+    a: "Deliveries arrive in commercial food-grade insulated bags with gel ice packs, keeping meals at optimal temperature (38°F) for up to 6 hours."
+  }
+];
+---
+
+<section class="py-20 bg-dark-surface border-b border-dark-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+          Got Questions?
+        </span>
+        <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <a
+        href="/faq/"
+        class="mt-4 md:mt-0 font-display text-sm font-bold text-brand-400 hover:text-brand-300 inline-flex items-center gap-2"
+      >
+        View All FAQs & Knowledge Base &rarr;
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {faqs.map((f) => (
+        <div class="bg-dark-card border border-dark-border rounded-2xl p-6">
+          <h3 class="font-display font-bold text-base text-white uppercase mb-2 flex items-start gap-2">
+            <span class="text-brand-500 font-black">Q.</span>
+            <span>{f.q}</span>
+          </h3>
+          <p class="text-sm text-gray-300 leading-relaxed pl-6">
+            {f.a}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

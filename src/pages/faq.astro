@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import StructuredData from '../components/seo/StructuredData.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const faqsCollection = await getCollection('faqs');
+const sortedFaqs = faqsCollection.sort((a: CollectionEntry<'faqs'>, b: CollectionEntry<'faqs'>) => a.data.order - b.data.order);
+
+const faqSchemaData = sortedFaqs.map((f: CollectionEntry<'faqs'>) => ({
+  question: f.data.question,
+  answer: f.body
+}));
+---
+
+<BaseLayout
+  title="Frequently Asked Questions | Foodie Fit Las Vegas"
+  description="Answers to common questions about Foodie Fit meal ordering, delivery, store pickup, macros, and subscriptions."
+>
+  <StructuredData type="FAQPage" data={faqSchemaData} />
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'FAQ' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Help & Knowledge Base
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Everything you need to know about our fresh meals, delivery schedules, store hours, and dietary accommodations.
+      </p>
+    </div>
+
+    <div class="space-y-6 my-12">
+      {sortedFaqs.map((faq: CollectionEntry<'faqs'>) => (
+        <div class="bg-dark-card border border-dark-border rounded-2xl p-6 sm:p-8 space-y-3">
+          <span class="px-2.5 py-0.5 rounded text-[10px] font-bold uppercase bg-brand-500/10 text-brand-400 border border-brand-500/30">
+            {faq.data.category}
+          </span>
+          <h2 class="font-display font-bold text-xl text-white uppercase">{faq.data.question}</h2>
+          <div class="text-gray-300 text-sm leading-relaxed prose prose-invert max-w-none">
+            {faq.body}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

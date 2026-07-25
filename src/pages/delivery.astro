@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Delivery Information | Foodie Fit Las Vegas"
+  description="Fresh meal prep delivered to your door in Las Vegas, Henderson, Summerlin & Centennial Hills. Order by 6 PM for next-day delivery."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Delivery Information' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Local Fast Delivery
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Las Vegas Meal Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Fresh prepared meals delivered straight to your doorstep as early as tomorrow morning.
+      </p>
+    </div>
+
+    <!-- Cutoff Banner -->
+    <div class="bg-gradient-to-r from-brand-900/60 to-dark-card border border-brand-500/40 rounded-3xl p-8 mb-16 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h2 class="font-display font-bold text-2xl text-white uppercase mb-2">Next-Day Delivery Cutoff: 6:00 PM</h2>
+        <p class="text-sm text-gray-300">Place your order before 6:00 PM today to guarantee delivery as early as tomorrow.</p>
+      </div>
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-sm text-white bg-brand-600 hover:bg-brand-500 shadow-glow-green whitespace-nowrap">
+        Order For Tomorrow &rarr;
+      </a>
+    </div>
+
+    <!-- Coverage & Thermal Packaging Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <h3 class="font-display font-bold text-2xl text-white uppercase">Delivery Neighborhoods</h3>
+        <p class="text-sm text-gray-300">We deliver across Southern Nevada, including:</p>
+        <ul class="grid grid-cols-2 gap-2 text-xs font-semibold text-brand-400">
+          <li>• Las Vegas (All ZIPs)</li>
+          <li>• Henderson & Green Valley</li>
+          <li>• Summerlin South & North</li>
+          <li>• Centennial Hills</li>
+          <li>• Spring Valley & The Lakes</li>
+          <li>• Enterprise & Rhodes Ranch</li>
+        </ul>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4">
+        <h3 class="font-display font-bold text-2xl text-white uppercase">Thermal Insulated Packaging</h3>
+        <p class="text-sm text-gray-300">
+          Not home when the driver arrives? No problem! All meals are packed inside heavy-duty insulated bags with food-grade gel ice packs designed to keep meals at safe refrigerated temperatures (38°F) for up to 6 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

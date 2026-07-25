@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="About Us | Foodie Fit Las Vegas Meal Prep"
+  description="Learn about Foodie Fit's mission to make healthy eating effortless in Southern Nevada. Founded in Las Vegas with three local store locations."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'About Us' }]} />
+
+    <div class="max-w-3xl mx-auto my-12 text-center space-y-6">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs block">
+        Our Story & Philosophy
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight">
+        Healthy Never Tasted <br />
+        <span class="text-brand-400">This Good.</span>
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Foodie Fit was founded right here in Las Vegas with a simple belief: nobody should have to sacrifice flavor, freshness, or convenience to achieve their physical and health goals.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+      <div class="rounded-3xl overflow-hidden border border-dark-border shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" alt="Foodie Fit Commercial Kitchen" class="w-full h-96 object-cover" />
+      </div>
+
+      <div class="space-y-6 text-gray-300 text-sm leading-relaxed">
+        <h2 class="font-display font-bold text-2xl text-white uppercase">The Culinary Difference</h2>
+        <p>
+          Traditional meal prep services often rely on mass-produced, frozen meals shipped across state lines. By the time food reaches your table, it's soggy and bland.
+        </p>
+        <p>
+          At Foodie Fit, our culinary team cooks **fresh every single day** in our local Las Vegas kitchen. We rapidly flash-chill meals to lock in moisture, crispness, and nutrient density without ever freezing.
+        </p>
+        <div class="pt-4">
+          <a href={orderUrl} class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-display text-sm font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-green">
+            Taste The Difference &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

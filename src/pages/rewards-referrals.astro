@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const accountUrl = ExternalCommerceAdapter.getAccountUrl();
+---
+
+<BaseLayout
+  title="Rewards & Referrals | Foodie Fit Las Vegas"
+  description="Give $10, Get $10. Share Foodie Fit with your friends and earn meal prep reward credits on every referral."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Rewards & Referrals' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Give $10, Get $10
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Rewards & Referrals
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Healthy eating is better with friends. Refer your gym partners, family, or coworkers and earn meal credits every time they order.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 font-bold text-xl mx-auto">
+          1
+        </div>
+        <h3 class="font-display font-bold text-xl text-white uppercase">Share Your Link</h3>
+        <p class="text-xs text-gray-300">Find your unique referral link inside your Foodie Fit customer account dashboard.</p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 font-bold text-xl mx-auto">
+          2
+        </div>
+        <h3 class="font-display font-bold text-xl text-white uppercase">They Get $10 Off</h3>
+        <p class="text-xs text-gray-300">Your friend gets $10 off their first meal prep order of $40 or more.</p>
+      </div>
+
+      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 space-y-4 text-center">
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 font-bold text-xl mx-auto">
+          3
+        </div>
+        <h3 class="font-display font-bold text-xl text-white uppercase">You Get $10 Credit</h3>
+        <p class="text-xs text-gray-300">Once your friend completes their order, a $10 credit is automatically added to your account.</p>
+      </div>
+    </div>
+
+    <div class="text-center py-8">
+      <a href={accountUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Log In To Get Your Referral Link &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

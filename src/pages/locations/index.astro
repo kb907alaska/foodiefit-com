@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import LocationCard from '../../components/locations/LocationCard.astro';
+import { COMMERCE_CONFIG } from '../../config/commerce';
+import StructuredData from '../../components/seo/StructuredData.astro';
+---
+
+<BaseLayout
+  title="Store Locations | Foodie Fit Las Vegas & Henderson"
+  description="Visit one of our three local Las Vegas retail stores: Green Valley, Summerlin, and Northwest. Open daily 8 AM – 8 PM for fresh meal grab & go."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Store Locations' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Local Storefronts
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        3 Las Vegas Locations
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Walk in to browse our refrigerated storefronts or select store pickup during online checkout. All stores open 7 days a week from 8:00 AM to 8:00 PM.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+      {COMMERCE_CONFIG.storeLocations.map((store) => (
+        <>
+          <StructuredData type="LocalBusiness" data={store} />
+          <LocationCard location={store} />
+        </>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
