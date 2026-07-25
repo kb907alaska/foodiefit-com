@@ -5,7 +5,7 @@ const goals = [
     subtitle: '45g+ Protein Per Portion',
     category: 'active',
     tag: 'high-protein',
-    image: '/images/meals/impossible-dumplings.jpg',
+    image: '/images/meals/kung-pao-beef.jpg',
     color: 'from-brand-600/80 to-dark-bg'
   },
   {
@@ -13,7 +13,7 @@ const goals = [
     subtitle: 'Under 15g Net Carbs',
     category: 'low-carb',
     tag: 'low-carb',
-    image: '/images/meals/backyard-bbq-plate.jpg',
+    image: '/images/meals/lemon-pepper-salmon.jpg',
     color: 'from-red-600/80 to-dark-bg'
   },
   {
@@ -21,7 +21,7 @@ const goals = [
     subtitle: 'Optimal Carb & Protein Fuel',
     category: 'active',
     tag: 'all',
-    image: '/images/meals/rancheros-breakfast-burrito.jpg',
+    image: '/images/meals/surf-n-turf.jpg',
     color: 'from-brand-600/80 to-dark-bg'
   },
   {
@@ -29,7 +29,7 @@ const goals = [
     subtitle: 'Pancakes, Scrambles & Burritos',
     category: 'breakfast',
     tag: 'all',
-    image: '/images/meals/chicken-tendies-mac.jpg',
+    image: '/images/meals/red-velvet-pancakes.jpg',
     color: 'from-amber-600/80 to-dark-bg'
   },
   {
@@ -37,31 +37,31 @@ const goals = [
     subtitle: 'Protein Bites, Cookies & Shakes',
     category: 'snack-dessert',
     tag: 'all',
-    image: '/images/meals/nashville-hot-chicken.jpg',
+    image: '/images/meals/red-velvet-donuts.jpg',
     color: 'from-blue-600/80 to-dark-bg'
   },
   {
     title: 'Custom Meal Prep',
     subtitle: 'Build Your Own Ounces',
     href: '/custom-meals/',
-    image: '/images/meals/southwest-salad.jpg',
+    image: '/images/meals/custom-breakfast.jpg',
     color: 'from-purple-600/80 to-dark-bg'
   }
 ];
 ---
 
-<section class="py-20 bg-dark-bg border-b border-dark-border">
+<section class="py-20 bg-white dark:bg-dark-bg border-b border-gray-200 dark:border-dark-border transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
         <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
           Targeted Nutrition
         </span>
-        <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight">
+        <h2 class="clamp-h2 font-display font-black text-slate-900 dark:text-white uppercase tracking-tight">
           Shop By Goal
         </h2>
       </div>
-      <p class="text-gray-400 text-sm max-w-md mt-2 md:mt-0">
+      <p class="text-slate-600 dark:text-gray-400 text-sm max-w-md mt-2 md:mt-0">
         Filter instantly by your specific macros, body composition target, or daily schedule.
       </p>
     </div>
@@ -70,7 +70,7 @@ const goals = [
       {goals.map((g) => (
         <a
           href={g.href || `/menu/?category=${g.category}`}
-          class="relative rounded-2xl overflow-hidden border border-dark-border bg-dark-card group card-hover-effect h-56 flex flex-col justify-end p-6"
+          class="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-border bg-white dark:bg-dark-card group card-hover-effect h-56 flex flex-col justify-end p-6 shadow-md"
         >
           <img 
             src={g.image} 

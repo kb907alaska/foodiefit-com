@@ -1,64 +1,72 @@
 ---
+import { MEALS_DATA } from '../../data/meals';
+
+const activeMeal = MEALS_DATA.find(m => m.slug === 'impossible-dumplings') || MEALS_DATA[0];
+const breakfastMeal = MEALS_DATA.find(m => m.slug === 'red-velvet-pancakes') || MEALS_DATA[1];
+const snackMeal = MEALS_DATA.find(m => m.slug === 'red-velvet-donuts') || MEALS_DATA[2];
 ---
 
-<section class="py-20 bg-dark-surface border-b border-dark-border relative overflow-hidden">
+<section class="py-20 bg-slate-50 dark:bg-dark-surface border-b border-gray-200 dark:border-dark-border relative overflow-hidden transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-3 block">
       Chef-Crafted Excellence
     </span>
-    <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight mb-6">
+    <h2 class="clamp-h2 font-display font-black text-slate-900 dark:text-white uppercase tracking-tight mb-6">
       This Is What Healthy <br class="hidden sm:inline" />
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-brand-500">
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-brand-500">
         Should Taste Like.
       </span>
     </h2>
-    <p class="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg mb-12">
+    <p class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-base sm:text-lg mb-12">
       No bland rubbery chicken. No unseasoned steamed broccoli. Every recipe is created by culinary trained chefs using real herbs, natural spices, and premium proteins.
     </p>
 
     <!-- Editorial 3-Photo Collage -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-      <div class="relative rounded-2xl overflow-hidden border border-dark-border group aspect-[4/3]">
+      <!-- Card 1: Active Meal -->
+      <a href={`/menu/${activeMeal.slug}/`} class="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-border group aspect-[4/3] shadow-md block">
         <img 
-          src="/images/meals/impossible-dumplings.jpg" 
-          alt="Teriyaki Chicken and Jasmine Rice" 
+          src={activeMeal.image} 
+          alt={activeMeal.name} 
           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-90"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 dark:from-dark-bg via-transparent to-transparent opacity-90"></div>
         <div class="absolute bottom-4 left-4 right-4 text-white">
           <span class="text-xs uppercase font-bold text-brand-400 tracking-wider">Active Category</span>
-          <h3 class="font-display font-bold text-lg">Teriyaki Chicken Power Plate</h3>
-          <p class="text-xs text-gray-300">48g Protein • 58g Carbs • 520 Cal</p>
+          <h3 class="font-display font-bold text-lg text-white">{activeMeal.name}</h3>
+          <p class="text-xs text-gray-200">{activeMeal.protein}g Protein • {activeMeal.carbs}g Carbs • {activeMeal.calories} Cal</p>
         </div>
-      </div>
+      </a>
 
-      <div class="relative rounded-2xl overflow-hidden border border-dark-border group aspect-[4/3]">
+      <!-- Card 2: Breakfast Meal -->
+      <a href={`/menu/${breakfastMeal.slug}/`} class="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-border group aspect-[4/3] shadow-md block">
         <img 
-          src="/images/meals/backyard-bbq-plate.jpg" 
-          alt="Cinnamon Roll Protein Pancakes" 
+          src={breakfastMeal.image} 
+          alt={breakfastMeal.name} 
           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-90"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 dark:from-dark-bg via-transparent to-transparent opacity-90"></div>
         <div class="absolute bottom-4 left-4 right-4 text-white">
           <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Breakfast Category</span>
-          <h3 class="font-display font-bold text-lg">Cinnamon Roll Pancakes</h3>
-          <p class="text-xs text-gray-300">40g Protein • 52g Carbs • 460 Cal</p>
+          <h3 class="font-display font-bold text-lg text-white">{breakfastMeal.name}</h3>
+          <p class="text-xs text-gray-200">{breakfastMeal.protein}g Protein • {breakfastMeal.carbs}g Carbs • {breakfastMeal.calories} Cal</p>
         </div>
-      </div>
+      </a>
 
-      <div class="relative rounded-2xl overflow-hidden border border-dark-border group aspect-[4/3]">
+      <!-- Card 3: Snack & Dessert -->
+      <a href={`/menu/${snackMeal.slug}/`} class="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-border group aspect-[4/3] shadow-md block">
         <img 
-          src="/images/meals/rancheros-breakfast-burrito.jpg" 
-          alt="Fudge Brownie Protein Bites" 
+          src={snackMeal.image} 
+          alt={snackMeal.name} 
           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-90"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 dark:from-dark-bg via-transparent to-transparent opacity-90"></div>
         <div class="absolute bottom-4 left-4 right-4 text-white">
           <span class="text-xs uppercase font-bold text-blue-400 tracking-wider">Snack & Dessert</span>
-          <h3 class="font-display font-bold text-lg">Fudge Brownie Bites</h3>
-          <p class="text-xs text-gray-300">20g Protein • 22g Carbs • 260 Cal</p>
+          <h3 class="font-display font-bold text-lg text-white">{snackMeal.name}</h3>
+          <p class="text-xs text-gray-200">{snackMeal.protein}g Protein • {snackMeal.carbs}g Carbs • {snackMeal.calories} Cal</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
