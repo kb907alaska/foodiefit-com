@@ -18,13 +18,13 @@ const highProteinMeals = MEALS_DATA.filter(m => m.protein >= 40).sort((a, b) => 
     <Breadcrumbs items={[{ name: 'High Protein Meals' }]} />
 
     <div class="text-center max-w-3xl mx-auto my-12">
-      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+      <span class="text-brand-600 dark:text-brand-400 font-bold uppercase tracking-widest text-xs mb-2 block">
         45g – 70g+ Protein Per Portion
       </span>
-      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
         High Protein Meal Prep
       </h1>
-      <p class="text-gray-300 text-lg leading-relaxed">
+      <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed">
         Engineered for muscle recovery, strength training, and lean body composition goals. Cooked fresh daily in Las Vegas.
       </p>
     </div>
@@ -40,7 +40,7 @@ const highProteinMeals = MEALS_DATA.filter(m => m.protein >= 40).sort((a, b) => 
     </div>
 
     <div class="text-center py-8">
-      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+      <a href={orderUrl} class="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red hover:scale-105 transition-all">
         Order High-Protein Meals &rarr;
       </a>
     </div>

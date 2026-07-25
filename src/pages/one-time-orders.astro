@@ -15,13 +15,13 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl();
     <Breadcrumbs items={[{ name: 'One-Time Orders' }]} />
 
     <div class="text-center max-w-3xl mx-auto my-12">
-      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+      <span class="text-brand-600 dark:text-brand-400 font-bold uppercase tracking-widest text-xs mb-2 block">
         Zero Commitment • Order As Needed
       </span>
-      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
         One-Time Meal Orders
       </h1>
-      <p class="text-gray-300 text-lg leading-relaxed">
+      <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed">
         Not ready for a weekly subscription? Order 1 meal or 20 meals whenever you want. No order minimums and no hidden fees.
       </p>
     </div>
@@ -32,7 +32,7 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl();
     />
 
     <div class="text-center py-8">
-      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+      <a href={orderUrl} class="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red hover:scale-105 transition-all">
         Start One-Time Order &rarr;
       </a>
     </div>
