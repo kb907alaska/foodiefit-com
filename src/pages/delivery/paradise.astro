@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Paradise & Strip Corridor Meal Prep Delivery | Foodie Fit"
+  description="Fresh prepared meal prep delivery for Paradise residents, UNLV students, and hospitality professionals in Las Vegas."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'Paradise Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Hospitality & UNLV Area Coverage
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Paradise Meal Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Designed for busy resort employees, UNLV students, healthcare workers, and Paradise residents who need quick, clean nutrition.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Is Paradise and the airport corridor included in Foodie Fit's delivery zone?"
+      answer="Yes! ZIP codes 89109, 89119, 89120, 89121, and 89169 in Paradise receive fresh daily meal prep delivery."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Paradise Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

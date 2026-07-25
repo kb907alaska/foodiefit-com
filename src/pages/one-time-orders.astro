@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="One-Time Meal Prep Delivery Las Vegas (No Subscription Required) | Foodie Fit"
+  description="Order fresh prepared meals without a subscription commitment. Single orders delivered next-day in Las Vegas & Henderson or ready for store pickup."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'One-Time Orders' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Zero Commitment • Order As Needed
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        One-Time Meal Orders
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Not ready for a weekly subscription? Order 1 meal or 20 meals whenever you want. No order minimums and no hidden fees.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Can I order Foodie Fit meals just once without subscribing?"
+      answer="Yes! Foodie Fit never forces subscription commitments. You can place a single one-time order for local delivery or store pickup whenever it fits your schedule."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Start One-Time Order &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

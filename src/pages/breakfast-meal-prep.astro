@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const breakfastMeals = MEALS_DATA.filter(m => m.category === 'breakfast');
+---
+
+<BaseLayout
+  title="Breakfast Meal Prep Las Vegas (Yellow Label) | Foodie Fit"
+  description="High-protein chef breakfasts made fresh daily in Las Vegas. Cinnamon roll protein pancakes, steak breakfast burritos, and overnight oats."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Breakfast Meal Prep' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-amber-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Yellow Label Category • Morning Powerhouse
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Breakfast Meal Prep
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Start your morning in Southern Nevada with dessert-level flavor packed with 40g+ protein per serving.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What morning options are available in the Breakfast collection?"
+      answer="Foodie Fit Yellow-Label Breakfasts include protein cinnamon roll pancakes, steak and egg white breakfast burritos, turkey sausage scrambles, Denver omelets, and vanilla blueberry overnight oats."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={breakfastMeals} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Breakfast Prep &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

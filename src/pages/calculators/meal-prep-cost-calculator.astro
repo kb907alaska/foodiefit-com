@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Interactive Meal-Prep Cost & Time Calculator | Foodie Fit"
+  description="Calculate your weekly grocery costs, cooking time, gas, and food waste vs. ordering chef-cooked prepared meals from Foodie Fit."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Meal Prep Cost Calculator' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Interactive Cost Comparison Tool
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Meal-Prep Cost Calculator
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        See how much time and money you save when switching from grocery shopping, cooking, and washing dishes to Foodie Fit.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Is buying Foodie Fit cheaper than grocery shopping and cooking at home?"
+      answer="When factoring in grocery costs, food waste (rotting veggies), gas, and 5 to 7 hours of weekend prep/cleaning time valued at your hourly wage, Foodie Fit is often equal to or cheaper than cooking at home."
+    />
+
+    <!-- Interactive Calculator Container -->
+    <div class="bg-dark-card border border-dark-border rounded-3xl p-8 sm:p-12 max-w-3xl mx-auto my-12 shadow-2xl space-y-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label for="meals-per-week" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Meals Per Week</label>
+          <input type="number" id="meals-per-week" min="3" max="30" value="10" class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-white font-bold" />
+        </div>
+        <div>
+          <label for="hourly-val" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Your Value of Time ($/hr)</label>
+          <input type="number" id="hourly-val" min="15" max="250" value="35" class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-white font-bold" />
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-bg border border-dark-border grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <span class="text-xs text-gray-400 font-semibold block uppercase">Cooking at Home Cost</span>
+          <span id="home-cost" class="font-display text-3xl font-bold text-red-400">$185.00 / wk</span>
+          <span id="home-hours" class="text-xs text-gray-400 block mt-1">Includes 5.5 hrs grocery & cooking</span>
+        </div>
+
+        <div>
+          <span class="text-xs text-gray-400 font-semibold block uppercase">Foodie Fit Cost</span>
+          <span id="ff-cost" class="font-display text-3xl font-bold text-emerald-400">$119.90 / wk</span>
+          <span class="text-xs text-emerald-400 block mt-1">Includes 0 hrs cooking & 0 food waste</span>
+        </div>
+      </div>
+
+      <div class="text-center pt-4">
+        <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+          Save Time & Order Today &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const mealsInput = document.getElementById('meals-per-week') as HTMLInputElement;
+  const hourlyInput = document.getElementById('hourly-val') as HTMLInputElement;
+  const homeCostEl = document.getElementById('home-cost');
+  const ffCostEl = document.getElementById('ff-cost');
+
+  function calculate() {
+    const meals = parseInt(mealsInput.value, 10) || 10;
+    const hourly = parseInt(hourlyInput.value, 10) || 35;
+
+    const groceryCost = meals * 8.5; // $8.50 per meal groceries
+    const timeSpentHours = 1.5 + (meals * 0.35); // base + time per meal
+    const timeCost = timeSpentHours * hourly;
+    const totalHomeCost = groceryCost + timeCost;
+
+    const ffTotal = meals * 11.99;
+
+    if (homeCostEl) homeCostEl.textContent = `$${totalHomeCost.toFixed(2)} / wk`;
+    if (ffCostEl) ffCostEl.textContent = `$${ffTotal.toFixed(2)} / wk`;
+  }
+
+  mealsInput?.addEventListener('input', calculate);
+  hourlyInput?.addEventListener('input', calculate);
+</script>

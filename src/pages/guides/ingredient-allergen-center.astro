@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+---
+
+<BaseLayout
+  title="Ingredient & Allergen Center | Foodie Fit Las Vegas"
+  description="Centralized ingredient standards, allergen policies, cross-contact disclosures, and major allergen exclusions."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Ingredient & Allergen Center' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Food Safety & Transparency
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Ingredient & Allergen Center
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Full transparency regarding our culinary ingredients, allergen labeling, and commercial kitchen practices.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What is Foodie Fit's policy on cross-contact for severe food allergies?"
+      answer="All Foodie Fit meals are prepared in a shared commercial facility that handles milk, eggs, fish, crustacean shellfish, tree nuts, peanuts, wheat, and soy. We do not claim any meal is 100% free of potential trace cross-contact."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
+        <h3 class="font-display font-bold text-lg text-white uppercase">Made Without Gluten</h3>
+        <p class="text-xs text-gray-300">Meals labeled Gluten-Free are prepared using naturally gluten-free grains (jasmine rice, sweet potatoes, oats) and sauces without wheat flour.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
+        <h3 class="font-display font-bold text-lg text-white uppercase">Made Without Dairy</h3>
+        <p class="text-xs text-gray-300">Dairy-Free meals contain zero milk, cheese, butter, or heavy cream in recipe ingredients.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

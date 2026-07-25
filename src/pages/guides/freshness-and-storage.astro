@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+---
+
+<BaseLayout
+  title="Freshness, Storage & Food Safety Guide | Foodie Fit"
+  description="Learn how to store, refrigerate, and preserve Foodie Fit meals for up to 5–7 days after store pickup or delivery."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Freshness & Storage Guide' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Fresh Daily Quality
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Freshness & Storage Guide
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Proper refrigeration and storage tips to keep your Foodie Fit meals tasting fresh for up to 7 days.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="How long do Foodie Fit fresh meals last in the refrigerator?"
+      answer="Foodie Fit meals stay fresh for 5 to 7 days when kept properly refrigerated at 38°F or below immediately upon arrival or store pickup."
+    />
+
+    <div class="space-y-6 max-w-3xl mx-auto my-12 text-sm text-gray-300">
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">1. Refrigeration Requirements</h3>
+        <p>Keep containers sealed in the back of your main refrigerator shelves (35°F – 38°F). Avoid storing on door shelves where temperature fluctuates.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">2. Flash Chilling Technology</h3>
+        <p>We rapidly flash-cool meals in commercial blast chillers immediately after cooking to lock in food safety and moisture without freezing.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

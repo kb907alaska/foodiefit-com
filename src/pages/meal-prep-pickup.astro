@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import LocationCard from '../components/locations/LocationCard.astro';
+import { COMMERCE_CONFIG } from '../config/commerce';
+---
+
+<BaseLayout
+  title="Meal Prep Store Pickup Las Vegas (3 Locations) | Foodie Fit"
+  description="Preorder online for fast 60-second in-store pickup or walk in daily 8 AM – 8 PM at Green Valley, Summerlin, and Northwest Las Vegas stores."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Meal Prep Pickup' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Fast In-Store Collection
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Meal Prep Store Pickup
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Save on delivery fees! Order online ahead of time and collect your meals at any of our three Las Vegas retail storefronts.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What is the difference between online pre-order pickup and walk-in shopping?"
+      answer="Online pre-order pickup guarantees your specific meal choices are bagged and waiting on our express shelf. Walk-in shopping lets you browse our store refrigerators daily 8:00 AM – 8:00 PM without ordering ahead."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+      {COMMERCE_CONFIG.storeLocations.map((store) => (
+        <LocationCard location={store} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

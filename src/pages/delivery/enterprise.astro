@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Enterprise & Southwest Las Vegas Meal Delivery | Foodie Fit"
+  description="Fresh prepared meal prep delivery in Enterprise, NV (89139, 89141, 89178, 89179). High-protein, low carb, and chef-cooked meals."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'Enterprise Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Southwest Las Vegas
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Enterprise Meal Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Serving Enterprise, Rhodes Ranch, Southern Highlands, and Mountain's Edge with next-day healthy meal delivery.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Does Foodie Fit deliver to Enterprise and Southern Highlands?"
+      answer="Yes! All Enterprise and Southwest Las Vegas ZIP codes (89139, 89141, 89178, 89179) receive next-day delivery when ordered before the 6:00 PM cutoff."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Enterprise Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

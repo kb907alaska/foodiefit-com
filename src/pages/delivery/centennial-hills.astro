@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Centennial Hills & Northwest Las Vegas Meal Delivery | Foodie Fit"
+  description="Fresh prepared meal prep delivery in Centennial Hills & Skye Canyon. Doorstep delivery or pickup at 7085 W Ann Rd."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'Centennial Hills Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Northwest Store Connection
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Centennial Hills Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Serving Centennial Hills, Skye Canyon, Providence, and Northwest Las Vegas with next-day healthy meal delivery.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Where is the nearest store location for Centennial Hills residents?"
+      answer="Centennial Hills residents can pick up orders or shop walk-in at our Northwest storefront located at 7085 W Ann Rd #140 (Ann Rd & US-95)."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Centennial Hills Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

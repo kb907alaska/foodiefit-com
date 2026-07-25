@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../../data/meals';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+// Rank meals by grams of protein per dollar
+const rankedMeals = MEALS_DATA.map((meal) => {
+  const proteinPerDollar = meal.price > 0 ? (meal.protein / meal.price) : 0;
+  return { ...meal, proteinPerDollar };
+}).sort((a, b) => b.proteinPerDollar - a.proteinPerDollar).slice(0, 15);
+---
+
+<BaseLayout
+  title="Protein-per-Dollar Efficiency Ranker | Foodie Fit Las Vegas"
+  description="Compare live Foodie Fit meals ranked by protein per dollar. Find the highest protein density for your body building and training budget."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Protein-per-Dollar Calculator' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Live Economic Macro Analysis
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Protein-Per-Dollar Ranker
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Maximize your bodybuilding and nutrition budget. Here are the top Foodie Fit meals ranked by total grams of protein per dollar spent.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Which Foodie Fit meal offers the highest protein per dollar?"
+      answer="Signature meals featuring lean sirloin steak, chicken breast, and egg white scrambles consistently yield 4.0g to 4.8g+ of protein per dollar, making them the most cost-efficient protein sources on our menu."
+    />
+
+    <div class="bg-dark-card border border-dark-border rounded-3xl p-6 sm:p-8 my-12 shadow-2xl overflow-x-auto">
+      <table class="w-full text-left text-sm text-gray-300">
+        <thead>
+          <tr class="border-b border-dark-border bg-dark-bg/60">
+            <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Rank</th>
+            <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Meal Name</th>
+            <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Category</th>
+            <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Price</th>
+            <th scope="col" class="py-4 px-4 font-bold text-emerald-400 uppercase text-xs">Protein</th>
+            <th scope="col" class="py-4 px-4 font-bold text-brand-400 uppercase text-xs">Protein / Dollar</th>
+            <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-dark-border">
+          {rankedMeals.map((m, idx) => (
+            <tr class="hover:bg-dark-surface/50 transition-colors">
+              <td class="py-4 px-4 font-display font-bold text-brand-400">#{idx + 1}</td>
+              <td class="py-4 px-4 font-bold text-white flex items-center gap-3">
+                <img src={m.image} alt={m.name} class="w-10 h-10 rounded-lg object-cover flex-shrink-0" />
+                <span>{m.name}</span>
+              </td>
+              <td class="py-4 px-4 text-xs font-semibold uppercase">{m.category}</td>
+              <td class="py-4 px-4 font-bold text-white">${m.price.toFixed(2)}</td>
+              <td class="py-4 px-4 font-extrabold text-emerald-400 text-base">{m.protein}g</td>
+              <td class="py-4 px-4 font-black text-brand-400 text-base bg-brand-500/10">
+                {m.proteinPerDollar.toFixed(2)}g / $
+              </td>
+              <td class="py-4 px-4">
+                <a href={ExternalCommerceAdapter.getOrderUrl(m.sku)} class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-green">
+                  Order Now
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</BaseLayout>

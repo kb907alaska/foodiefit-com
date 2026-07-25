@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="North Las Vegas Meal Prep Delivery | Foodie Fit"
+  description="Fresh prepared meal prep delivery in North Las Vegas, NV (89030, 89031, 89032, 89081, 89084). Order high protein meals online."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'North Las Vegas Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Verified Service Zone
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        North Las Vegas Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Fresh daily prepared meals delivered to verified residential and commercial ZIP codes across North Las Vegas.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Which North Las Vegas ZIP codes are served by Foodie Fit?"
+      answer="We deliver to North Las Vegas ZIP codes 89030, 89031, 89032, 89081, 89084, and 89085 with next-day doorstep delivery when ordered before 6:00 PM."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order North Las Vegas Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

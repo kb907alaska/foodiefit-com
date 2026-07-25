@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Henderson & Green Valley Meal Delivery | Foodie Fit"
+  description="Fresh prepared meal prep delivery in Henderson & Green Valley, NV. Order online for home delivery or pick up at 2185 E Windmill Ln."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'Henderson Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Green Valley Store Connection
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Henderson Meal Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Serving Henderson, Green Valley Ranch, Silverado Ranch, and Seven Hills with fresh prepared healthy meal delivery and store pickup.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Is Henderson eligible for Foodie Fit next-day meal delivery?"
+      answer="Yes! All Henderson ZIP codes (89011, 89012, 89014, 89044, 89052, 89074, 89123) are eligible for next-day delivery when ordered before 6:00 PM."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Henderson Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

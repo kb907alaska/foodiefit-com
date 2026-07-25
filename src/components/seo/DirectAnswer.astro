@@ -1,0 +1,25 @@
+---
+export interface Props {
+  question: string;
+  answer: string;
+  sourceLabel?: string;
+}
+
+const { question, answer, sourceLabel = 'Foodie Fit Verified Answer' } = Astro.props;
+---
+
+<div class="my-6 p-6 rounded-2xl bg-gradient-to-r from-brand-950/40 via-dark-card to-dark-card border border-brand-500/30 shadow-lg">
+  <div class="flex items-center justify-between mb-2">
+    <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-400 flex items-center gap-1.5">
+      <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+      {sourceLabel}
+    </span>
+    <span class="text-[10px] text-gray-400 font-mono">AEO Module</span>
+  </div>
+  <h3 class="font-display font-bold text-base text-white uppercase mb-2">
+    {question}
+  </h3>
+  <p class="text-sm text-gray-200 leading-relaxed font-normal">
+    {answer}
+  </p>
+</div>

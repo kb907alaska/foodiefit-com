@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Summerlin Meal Prep Delivery | Foodie Fit West Las Vegas"
+  description="Fresh prepared meal prep delivery in Summerlin & West Las Vegas. Next-day doorstep delivery or pickup at 4235 S Fort Apache Rd."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'Summerlin Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        West Las Vegas Coverage
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Summerlin Meal Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Serving Summerlin South, Summerlin North, The Lakes, and Peccole Ranch with chef-crafted healthy meal delivery.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="Can Summerlin residents pick up meals in-store?"
+      answer="Yes! In addition to doorstep delivery, Summerlin residents can visit our storefront at 4235 S Fort Apache Rd #220 (open 8 AM – 8 PM daily) for instant grab-and-go or online pre-order collection."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Summerlin Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+---
+
+<BaseLayout
+  title="How to Read Foodie Fit Nutrition Labels & Macros | Guide"
+  description="Learn how to read calories, protein, net carbs, fat, fiber, and sodium on Foodie Fit meal containers without medical advice."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'How to Read Macros' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Nutritional Literacy
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        How to Read Foodie Fit Macros
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Understand the exact numbers printed on every Foodie Fit meal container and website listing.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="How does Foodie Fit calculate Net Carbs on meal labels?"
+      answer="Net Carbs are calculated by subtracting dietary fiber and sugar alcohols from total carbohydrates (Net Carbs = Total Carbs - Fiber - Sugar Alcohols). Fiber and sugar alcohols have minimal impact on blood glucose."
+    />
+
+    <div class="space-y-6 max-w-3xl mx-auto my-12 text-sm text-gray-300 leading-relaxed">
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">1. Protein (Grams)</h3>
+        <p>Essential for muscle tissue repair, recovery, and satiety. Foodie Fit lists verified protein grams tested from cooked meat weights.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">2. Total Carbs vs Net Carbs</h3>
+        <p>Total carbs include all starches, sugars, and fiber. Net carbs represent the digestible carbohydrates available for energy.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+        <h3 class="font-display font-bold text-lg text-white uppercase mb-2">3. Healthy Fats</h3>
+        <p>Derived from cold-pressed extra virgin olive oil, wild salmon, avocados, ghee, and natural nuts.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

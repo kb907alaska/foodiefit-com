@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const activeMeals = MEALS_DATA.filter(m => m.category === 'active');
+---
+
+<BaseLayout
+  title="Balanced & Active Meals Las Vegas (Green Label) | Foodie Fit"
+  description="Explore active green-label balanced prepared meals in Las Vegas. Perfect ratios of complex carbohydrates, lean protein, and healthy fats."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Balanced Meals' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Green Label Category • Athletic Fuel
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Balanced Active Meals
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Optimal macro ratios of long-grain jasmine rice, sweet potato hash, quinoa, and lean steak or chicken.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What makes a meal 'Balanced / Active' at Foodie Fit?"
+      answer="Balanced (Green Label) meals combine high-protein lean meats with complex carbohydrates (jasmine rice, sweet potatoes, brown rice) and vegetables to provide sustained physical energy for active daily routines."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={activeMeals} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Balanced Meals &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

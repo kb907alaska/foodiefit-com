@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import CategoryBadge from '../../components/menu/CategoryBadge.astro';
+---
+
+<BaseLayout
+  title="Meal Category Color System Guide | Foodie Fit Las Vegas"
+  description="Learn how Foodie Fit's color-coded meal taxonomy works: Red (Low Carb), Green (Active), Yellow (Breakfast), and Blue (Snack & Dessert)."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Meal Category Guide' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Visual Taxonomy System
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Meal Category Guide
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Foodie Fit uses an intuitive 4-color category system so you can instantly grab meals that fit your macro targets in store or online.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What do the four Foodie Fit meal colors mean?"
+      answer="Red represents Low-Carb meals (under 15g net carbs). Green represents Active Balanced meals (complex carbs + protein). Yellow represents Breakfast meals. Blue represents Snacks, Desserts, and Protein Beverages."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+      <div class="p-8 rounded-3xl bg-dark-card border border-red-500/40 space-y-4">
+        <CategoryBadge category="low-carb" />
+        <h2 class="font-display font-bold text-2xl text-white uppercase">Red Label: Low Carb</h2>
+        <p class="text-sm text-gray-300">Under 15g net carbs per serving. Made using riced cauliflower, zucchini ribbons, roasted asparagus, and seared meats.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-emerald-500/40 space-y-4">
+        <CategoryBadge category="active" />
+        <h2 class="font-display font-bold text-2xl text-white uppercase">Green Label: Active / Balanced</h2>
+        <p class="text-sm text-gray-300">Athletic performance energy. Features long-grain jasmine rice, cinnamon sweet potato hash, brown rice, and lean sirloin or chicken.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-amber-500/40 space-y-4">
+        <CategoryBadge category="breakfast" />
+        <h2 class="font-display font-bold text-2xl text-white uppercase">Yellow Label: Breakfast</h2>
+        <p class="text-sm text-gray-300">High-protein morning powerhouses. Protein cinnamon roll pancakes, steak and egg white burritos, omelets, and overnight oats.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-dark-card border border-blue-500/40 space-y-4">
+        <CategoryBadge category="snack-dessert" />
+        <h2 class="font-display font-bold text-2xl text-white uppercase">Blue Label: Snacks & Desserts</h2>
+        <p class="text-sm text-gray-300">High-protein guilt-free treats. Fudge brownie bites, bakery protein cookies, key lime cheesecake cups, and collagen smoothies.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

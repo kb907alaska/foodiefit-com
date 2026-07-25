@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const snackMeals = MEALS_DATA.filter(m => m.category === 'snack-dessert');
+---
+
+<BaseLayout
+  title="Healthy Snacks, Protein Desserts & Drinks | Foodie Fit Las Vegas"
+  description="Explore blue-label protein snacks, fudge brownie bites, protein cookies, collagen smoothies, and buffalo chicken dips in Las Vegas."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Healthy Snacks & Drinks' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Blue Label Category • Guilt-Free Treats
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Snacks & Protein Desserts
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Satisfy sweet and savory cravings with high-protein bites, bakery-style cookies, and fresh collagen shakes.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What options are in the Blue Label Snack & Dessert category?"
+      answer="Foodie Fit Blue-Label items feature fudge brownie protein bites, soft-batch peanut butter chocolate cookies, key lime protein cheesecake cups, buffalo chicken dip, and collagen smoothies."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={snackMeals} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Protein Snacks &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

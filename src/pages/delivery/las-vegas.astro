@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Healthy Meal Prep Delivery Las Vegas, NV | Foodie Fit"
+  description="Fresh prepared meal prep delivery in Las Vegas, NV. Chef-crafted high protein, low carb, and balanced meals delivered to your door."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'Las Vegas Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        City-Wide Coverage
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Las Vegas Meal Prep Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Fresh daily prepared meals delivered to homes, condos, and commercial buildings across Las Vegas.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="How fast is Foodie Fit meal delivery in Las Vegas?"
+      answer="Orders placed by 6:00 PM are delivered as early as the next morning in thermal insulated bags with gel ice packs that preserve 38°F refrigeration for up to 6 hours."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Las Vegas Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+---
+
+<BaseLayout
+  title="Spring Valley Meal Prep Delivery | Foodie Fit Las Vegas"
+  description="Fresh prepared meal prep delivery in Spring Valley, NV. Order high protein and low carb meals delivered next day."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[
+      { name: 'Delivery Areas', href: '/delivery-areas/' },
+      { name: 'Spring Valley Delivery' }
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Central & West Las Vegas
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Spring Valley Meal Delivery
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Delivering fresh, never-frozen prepared meals to Spring Valley homes and apartments.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What ZIP codes in Spring Valley are eligible for Foodie Fit delivery?"
+      answer="Spring Valley ZIP codes 89103, 89117, 89146, and 89147 are covered with next-day home delivery when ordered before 6:00 PM."
+    />
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Spring Valley Delivery &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>

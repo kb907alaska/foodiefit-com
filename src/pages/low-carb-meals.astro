@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import MealGrid from '../components/menu/MealGrid.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const lowCarbMeals = MEALS_DATA.filter(m => m.category === 'low-carb' || m.carbs <= 15);
+---
+
+<BaseLayout
+  title="Low Carb & Keto Meal Prep Las Vegas (Red Label) | Foodie Fit"
+  description="Discover red-label low-carb prepared meals in Las Vegas. Under 15g net carbs per serving, fresh grilled meats, cauliflower rice, and asparagus."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Low Carb Meals' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Red Label Category • Keto Friendly
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+        Low-Carb Meal Prep
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Ultra-low net carbs paired with premium lean proteins and fiber-rich vegetables. Cooked fresh daily in Southern Nevada.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="How does Foodie Fit define Low-Carb meals?"
+      answer="Foodie Fit Red-Label Low Carb meals feature 15g or fewer net carbohydrates per serving, using cauliflower rice, zucchini ribbons, roasted asparagus, and bell peppers instead of heavy starches."
+    />
+
+    <div class="my-12">
+      <MealGrid meals={lowCarbMeals} />
+    </div>
+
+    <div class="text-center py-8">
+      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+        Order Low-Carb Meals &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>
