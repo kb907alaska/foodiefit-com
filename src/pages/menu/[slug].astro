@@ -35,7 +35,7 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
       
       <!-- Left Column: Meal Image & Quick Specs -->
       <div class="lg:col-span-6 space-y-6">
-        <div class="relative rounded-3xl overflow-hidden border border-dark-border bg-dark-card aspect-[4/3] shadow-2xl">
+        <div class="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-dark-border bg-white dark:bg-dark-card aspect-[4/3] shadow-2xl">
           <img src={meal.image} alt={meal.name} class="w-full h-full object-cover" />
           <div class="absolute top-4 left-4">
             <CategoryBadge category={meal.category} />
@@ -44,24 +44,24 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
 
         <!-- Heating & Storage Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="p-5 rounded-2xl bg-dark-card border border-dark-border">
-            <h4 class="font-display font-bold text-sm text-white uppercase mb-2 flex items-center gap-2">
+          <div class="p-5 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border shadow-sm">
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white uppercase mb-2 flex items-center gap-2">
               <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
               Heating Directions
             </h4>
-            <p class="text-xs text-gray-300 leading-relaxed">{meal.heatingInstructions}</p>
+            <p class="text-xs text-slate-600 dark:text-gray-300 leading-relaxed">{meal.heatingInstructions}</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-dark-card border border-dark-border">
-            <h4 class="font-display font-bold text-sm text-white uppercase mb-2 flex items-center gap-2">
+          <div class="p-5 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border shadow-sm">
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white uppercase mb-2 flex items-center gap-2">
               <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8" />
               </svg>
               Storage Guidance
             </h4>
-            <p class="text-xs text-gray-300 leading-relaxed">{meal.storageInstructions}</p>
+            <p class="text-xs text-slate-600 dark:text-gray-300 leading-relaxed">{meal.storageInstructions}</p>
           </div>
         </div>
       </div>
@@ -70,32 +70,32 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
       <div class="lg:col-span-6 space-y-8">
         <div>
           <div class="flex items-center justify-between gap-4 mb-2">
-            <span class="text-xs font-mono text-dark-muted">SKU: {meal.sku}</span>
+            <span class="text-xs font-mono text-slate-500 dark:text-dark-muted">SKU: {meal.sku}</span>
             <div class="flex gap-1.5">
               {meal.dietaryTags.map(t => <DietaryBadge tag={t} />)}
             </div>
           </div>
 
-          <h1 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight mb-4">
+          <h1 class="font-display font-black text-3xl sm:text-4xl text-slate-900 dark:text-white uppercase tracking-tight mb-4">
             {meal.name}
           </h1>
 
-          <p class="text-gray-300 text-base leading-relaxed mb-6">
+          <p class="text-slate-700 dark:text-gray-300 text-base leading-relaxed mb-6">
             {meal.longDescription}
           </p>
 
           <!-- Portion Options Selector -->
           {meal.portionOptions && meal.portionOptions.length > 0 && (
-            <div class="p-4 rounded-2xl bg-dark-card border border-dark-border mb-6">
-              <span class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Select Portion Size</span>
+            <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border mb-6 shadow-sm">
+              <span class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-gray-400 mb-3">Select Portion Size</span>
               <div class="grid grid-cols-2 gap-3">
                 {meal.portionOptions.map((p) => (
-                  <div class="p-3 rounded-xl border border-brand-500/50 bg-brand-500/10 text-white flex flex-col justify-between">
+                  <div class="p-3 rounded-xl border border-brand-500/50 bg-brand-500/10 text-slate-900 dark:text-white flex flex-col justify-between">
                     <div>
-                      <span class="font-bold text-sm block">{p.name}</span>
-                      <span class="text-xs text-brand-400 font-semibold">{p.protein}g Protein • {p.calories} Cal</span>
+                      <span class="font-bold text-sm block text-slate-900 dark:text-white">{p.name}</span>
+                      <span class="text-xs text-brand-500 dark:text-brand-400 font-semibold">{p.protein}g Protein • {p.calories} Cal</span>
                     </div>
-                    <span class="font-display text-lg font-bold mt-2">${p.price.toFixed(2)}</span>
+                    <span class="font-display text-lg font-bold mt-2 text-slate-900 dark:text-white">${p.price.toFixed(2)}</span>
                   </div>
                 ))}
               </div>
@@ -103,7 +103,7 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
           )}
 
           <!-- Nutrition Label Box -->
-          <div class="nutrition-label bg-white text-black p-6 rounded-2xl shadow-xl max-w-sm mb-6">
+          <div class="nutrition-label bg-white text-black p-6 rounded-2xl shadow-xl max-w-sm mb-6 border-2 border-slate-900">
             <h2 class="font-black text-2xl uppercase border-b-8 border-black pb-1 leading-none">Nutrition Facts</h2>
             <div class="text-xs font-bold py-1 border-b-4 border-black flex justify-between">
               <span>Serving Size</span>
@@ -151,23 +151,23 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
           </div>
 
           <!-- Ingredients & Allergens -->
-          <div class="space-y-4 p-5 rounded-2xl bg-dark-card border border-dark-border text-xs">
+          <div class="space-y-4 p-5 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border text-xs shadow-sm">
             <div>
-              <span class="font-bold text-white uppercase block mb-1">Ingredients:</span>
-              <p class="text-gray-300 leading-relaxed">{meal.ingredients.join(', ')}.</p>
+              <span class="font-bold text-slate-900 dark:text-white uppercase block mb-1">Ingredients:</span>
+              <p class="text-slate-700 dark:text-gray-300 leading-relaxed">{meal.ingredients.join(', ')}.</p>
             </div>
             {meal.allergens.length > 0 ? (
-              <div class="text-red-400 font-semibold">
+              <div class="text-red-500 dark:text-red-400 font-semibold">
                 <span>Contains Allergens: </span>
                 <span>{meal.allergens.join(', ')}.</span>
               </div>
             ) : (
-              <div class="text-brand-400 font-semibold">
+              <div class="text-brand-500 dark:text-brand-400 font-semibold">
                 <span>No Major Common Allergens in Recipe Ingredients.</span>
               </div>
             )}
-            <p class="text-[11px] text-dark-muted pt-2 border-t border-dark-border">
-              Prepared in a shared commercial facility. Review our full <a href="/nutrition-allergen-disclaimer/" class="underline text-brand-400">Nutrition & Allergen Disclaimer</a>.
+            <p class="text-[11px] text-slate-500 dark:text-dark-muted pt-2 border-t border-gray-200 dark:border-dark-border">
+              Prepared in a shared commercial facility. Review our full <a href="/nutrition-allergen-disclaimer/" class="underline text-brand-500 dark:text-brand-400">Nutrition & Allergen Disclaimer</a>.
             </p>
           </div>
 
@@ -175,7 +175,7 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
           <div class="pt-6 flex flex-col sm:flex-row items-center gap-4">
             <a
               href={orderUrl}
-              class="w-full sm:flex-1 py-4 px-8 rounded-2xl font-display text-base font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-green text-center transition-all"
+              class="w-full sm:flex-1 py-4 px-8 rounded-2xl font-display text-base font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red text-center transition-all"
             >
               Order This Meal Now &rarr;
             </a>
