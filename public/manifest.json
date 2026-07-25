@@ -1,0 +1,50 @@
+{
+  "name": "Foodie Fit | Las Vegas Fresh Meal Prep",
+  "short_name": "Foodie Fit",
+  "description": "Chef-cooked, high-protein fresh meal prep delivered in Las Vegas & Henderson, or pick up at 3 local retail stores.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F172A",
+  "theme_color": "#EF5454",
+  "lang": "en-US",
+  "categories": ["food", "health", "lifestyle", "shopping"],
+  "icons": [
+    {
+      "src": "/images/foodiefit-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/foodiefit-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Explore Menu",
+      "short_name": "Menu",
+      "description": "View 30+ rotating fresh meal prep items",
+      "url": "/menu/",
+      "icons": [{ "src": "/images/foodiefit-logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Build Your Week",
+      "short_name": "Planner",
+      "description": "Slot meals into Monday-Sunday daily routines",
+      "url": "/build-your-week/",
+      "icons": [{ "src": "/images/foodiefit-logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Store Locations",
+      "short_name": "Locations",
+      "description": "Find Green Valley, Summerlin & Northwest stores",
+      "url": "/locations/",
+      "icons": [{ "src": "/images/foodiefit-logo.png", "sizes": "192x192" }]
+    }
+  ]
+}

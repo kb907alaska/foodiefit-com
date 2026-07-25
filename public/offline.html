@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline | Foodie Fit Las Vegas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0F172A;
+      color: #F8FAFC;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .card {
+      background-color: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem;
+      max-width: 480px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .logo {
+      height: 48px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      color: #FFFFFF;
+    }
+    p {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #EF5454, #E11D48);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.875rem 2rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 25px -5px rgba(239, 84, 84, 0.4);
+      transition: transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.03);
+    }
+    .phone-box {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #334155;
+      font-size: 0.85rem;
+      color: #CBD5E1;
+    }
+    .phone-link {
+      color: #EF5454;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/images/foodiefit-logo.png" alt="Foodie Fit Logo" class="logo" />
+    <h1>You Are Offline</h1>
+    <p>It looks like your internet connection is currently offline. You can still call our Las Vegas store support line directly or retry your connection below.</p>
+    <button class="btn" onclick="window.location.reload()">Retry Connection</button>
+    <div class="phone-box">
+      Need urgent support? Call us: <a href="tel:7028448848" class="phone-link">(702) 844-8848</a>
+    </div>
+  </div>
+</body>
+</html>
