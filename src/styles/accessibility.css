@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Foodie Fit WCAG 2.2 AA Accessibility Engine Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Universal High-Contrast Focus Ring
+   -------------------------------------------------------------------------- */
+*:focus-visible {
+  outline: 3px solid #EF5454 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 5px rgba(239, 84, 84, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Accessibility Control Classes (Applied on <html> or <body>)
+   -------------------------------------------------------------------------- */
+
+/* Increase Text Size Level 1 */
+html.a11y-text-lg, body.a11y-text-lg {
+  font-size: 112.5% !important; /* 18px base */
+}
+
+/* Decrease Text Size Level 1 */
+html.a11y-text-sm, body.a11y-text-sm {
+  font-size: 93.75% !important; /* 15px base */
+}
+
+/* High Contrast Mode */
+html.a11y-high-contrast, body.a11y-high-contrast {
+  --color-bg: #FFFFFF !important;
+  --color-surface: #F1F5F9 !important;
+  --color-card: #FFFFFF !important;
+  --color-text: #000000 !important;
+  --color-text-muted: #1E293B !important;
+  --color-border: #000000 !important;
+}
+
+html.a11y-high-contrast.dark, body.a11y-high-contrast.dark {
+  --color-bg: #000000 !important;
+  --color-surface: #111111 !important;
+  --color-card: #000000 !important;
+  --color-text: #FFFFFF !important;
+  --color-text-muted: #E2E8F0 !important;
+  --color-border: #FFFFFF !important;
+}
+
+html.a11y-high-contrast p,
+html.a11y-high-contrast span,
+html.a11y-high-contrast h1,
+html.a11y-high-contrast h2,
+html.a11y-high-contrast h3,
+html.a11y-high-contrast h4,
+html.a11y-high-contrast a,
+html.a11y-high-contrast button {
+  font-weight: 700 !important;
+}
+
+/* Grayscale Mode */
+html.a11y-grayscale, body.a11y-grayscale {
+  filter: grayscale(100%) !important;
+}
+
+/* Invert Colors Mode */
+html.a11y-invert, body.a11y-invert {
+  filter: invert(100%) hue-rotate(180deg) !important;
+}
+html.a11y-invert img,
+html.a11y-invert video,
+html.a11y-invert .a11y-no-invert {
+  filter: invert(100%) hue-rotate(180deg) !important;
+}
+
+/* Highlight Links Mode */
+html.a11y-highlight-links a, body.a11y-highlight-links a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
+  background-color: rgba(239, 84, 84, 0.15) !important;
+  color: #BE123C !important;
+  border-bottom: 2px solid #EF5454 !important;
+}
+html.dark.a11y-highlight-links a {
+  color: #FB7185 !important;
+  background-color: rgba(239, 84, 84, 0.25) !important;
+}
+
+/* Readable Font Mode */
+html.a11y-readable-font, body.a11y-readable-font {
+  font-family: Arial, Helvetica, Verdana, sans-serif !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.02em !important;
+}
+html.a11y-readable-font h1,
+html.a11y-readable-font h2,
+html.a11y-readable-font h3,
+html.a11y-readable-font h4 {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Pause Animations Mode */
+html.a11y-pause-animations *, body.a11y-pause-animations * {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* Bigger Cursor Mode */
+html.a11y-big-cursor, html.a11y-big-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='%23EF5454' stroke='%23ffffff' stroke-width='2'%3E%3Cpath d='M3 3l7 18 3-7 7-3L3 3z'/%3E%3C/svg%3E"), default !important;
+}
+html.a11y-big-cursor a, html.a11y-big-cursor button, html.a11y-big-cursor input {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='%23E11D48' stroke='%23ffffff' stroke-width='2'%3E%3Cpath d='M10 2a2 2 0 012 2v6h6a2 2 0 110 4h-6v6a2 2 0 11-4 0v-6H4a2 2 0 110-4h6V4a2 2 0 012-2z'/%3E%3C/svg%3E"), pointer !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Panel & Floating Button Specific Overrides
+   -------------------------------------------------------------------------- */
+#a11y-floating-trigger {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#a11y-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+#a11y-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#a11y-panel {
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#a11y-panel.is-open {
+  transform: translateX(0);
+}

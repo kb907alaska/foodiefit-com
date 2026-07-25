@@ -1,0 +1,209 @@
+---
+---
+
+<!-- Floating Lower-Left Accessibility Trigger Button -->
+<button
+  id="a11y-floating-trigger"
+  type="button"
+  class="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-brand-600 hover:bg-brand-500 text-white flex items-center justify-center shadow-2xl border-2 border-white/20 focus:outline-none focus:ring-4 focus:ring-brand-500/50 transition-all hover:scale-110 active:scale-95 cursor-pointer"
+  aria-label="Open accessibility options"
+  aria-expanded="false"
+  aria-controls="a11y-panel"
+  title="Accessibility Options (WCAG 2.2 AA)"
+>
+  <!-- Universal Accessibility Icon (Person in Circle) -->
+  <svg class="w-7 h-7 fill-current pointer-events-none" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2a2 2 0 100 4 2 2 0 000-4zm-1 5a1 1 0 00-1 1v5h1.5v8a1 1 0 002 0v-8H15V8a1 1 0 00-1-1h-3z" />
+    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16z" />
+  </svg>
+</button>
+
+<!-- Backdrop Overlay for Outside Click Close -->
+<div
+  id="a11y-overlay"
+  class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300"
+  aria-hidden="true"
+></div>
+
+<!-- Left Slide-Out Accessibility Panel Dialog -->
+<aside
+  id="a11y-panel"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="a11y-panel-title"
+  aria-describedby="a11y-panel-desc"
+  class="fixed top-0 left-0 bottom-0 z-50 w-full max-w-[380px] sm:max-w-[420px] bg-white dark:bg-dark-card text-slate-900 dark:text-gray-100 shadow-2xl border-r border-gray-200 dark:border-dark-border flex flex-col justify-between overflow-y-auto"
+>
+  <!-- Panel Header -->
+  <div class="p-6 border-b border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface sticky top-0 z-10 flex items-start justify-between gap-4">
+    <div>
+      <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/30 text-[10px] font-bold uppercase tracking-wider mb-1">
+        WCAG 2.2 AA Compliant
+      </div>
+      <h2 id="a11y-panel-title" class="font-display font-black text-xl text-slate-900 dark:text-white uppercase tracking-tight">
+        Accessibility Options
+      </h2>
+      <p id="a11y-panel-desc" class="text-xs text-slate-600 dark:text-gray-400 mt-1 leading-normal">
+        Adjust display & reading settings for optimal comfort on this device.
+      </p>
+    </div>
+
+    <!-- Close Button -->
+    <button
+      id="a11y-close-btn"
+      type="button"
+      class="p-2 rounded-xl text-slate-500 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-dark-border focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+      aria-label="Close accessibility options"
+    >
+      <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Panel Controls Grid (10 Features) -->
+  <div class="p-6 space-y-3 flex-1 overflow-y-auto">
+    <!-- 1. Increase Text Size -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-text-lg"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">A+</span>
+        <span>Increase Text Size</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 2. Decrease Text Size -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-text-sm"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-xs">A-</span>
+        <span>Decrease Text Size</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 3. High Contrast -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-high-contrast"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">◐</span>
+        <span>High Contrast</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 4. Grayscale Mode -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-grayscale"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">⬛</span>
+        <span>Grayscale</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 5. Invert Colors -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-invert"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">☯</span>
+        <span>Invert Colors</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 6. Highlight Links -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-highlight-links"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">🔗</span>
+        <span>Highlight Links</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 7. Readable Font -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-readable-font"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">Aa</span>
+        <span>Readable Font</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 8. Pause Animations -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-pause-animations"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">⏸</span>
+        <span>Pause Animations</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+
+    <!-- 9. Bigger Cursor -->
+    <button
+      type="button"
+      class="a11y-control-btn w-full p-3.5 rounded-xl border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface hover:bg-gray-100 dark:hover:bg-dark-border text-slate-900 dark:text-white text-left flex items-center justify-between transition-colors cursor-pointer group"
+      data-a11y-target="a11y-big-cursor"
+      aria-pressed="false"
+    >
+      <span class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
+        <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center font-bold text-sm">🖱️</span>
+        <span>Bigger Cursor</span>
+      </span>
+      <span class="w-4 h-4 rounded-full border border-gray-300 dark:border-dark-border group-[.is-active]:bg-brand-500 group-[.is-active]:border-brand-500 transition-colors"></span>
+    </button>
+  </div>
+
+  <!-- Panel Footer with Reset Button -->
+  <div class="p-6 border-t border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface sticky bottom-0 z-10 space-y-3">
+    <button
+      id="a11y-reset-btn"
+      type="button"
+      class="w-full py-3.5 px-4 rounded-xl font-display font-bold text-xs uppercase text-slate-700 dark:text-white bg-gray-200 dark:bg-dark-border hover:bg-red-500 hover:text-white dark:hover:bg-red-600 transition-colors text-center cursor-pointer"
+    >
+      Reset All Settings
+    </button>
+    <p class="text-[10px] text-center text-slate-500 dark:text-gray-400">
+      Settings automatically save to your device for future visits.
+    </p>
+  </div>
+</aside>
+
+<script src="../../scripts/accessibility.js"></script>
