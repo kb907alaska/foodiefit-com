@@ -26,22 +26,22 @@ const faqSchemaData = sortedFaqs.map((f: CollectionEntry<'faqs'>) => ({
       <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
         Help & Knowledge Base
       </span>
-      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
         Frequently Asked Questions
       </h1>
-      <p class="text-gray-300 text-lg leading-relaxed">
+      <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed">
         Everything you need to know about our fresh meals, delivery schedules, store hours, and dietary accommodations.
       </p>
     </div>
 
     <div class="space-y-6 my-12">
       {sortedFaqs.map((faq: CollectionEntry<'faqs'>) => (
-        <div class="bg-dark-card border border-dark-border rounded-2xl p-6 sm:p-8 space-y-3">
-          <span class="px-2.5 py-0.5 rounded text-[10px] font-bold uppercase bg-brand-500/10 text-brand-400 border border-brand-500/30">
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-2xl p-6 sm:p-8 space-y-3 shadow-sm transition-colors">
+          <span class="px-2.5 py-0.5 rounded text-[10px] font-bold uppercase bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/30">
             {faq.data.category}
           </span>
-          <h2 class="font-display font-bold text-xl text-white uppercase">{faq.data.question}</h2>
-          <div class="text-gray-300 text-sm leading-relaxed prose prose-invert max-w-none">
+          <h2 class="font-display font-bold text-xl text-slate-900 dark:text-white uppercase">{faq.data.question}</h2>
+          <div class="text-slate-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed max-w-none">
             {faq.body}
           </div>
         </div>

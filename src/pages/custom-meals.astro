@@ -17,42 +17,42 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl();
       <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
         Precision Macro Engineering
       </span>
-      <h1 class="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight mb-6">
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
         Custom Meal Prep
       </h1>
-      <p class="text-gray-300 text-lg leading-relaxed">
+      <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed">
         Following a strict macro prescription from your coach or dietitian? Build your meals by the ounce down to the exact gram.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
-      <div class="bg-dark-card border border-dark-border rounded-3xl p-6 text-center space-y-4">
-        <div class="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 font-bold text-xl mx-auto">
+      <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 text-center space-y-4 shadow-sm transition-colors">
+        <div class="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold text-xl mx-auto">
           PRO
         </div>
-        <h3 class="font-display font-bold text-xl text-white uppercase">1. Pick Protein (4oz – 10oz)</h3>
-        <p class="text-xs text-gray-300">Sirloin Steak, Grilled Chicken, Ground Turkey, Baked Salmon, or Pork Tenderloin.</p>
+        <h2 class="font-display font-bold text-xl text-slate-900 dark:text-white uppercase">1. Pick Protein (4oz – 10oz)</h2>
+        <p class="text-xs text-slate-600 dark:text-gray-300">Sirloin Steak, Grilled Chicken, Ground Turkey, Baked Salmon, or Pork Tenderloin.</p>
       </div>
 
-      <div class="bg-dark-card border border-dark-border rounded-3xl p-6 text-center space-y-4">
-        <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xl mx-auto">
+      <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 text-center space-y-4 shadow-sm transition-colors">
+        <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 font-bold text-xl mx-auto">
           CARB
         </div>
-        <h3 class="font-display font-bold text-xl text-white uppercase">2. Pick Carb (0oz – 10oz)</h3>
-        <p class="text-xs text-gray-300">Jasmine Rice, Roasted Sweet Potatoes, Brown Rice, Quinoa, or Soba Noodles.</p>
+        <h2 class="font-display font-bold text-xl text-slate-900 dark:text-white uppercase">2. Pick Carb (0oz – 10oz)</h2>
+        <p class="text-xs text-slate-600 dark:text-gray-300">Jasmine Rice, Roasted Sweet Potatoes, Brown Rice, Quinoa, or Soba Noodles.</p>
       </div>
 
-      <div class="bg-dark-card border border-dark-border rounded-3xl p-6 text-center space-y-4">
-        <div class="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 font-bold text-xl mx-auto">
+      <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 text-center space-y-4 shadow-sm transition-colors">
+        <div class="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-600 dark:text-brand-400 font-bold text-xl mx-auto">
           VEG
         </div>
-        <h3 class="font-display font-bold text-xl text-white uppercase">3. Pick Veggies (0oz – 6oz)</h3>
-        <p class="text-xs text-gray-300">Steamed Broccoli, Roasted Asparagus, Green Beans, Zucchini, or Cauliflower Rice.</p>
+        <h2 class="font-display font-bold text-xl text-slate-900 dark:text-white uppercase">3. Pick Veggies (0oz – 6oz)</h2>
+        <p class="text-xs text-slate-600 dark:text-gray-300">Steamed Broccoli, Roasted Asparagus, Green Beans, Zucchini, or Cauliflower Rice.</p>
       </div>
     </div>
 
     <div class="text-center py-8">
-      <a href={orderUrl} class="px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-green hover:scale-105 transition-all">
+      <a href={orderUrl} class="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red hover:scale-105 transition-all">
         Build Custom Meal Now &rarr;
       </a>
     </div>

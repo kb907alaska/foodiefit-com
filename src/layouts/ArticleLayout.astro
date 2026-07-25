@@ -24,21 +24,21 @@ const { title, description, publishDate, author, image, category, readTime } = A
 
     <header class="mb-10 text-center sm:text-left">
       {category && (
-        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/30 mb-4">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/30 mb-4">
           {category}
         </span>
       )}
-      <h1 class="font-display text-3xl sm:text-5xl font-black text-white leading-tight mb-4">
+      <h1 class="font-display text-3xl sm:text-5xl font-black text-slate-900 dark:text-white leading-tight mb-4">
         {title}
       </h1>
-      <p class="text-xl text-gray-300 mb-6 leading-relaxed">
+      <p class="text-xl text-slate-600 dark:text-gray-300 mb-6 leading-relaxed">
         {description}
       </p>
 
-      <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-dark-border text-sm text-gray-400">
+      <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-gray-200 dark:border-dark-border text-sm text-slate-500 dark:text-gray-400">
         <div class="flex items-center gap-3">
           {author && (
-            <span class="font-semibold text-white">By {author}</span>
+            <span class="font-semibold text-slate-900 dark:text-white">By {author}</span>
           )}
           {publishDate && (
             <>
@@ -48,18 +48,18 @@ const { title, description, publishDate, author, image, category, readTime } = A
           )}
         </div>
         {readTime && (
-          <span class="text-brand-400 font-medium">{readTime}</span>
+          <span class="text-brand-600 dark:text-brand-400 font-medium">{readTime}</span>
         )}
       </div>
     </header>
 
     {image && (
-      <div class="mb-12 rounded-2xl overflow-hidden shadow-2xl border border-dark-border">
+      <div class="mb-12 rounded-2xl overflow-hidden shadow-xl border border-gray-200 dark:border-dark-border">
         <img src={image} alt={title} class="w-full max-h-[450px] object-cover" />
       </div>
     )}
 
-    <article class="prose prose-invert prose-rose max-w-none prose-headings:font-display prose-headings:text-white prose-p:text-gray-300 prose-p:leading-relaxed prose-li:text-gray-300 prose-strong:text-white">
+    <article class="prose dark:prose-invert prose-rose max-w-none prose-headings:font-display prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-li:text-slate-600 dark:prose-li:text-gray-300 prose-strong:text-slate-900 dark:prose-strong:text-white">
       <slot />
     </article>
   </div>

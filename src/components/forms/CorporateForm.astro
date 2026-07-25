@@ -8,7 +8,7 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
   id="corporate-inquiry-form"
   action={endpoint || "#"} 
   method="POST" 
-  class="bg-dark-card border border-dark-border rounded-3xl p-8 sm:p-12 space-y-6 shadow-2xl"
+  class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-8 sm:p-12 space-y-6 shadow-xl transition-colors"
 >
   <div id="form-feedback" class="hidden p-4 rounded-xl text-sm font-semibold"></div>
 
@@ -20,25 +20,25 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div>
-      <label for="first-name" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">First Name *</label>
+      <label for="first-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">First Name *</label>
       <input 
         type="text" 
         id="first-name" 
         name="firstName" 
         required 
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"
         placeholder="Jane"
       />
     </div>
 
     <div>
-      <label for="last-name" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Last Name *</label>
+      <label for="last-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Last Name *</label>
       <input 
         type="text" 
         id="last-name" 
         name="lastName" 
         required 
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"
         placeholder="Smith"
       />
     </div>
@@ -46,25 +46,25 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div>
-      <label for="work-email" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Work Email *</label>
+      <label for="work-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Work Email *</label>
       <input 
         type="email" 
         id="work-email" 
         name="workEmail" 
         required 
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"
         placeholder="jane@company.com"
       />
     </div>
 
     <div>
-      <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Direct Phone *</label>
+      <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Direct Phone *</label>
       <input 
         type="tel" 
         id="phone" 
         name="phone" 
         required 
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"
         placeholder="(702) 555-0199"
       />
     </div>
@@ -72,24 +72,24 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div>
-      <label for="company-name" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Company Name *</label>
+      <label for="company-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Company Name *</label>
       <input 
         type="text" 
         id="company-name" 
         name="companyName" 
         required 
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"
         placeholder="Vegas Tech Corp"
       />
     </div>
 
     <div>
-      <label for="employee-count" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Total Employees *</label>
+      <label for="employee-count" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Total Employees *</label>
       <select 
         id="employee-count" 
         name="employeeCount" 
         required 
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 transition-colors"
       >
         <option value="">Select Company Size</option>
         <option value="10-25">10 – 25 employees</option>
@@ -102,11 +102,11 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div>
-      <label for="program-interest" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Program Interest</label>
+      <label for="program-interest" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Program Interest</label>
       <select 
         id="program-interest" 
         name="programInterest" 
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 transition-colors"
       >
         <option value="sponsored">Sponsored Company Meal Benefit</option>
         <option value="group">Employee-Paid Group Ordering</option>
@@ -116,26 +116,26 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
     </div>
 
     <div>
-      <label for="zip-code" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Office ZIP Code *</label>
+      <label for="zip-code" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Office ZIP Code *</label>
       <input 
         type="text" 
         id="zip-code" 
         name="zipCode" 
         required 
         pattern="[0-9]{5}"
-        class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-500"
+        class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"
         placeholder="89101"
       />
     </div>
   </div>
 
   <div>
-    <label for="message" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Additional Notes / Dietary Preferences</label>
+    <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-2">Additional Notes / Dietary Preferences</label>
     <textarea 
       id="message" 
       name="message" 
       rows="4" 
-      class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-500"
+      class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-brand-500 transition-colors"
       placeholder="Tell us about your team's lunch schedule, delivery days, or dietary requirements..."
     ></textarea>
   </div>
@@ -146,20 +146,20 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
       id="consent" 
       name="consent" 
       required 
-      class="w-4 h-4 mt-1 rounded border-dark-border bg-dark-surface text-brand-600 focus:ring-brand-500"
+      class="w-4 h-4 mt-1 rounded border-gray-300 dark:border-dark-border bg-gray-50 dark:bg-dark-surface text-brand-600 focus:ring-brand-500"
     />
-    <label for="consent" class="text-xs text-gray-400">
-      I agree to receive corporate program details and tasting confirmation via email and phone from Foodie Fit. View our <a href="/privacy/" class="text-brand-400 underline">Privacy Policy</a>.
+    <label for="consent" class="text-xs text-slate-600 dark:text-gray-400">
+      I agree to receive corporate program details and tasting confirmation via email and phone from Foodie Fit. View our <a href="/privacy/" class="text-brand-600 dark:text-brand-400 underline">Privacy Policy</a>.
     </label>
   </div>
 
   <!-- Cloudflare Turnstile Bot Protection Widget -->
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" is:inline async defer></script>
   <div class="cf-turnstile my-4" data-sitekey="0x4AAAAAAAc1R2e3m4p5l6e7" data-theme="dark"></div>
 
   <button 
     type="submit"
-    class="w-full py-4 rounded-xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-green hover:scale-[1.01] transition-all text-center"
+    class="w-full py-4 rounded-xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red hover:scale-[1.01] transition-all text-center cursor-pointer"
   >
     Submit Corporate Inquiry & Request Tasting
   </button>
@@ -182,7 +182,7 @@ const endpoint = COMMERCE_CONFIG.corporateFormEndpoint;
       if (!hasEndpoint) {
         e.preventDefault();
         feedback.classList.remove('hidden', 'bg-red-500/20', 'text-red-300', 'border-red-500/40');
-        feedback.classList.add('bg-brand-500/20', 'text-brand-300', 'border', 'border-brand-500/40');
+        feedback.classList.add('bg-brand-500/20', 'text-brand-600', 'dark:text-brand-300', 'border', 'border-brand-500/40');
         feedback.innerHTML = '<strong>Demo Submission Received!</strong> Thank you for your corporate inquiry. Our B2B Catering Director will contact your team within 1 business day.';
         form.reset();
       }
