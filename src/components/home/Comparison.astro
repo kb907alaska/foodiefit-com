@@ -9,43 +9,43 @@ const rows = [
 ];
 ---
 
-<section class="py-20 bg-dark-surface border-b border-dark-border">
+<section class="py-20 bg-slate-50 dark:bg-dark-surface border-b border-gray-200 dark:border-dark-border transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
         The Difference
       </span>
-      <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight mb-4">
+      <h2 class="clamp-h2 font-display font-black text-slate-900 dark:text-white uppercase tracking-tight mb-4">
         Why Choose Foodie Fit?
       </h2>
-      <p class="text-gray-300 text-base sm:text-lg">
+      <p class="text-slate-600 dark:text-gray-300 text-base sm:text-lg">
         Compare how our fresh local meal service elevates your daily nutrition experience over traditional nationwide shipping services.
       </p>
     </div>
 
-    <div class="bg-dark-card border border-dark-border rounded-3xl overflow-hidden shadow-2xl">
+    <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl overflow-hidden shadow-sm">
       <div class="overflow-x-auto">
-        <table class="w-full text-left text-sm text-gray-300">
+        <table class="w-full text-left text-sm text-slate-600 dark:text-gray-300">
           <thead>
-            <tr class="border-b border-dark-border bg-dark-bg/60">
-              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-white text-base">Key Feature</th>
-              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-brand-400 text-base bg-brand-500/10 border-x border-dark-border">Foodie Fit Las Vegas</th>
-              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-gray-400 text-base">Traditional Meal Services</th>
+            <tr class="border-b border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-bg/60">
+              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-slate-900 dark:text-white text-base">Key Feature</th>
+              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-brand-600 dark:text-brand-400 text-base bg-brand-500/10 border-x border-gray-200 dark:border-dark-border">Foodie Fit Las Vegas</th>
+              <th scope="col" class="py-5 px-6 font-display uppercase font-bold text-slate-500 dark:text-gray-400 text-base">Traditional Meal Services</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-dark-border">
+          <tbody class="divide-y divide-gray-200 dark:divide-dark-border">
             {rows.map((r) => (
-              <tr class="hover:bg-dark-surface/50 transition-colors">
-                <td class="py-4 px-6 font-bold text-white text-base">{r.feature}</td>
-                <td class="py-4 px-6 font-medium text-brand-300 bg-brand-500/5 border-x border-dark-border">
+              <tr class="hover:bg-gray-50 dark:hover:bg-dark-surface/50 transition-colors">
+                <td class="py-4 px-6 font-bold text-slate-900 dark:text-white text-base">{r.feature}</td>
+                <td class="py-4 px-6 font-medium text-slate-800 dark:text-brand-300 bg-brand-500/5 border-x border-gray-200 dark:border-dark-border">
                   <div class="flex items-start gap-2">
-                    <span class="text-brand-400 font-bold">✓</span>
+                    <span class="text-brand-500 font-bold">✓</span>
                     <span>{r.foodiefit}</span>
                   </div>
                 </td>
-                <td class="py-4 px-6 text-gray-400">
+                <td class="py-4 px-6 text-slate-500 dark:text-gray-400">
                   <div class="flex items-start gap-2">
-                    <span class="text-red-400 font-bold">✕</span>
+                    <span class="text-red-500 font-bold">✕</span>
                     <span>{r.traditional}</span>
                   </div>
                 </td>

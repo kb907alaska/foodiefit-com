@@ -12,24 +12,24 @@ const { items } = Astro.props;
 ---
 
 <nav aria-label="Breadcrumb" class="py-3 px-4 sm:px-0">
-  <ol class="flex items-center flex-wrap gap-2 text-xs text-gray-400">
+  <ol class="flex items-center flex-wrap gap-2 text-xs text-slate-500 dark:text-gray-400">
     <li>
-      <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+      <a href="/" class="hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1">
         <span>Home</span>
       </a>
     </li>
 
     {items.map((item, index) => (
       <li class="flex items-center gap-2">
-        <svg class="w-3.5 h-3.5 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3.5 h-3.5 text-slate-400 dark:text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
         {item.href && index < items.length - 1 ? (
-          <a href={item.href} class="hover:text-white transition-colors">
+          <a href={item.href} class="hover:text-slate-900 dark:hover:text-white transition-colors">
             {item.name}
           </a>
         ) : (
-          <span class="text-white font-medium truncate max-w-[200px] sm:max-w-none" aria-current="page">
+          <span class="text-slate-900 dark:text-white font-medium truncate max-w-[200px] sm:max-w-none" aria-current="page">
             {item.name}
           </span>
         )}

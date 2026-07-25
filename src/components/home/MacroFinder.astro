@@ -4,27 +4,27 @@ import { MEALS_DATA } from '../../data/meals';
 const sampleMeals = MEALS_DATA.slice(0, 4);
 ---
 
-<section id="macro-finder" class="py-20 bg-dark-bg border-b border-dark-border">
+<section id="macro-finder" class="py-20 bg-white dark:bg-dark-bg border-b border-gray-200 dark:border-dark-border transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-gradient-to-br from-dark-card via-dark-surface to-dark-card border border-dark-border rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+    <div class="bg-slate-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-8 sm:p-12 shadow-md relative overflow-hidden">
       <div class="max-w-3xl mb-10">
         <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
           Interactive Meal Selector
         </span>
-        <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight mb-4">
+        <h2 class="clamp-h2 font-display font-black text-slate-900 dark:text-white uppercase tracking-tight mb-4">
           Macro Finder Assistant
         </h2>
-        <p class="text-gray-300 text-sm sm:text-base">
+        <p class="text-slate-600 dark:text-gray-300 text-sm sm:text-base">
           Adjust your dietary goal, minimum protein target, and calorie cap to discover meals tailored to your physique goals.
         </p>
       </div>
 
       <!-- Controls Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 p-6 rounded-2xl bg-dark-bg/80 border border-dark-border">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 p-6 rounded-2xl bg-white dark:bg-dark-bg/80 border border-gray-200 dark:border-dark-border shadow-sm">
         <!-- Goal -->
         <div>
-          <label class="block text-xs font-bold uppercase text-gray-300 mb-2">Primary Goal</label>
-          <select id="finder-goal" class="w-full bg-dark-surface border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 font-medium">
+          <label class="block text-xs font-bold uppercase text-slate-700 dark:text-gray-300 mb-2">Primary Goal</label>
+          <select id="finder-goal" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 font-medium">
             <option value="all">All Goals</option>
             <option value="muscle">Muscle Building (High Protein)</option>
             <option value="fatloss">Fat Loss (Low Carb / Keto)</option>
@@ -34,9 +34,9 @@ const sampleMeals = MEALS_DATA.slice(0, 4);
 
         <!-- Min Protein -->
         <div>
-          <div class="flex justify-between text-xs font-bold uppercase text-gray-300 mb-2">
+          <div class="flex justify-between text-xs font-bold uppercase text-slate-700 dark:text-gray-300 mb-2">
             <span>Min Protein</span>
-            <span id="finder-protein-num" class="text-brand-400">40g+</span>
+            <span id="finder-protein-num" class="text-brand-500 font-black">40g+</span>
           </div>
           <input 
             type="range" 
@@ -44,15 +44,15 @@ const sampleMeals = MEALS_DATA.slice(0, 4);
             min="20" 
             max="70" 
             value="40" 
-            class="w-full accent-brand-500 bg-dark-surface h-2 rounded-lg mt-3"
+            class="w-full accent-brand-500 bg-gray-200 dark:bg-dark-surface h-2 rounded-lg mt-3"
           />
         </div>
 
         <!-- Max Calories -->
         <div>
-          <div class="flex justify-between text-xs font-bold uppercase text-gray-300 mb-2">
+          <div class="flex justify-between text-xs font-bold uppercase text-slate-700 dark:text-gray-300 mb-2">
             <span>Max Calories</span>
-            <span id="finder-calories-num" class="text-amber-400">550 cal</span>
+            <span id="finder-calories-num" class="text-amber-600 dark:text-amber-400 font-black">550 cal</span>
           </div>
           <input 
             type="range" 
@@ -61,27 +61,27 @@ const sampleMeals = MEALS_DATA.slice(0, 4);
             max="750" 
             step="25"
             value="550" 
-            class="w-full accent-amber-500 bg-dark-surface h-2 rounded-lg mt-3"
+            class="w-full accent-amber-500 bg-gray-200 dark:bg-dark-surface h-2 rounded-lg mt-3"
           />
         </div>
       </div>
 
       <!-- Matching Sample Grid -->
       <div class="mb-8">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4 flex items-center justify-between">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-gray-400 mb-4 flex items-center justify-between">
           <span>Top Matches</span>
-          <span class="text-brand-400 text-xs font-semibold">Updating Live</span>
+          <span class="text-brand-500 dark:text-brand-400 text-xs font-semibold">Updating Live</span>
         </h3>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {sampleMeals.map((m) => (
-            <div class="bg-dark-bg border border-dark-border rounded-xl p-4 flex flex-col justify-between">
+            <div class="bg-white dark:bg-dark-bg border border-gray-200 dark:border-dark-border rounded-xl p-4 flex flex-col justify-between shadow-sm">
               <div>
                 <img src={m.image} alt={m.name} class="w-full h-32 object-cover rounded-lg mb-3" />
-                <h4 class="font-display font-bold text-sm text-white line-clamp-1">{m.name}</h4>
-                <p class="text-[11px] text-gray-400 mb-2 font-medium">{m.protein}g Protein • {m.calories} Cal</p>
+                <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white line-clamp-1">{m.name}</h4>
+                <p class="text-[11px] text-slate-600 dark:text-gray-400 mb-2 font-medium">{m.protein}g Protein • {m.calories} Cal</p>
               </div>
-              <a href={`/menu/${m.slug}/`} class="text-xs font-bold text-brand-400 hover:text-brand-300 block text-right mt-2">
+              <a href={`/menu/${m.slug}/`} class="text-xs font-bold text-brand-500 dark:text-brand-400 hover:underline block text-right mt-2">
                 View Details &rarr;
               </a>
             </div>
@@ -90,13 +90,13 @@ const sampleMeals = MEALS_DATA.slice(0, 4);
       </div>
 
       <!-- Action & Disclaimer -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-dark-border">
-        <p class="text-[11px] text-dark-muted max-w-xl">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-gray-200 dark:border-dark-border">
+        <p class="text-[11px] text-slate-500 dark:text-dark-muted max-w-xl">
           *Note: The Macro Finder is an interactive meal selection assistant and does not constitute medical advice or nutritional prescription. Consult a medical professional for personalized dietary guidelines.
         </p>
         <a 
           href="/menu/" 
-          class="px-6 py-3 rounded-xl font-display text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-green whitespace-nowrap"
+          class="px-6 py-3 rounded-xl font-display text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-red whitespace-nowrap"
         >
           View Filtered Menu &rarr;
         </a>

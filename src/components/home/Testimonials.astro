@@ -27,40 +27,40 @@ const testimonials = [
 ];
 ---
 
-<section class="py-20 bg-dark-bg border-b border-dark-border">
+<section class="py-20 bg-white dark:bg-dark-bg border-b border-gray-200 dark:border-dark-border transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
         Local Stories
       </span>
-      <h2 class="clamp-h2 font-display font-black text-white uppercase tracking-tight mb-4">
+      <h2 class="clamp-h2 font-display font-black text-slate-900 dark:text-white uppercase tracking-tight mb-4">
         Trusted by Las Vegas Locals
       </h2>
-      <p class="text-gray-300 text-base sm:text-lg">
+      <p class="text-slate-600 dark:text-gray-300 text-base sm:text-lg">
         Hear how Foodie Fit empowers busy professionals, parents, and athletes across Southern Nevada.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {testimonials.map((t) => (
-        <div class="bg-dark-card border border-dark-border rounded-2xl p-8 flex flex-col justify-between card-hover-effect">
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-2xl p-8 flex flex-col justify-between card-hover-effect shadow-sm">
           <div>
-            <div class="flex items-center gap-1 text-amber-400 mb-4">
+            <div class="flex items-center gap-1 text-amber-500 mb-4">
               {Array.from({ length: t.stars }).map(() => (
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
             </div>
-            <p class="text-gray-300 text-sm leading-relaxed mb-6 italic">
+            <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-6 italic">
               "{t.text}"
             </p>
           </div>
 
-          <div class="pt-4 border-t border-dark-border">
-            <div class="font-bold text-white text-base">{t.name}</div>
-            <div class="text-xs text-brand-400 font-semibold">{t.location}</div>
-            <div class="text-[11px] text-dark-muted mt-1">Favorite: {t.favoriteMeal}</div>
+          <div class="pt-4 border-t border-gray-200 dark:border-dark-border">
+            <div class="font-bold text-slate-900 dark:text-white text-base">{t.name}</div>
+            <div class="text-xs text-brand-500 dark:text-brand-400 font-semibold">{t.location}</div>
+            <div class="text-[11px] text-slate-500 dark:text-dark-muted mt-1">Favorite: {t.favoriteMeal}</div>
           </div>
         </div>
       ))}
