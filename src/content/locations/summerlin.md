@@ -9,7 +9,7 @@ hours: "8:00 AM – 8:00 PM Daily"
 openHour: 8
 closeHour: 20
 googleMapsUrl: "https://maps.google.com/?q=4235+S+Fort+Apache+Rd+%23220+Las+Vegas+NV+89147"
-image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+image: "/images/meals/impossible-dumplings.jpg"
 neighborhoods:
   - "Summerlin South"
   - "Spring Valley"

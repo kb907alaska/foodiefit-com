@@ -3,7 +3,7 @@ title: "The Ultimate Guide to Healthy Meal Prep in Las Vegas"
 description: "Discover how busy Las Vegas professionals, athletes, and families stay consistent with chef-prepared fresh meals."
 publishDate: "2026-07-20"
 author: "Foodie Fit Nutrition Team"
-image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+image: "/images/meals/impossible-dumplings.jpg"
 category: "Las Vegas Lifestyle"
 readTime: "4 min read"
 ---

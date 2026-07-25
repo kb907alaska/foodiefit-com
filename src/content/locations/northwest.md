@@ -9,7 +9,7 @@ hours: "8:00 AM – 8:00 PM Daily"
 openHour: 8
 closeHour: 20
 googleMapsUrl: "https://maps.google.com/?q=7085+W+Ann+Rd+%23140+Las+Vegas+NV+89130"
-image: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=1200&q=80"
+image: "/images/meals/impossible-dumplings.jpg"
 neighborhoods:
   - "Northwest Las Vegas"
   - "Centennial Hills"

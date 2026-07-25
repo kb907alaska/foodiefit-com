@@ -3,7 +3,7 @@ title: "Understanding Macros: How to Target Protein, Carbs, and Fat for Your Goa
 description: "Learn how to match your daily meal intake with your fat loss, muscle gain, or athletic performance targets."
 publishDate: "2026-07-15"
 author: "Foodie Fit Nutrition Team"
-image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80"
+image: "/images/meals/impossible-dumplings.jpg"
 category: "Nutrition Science"
 readTime: "5 min read"
 ---

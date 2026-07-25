@@ -9,7 +9,7 @@ hours: "8:00 AM – 8:00 PM Daily"
 openHour: 8
 closeHour: 20
 googleMapsUrl: "https://maps.google.com/?q=2185+E+Windmill+Ln+%23100+Las+Vegas+NV+89123"
-image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
+image: "/images/meals/impossible-dumplings.jpg"
 neighborhoods:
   - "Green Valley North"
   - "Green Valley Ranch"

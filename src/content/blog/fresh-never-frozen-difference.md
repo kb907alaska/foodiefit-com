@@ -3,7 +3,7 @@ title: "Fresh Never Frozen: Why Meal Quality Matters"
 description: "Why fresh daily preparation retains food texture, nutrient density, and superior culinary taste."
 publishDate: "2026-07-08"
 author: "Chef Marcus, Executive Culinary Director"
-image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
+image: "/images/meals/impossible-dumplings.jpg"
 category: "Culinary Quality"
 readTime: "3 min read"
 ---
