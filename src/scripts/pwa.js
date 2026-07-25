@@ -28,6 +28,8 @@ export function initPWA() {
 }
 
 function showInstallBanner() {
+  if (sessionStorage.getItem('pwa_banner_dismissed') === 'true') return;
+
   let banner = document.getElementById('pwa-install-banner');
   if (banner) return;
 
@@ -47,7 +49,7 @@ function showInstallBanner() {
       <button id="pwa-install-btn" type="button" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-brand-600 hover:bg-brand-500 text-white transition-colors cursor-pointer">
         Install
       </button>
-      <button id="pwa-dismiss-btn" type="button" class="p-1 rounded-lg text-slate-400 hover:text-white" aria-label="Dismiss">
+      <button id="pwa-dismiss-btn" type="button" class="p-1 rounded-lg text-slate-400 hover:text-white cursor-pointer" aria-label="Dismiss">
         ✕
       </button>
     </div>
@@ -69,6 +71,7 @@ function showInstallBanner() {
   });
 
   document.getElementById('pwa-dismiss-btn')?.addEventListener('click', () => {
+    sessionStorage.setItem('pwa_banner_dismissed', 'true');
     banner.remove();
   });
 }
