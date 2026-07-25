@@ -1,0 +1,14 @@
+# Foodie Fit Engineering & Image Rules
+
+## 1. Image & Photography Policy
+
+- **NO FAKE AI IMAGES**: Never generate, mock, or use synthetic AI-generated meal images or artificial placeholders.
+- **ONLY REAL IMAGES**: Use strictly authentic food photography downloaded directly from Foodie Fit's Meal Prep Tech (MPT) production API/Azure Blob storage (`/images/meals/`) or verified brand media assets.
+- **Asset Paths**: Serve all product images locally from `/images/meals/[slug].jpg` or verified MPT CDN endpoints.
+
+---
+
+## 2. Security & Commerce Perimeter Rules
+
+- **Commerce System Isolation**: Keep public marketing pages isolated from customer order/account systems.
+- **Strict Allowlist**: All outbound order/account links must validate through `CommerceUrlAllowlist`.
