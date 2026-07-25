@@ -12,6 +12,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/impossible-dumplings.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 280,
     "protein": 20,
     "carbs": 29,
@@ -34,6 +35,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 20,
         "carbs": 29,
         "fat": 10
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 392,
+        "protein": 29,
+        "carbs": 35,
+        "fat": 13
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -54,7 +64,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/backyard-bbq-plate.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 330,
     "protein": 36,
     "carbs": 22,
@@ -89,7 +99,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 462,
         "protein": 52,
         "carbs": 26,
@@ -114,6 +124,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/rancheros-breakfast-burrito.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 330,
     "protein": 19,
     "carbs": 33,
@@ -142,6 +153,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 19,
         "carbs": 33,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 462,
+        "protein": 28,
+        "carbs": 40,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -162,7 +182,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-tendies-mac.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 380,
     "protein": 36,
     "carbs": 38,
@@ -193,7 +213,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 532,
         "protein": 52,
         "carbs": 46,
@@ -218,6 +238,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-bacon-omelet.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
+    "bulkPrice": 10.49,
     "calories": 320,
     "protein": 23,
     "carbs": 18,
@@ -242,6 +263,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 23,
         "carbs": 18,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.49,
+        "calories": 448,
+        "protein": 33,
+        "carbs": 22,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -320,6 +350,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/nashville-hot-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 440,
     "protein": 39,
     "carbs": 19,
@@ -347,6 +378,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 39,
         "carbs": 19,
         "fat": 22
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 616,
+        "protein": 57,
+        "carbs": 23,
+        "fat": 29
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -424,7 +464,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tomato-cream-penne.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 410,
     "protein": 42,
     "carbs": 42,
@@ -455,7 +495,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 574,
         "protein": 61,
         "carbs": 50,
@@ -480,7 +520,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-n-grits.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
-    "bulkPrice": 11.49,
+    "bulkPrice": 11.99,
     "calories": 290,
     "protein": 30,
     "carbs": 21,
@@ -506,7 +546,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.49,
+        "price": 11.99,
         "calories": 406,
         "protein": 44,
         "carbs": 25,
@@ -531,7 +571,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/churro-french-toast.jpg",
     "price": 6.49,
     "leanPrice": 6.49,
-    "bulkPrice": 8.49,
+    "bulkPrice": 8.99,
     "calories": 330,
     "protein": 15,
     "carbs": 32,
@@ -560,7 +600,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 8.49,
+        "price": 8.99,
         "calories": 462,
         "protein": 22,
         "carbs": 38,
@@ -585,7 +625,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tandoori-tikka-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 360,
     "protein": 33,
     "carbs": 33,
@@ -614,7 +654,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 504,
         "protein": 48,
         "carbs": 40,
@@ -639,6 +679,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tropical-shrimp-bowl.jpg",
     "price": 10.49,
     "leanPrice": 10.49,
+    "bulkPrice": 12.99,
     "calories": 360,
     "protein": 39,
     "carbs": 37,
@@ -667,6 +708,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 39,
         "carbs": 37,
         "fat": 6
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.99,
+        "calories": 504,
+        "protein": 57,
+        "carbs": 44,
+        "fat": 8
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -687,6 +737,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/foodie-sliders.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 510,
     "protein": 40,
     "carbs": 37,
@@ -712,6 +763,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 37,
         "fat": 22
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 714,
+        "protein": 58,
+        "carbs": 44,
+        "fat": 29
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -732,7 +792,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/soba-salmon.jpg",
     "price": 12.49,
     "leanPrice": 12.49,
-    "bulkPrice": 15.49,
+    "bulkPrice": 14.99,
     "calories": 390,
     "protein": 34,
     "carbs": 17,
@@ -768,7 +828,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 15.49,
+        "price": 14.99,
         "calories": 546,
         "protein": 49,
         "carbs": 20,
@@ -793,6 +853,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pressed-juicery-shot.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -811,6 +872,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -831,6 +901,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/supreme-pizza.jpg",
     "price": 9.74,
     "leanPrice": 9.74,
+    "bulkPrice": 12.24,
     "calories": 310,
     "protein": 28,
     "carbs": 8,
@@ -854,6 +925,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 28,
         "carbs": 8,
         "fat": 18
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.24,
+        "calories": 434,
+        "protein": 41,
+        "carbs": 10,
+        "fat": 23
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -874,6 +954,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/egg-white-bites.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 240,
     "protein": 21,
     "carbs": 17,
@@ -902,6 +983,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 21,
         "carbs": 17,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 336,
+        "protein": 30,
+        "carbs": 20,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -922,6 +1012,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/jamaican-turken-burger-old.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 390,
     "protein": 41,
     "carbs": 13,
@@ -950,6 +1041,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 41,
         "carbs": 13,
         "fat": 18
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 546,
+        "protein": 59,
+        "carbs": 16,
+        "fat": 23
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -970,6 +1070,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/alfredo-chicken-asparagus.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 410,
     "protein": 58,
     "carbs": 10,
@@ -999,6 +1100,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 58,
         "carbs": 10,
         "fat": 14
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 574,
+        "protein": 84,
+        "carbs": 12,
+        "fat": 18
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1019,6 +1129,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/quest-protein-chips.jpg",
     "price": 3.29,
     "leanPrice": 3.29,
+    "bulkPrice": 5.79,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -1040,6 +1151,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.79,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1060,7 +1180,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/steak-bistro-box.jpg",
     "price": 11.49,
     "leanPrice": 11.49,
-    "bulkPrice": 13.49,
+    "bulkPrice": 13.99,
     "calories": 260,
     "protein": 32,
     "carbs": 16,
@@ -1095,7 +1215,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 13.49,
+        "price": 13.99,
         "calories": 364,
         "protein": 46,
         "carbs": 19,
@@ -1240,7 +1360,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hungry-planet-jambalaya.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 270,
     "protein": 19,
     "carbs": 35,
@@ -1265,7 +1385,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 378,
         "protein": 28,
         "carbs": 42,
@@ -1290,6 +1410,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/thai-chicken-wrap.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 330,
     "protein": 30,
     "carbs": 36,
@@ -1317,6 +1438,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 30,
         "carbs": 36,
         "fat": 11
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 462,
+        "protein": 44,
+        "carbs": 43,
+        "fat": 14
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1337,7 +1467,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/wakey-cakey-eggs-n-bakey.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
-    "bulkPrice": 8.49,
+    "bulkPrice": 9.49,
     "calories": 280,
     "protein": 25,
     "carbs": 33,
@@ -1366,7 +1496,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 8.49,
+        "price": 9.49,
         "calories": 392,
         "protein": 36,
         "carbs": 40,
@@ -1391,7 +1521,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chili-rice.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 400,
     "protein": 28,
     "carbs": 44,
@@ -1423,7 +1553,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 560,
         "protein": 41,
         "carbs": 53,
@@ -1448,6 +1578,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/built-bar-puffs.jpg",
     "price": 2.79,
     "leanPrice": 2.79,
+    "bulkPrice": 5.29,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -1466,6 +1597,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.29,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1486,6 +1626,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/apple-nachos.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 170,
     "protein": 3,
     "carbs": 28,
@@ -1510,6 +1651,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 3,
         "carbs": 28,
         "fat": 6
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 238,
+        "protein": 4,
+        "carbs": 34,
+        "fat": 8
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1530,7 +1680,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/right-rice-paella.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 360,
     "protein": 36,
     "carbs": 32,
@@ -1555,7 +1705,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 504,
         "protein": 52,
         "carbs": 38,
@@ -1640,6 +1790,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-sausage-egg-bites.jpg",
     "price": 5.25,
     "leanPrice": 5.25,
+    "bulkPrice": 7.75,
     "calories": 300,
     "protein": 22,
     "carbs": 8,
@@ -1669,6 +1820,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 22,
         "carbs": 8,
         "fat": 19
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.75,
+        "calories": 420,
+        "protein": 32,
+        "carbs": 10,
+        "fat": 25
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1689,6 +1849,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-chili.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 340,
     "protein": 35,
     "carbs": 18,
@@ -1717,6 +1878,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 35,
         "carbs": 18,
         "fat": 12
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 476,
+        "protein": 51,
+        "carbs": 22,
+        "fat": 16
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1737,6 +1907,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-dan-dan.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 390,
     "protein": 44,
     "carbs": 32,
@@ -1764,6 +1935,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 44,
         "carbs": 32,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 546,
+        "protein": 64,
+        "carbs": 38,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1784,6 +1964,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/meat-lover-s-pizza.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 340,
     "protein": 31,
     "carbs": 6,
@@ -1808,6 +1989,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 31,
         "carbs": 6,
         "fat": 21
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 476,
+        "protein": 45,
+        "carbs": 7,
+        "fat": 27
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1828,6 +2018,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/veggies-by-the-pound.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -1846,6 +2037,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -1866,7 +2066,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/deconstructed-enchiladas.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 370,
     "protein": 36,
     "carbs": 27,
@@ -1897,7 +2097,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 518,
         "protein": 52,
         "carbs": 32,
@@ -1922,7 +2122,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/kung-fit-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 270,
     "protein": 29,
     "carbs": 27,
@@ -1953,7 +2153,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 378,
         "protein": 42,
         "carbs": 32,
@@ -1978,6 +2178,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/neuro-gum.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -1996,6 +2197,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -2071,7 +2281,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-primavera.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 320,
     "protein": 32,
     "carbs": 15,
@@ -2100,7 +2310,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 448,
         "protein": 46,
         "carbs": 18,
@@ -2125,7 +2335,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-parmesan.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 380,
     "protein": 36,
     "carbs": 32,
@@ -2157,7 +2367,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 532,
         "protein": 52,
         "carbs": 38,
@@ -2182,7 +2392,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tomato-cream-penne-meatballs.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 440,
     "protein": 33,
     "carbs": 45,
@@ -2215,7 +2425,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 616,
         "protein": 48,
         "carbs": 54,
@@ -2240,6 +2450,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/omelet-italiano.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 400,
     "protein": 28,
     "carbs": 20,
@@ -2264,6 +2475,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 28,
         "carbs": 20,
         "fat": 22
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 560,
+        "protein": 41,
+        "carbs": 24,
+        "fat": 29
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -2284,7 +2504,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/greek-chicken-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 350,
     "protein": 31,
     "carbs": 18,
@@ -2318,7 +2538,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 490,
         "protein": 45,
         "carbs": 22,
@@ -2343,7 +2563,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/santa-maria-breakfast.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
-    "bulkPrice": 11.49,
+    "bulkPrice": 11.99,
     "calories": 370,
     "protein": 32,
     "carbs": 21,
@@ -2376,7 +2596,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.49,
+        "price": 11.99,
         "calories": 518,
         "protein": 46,
         "carbs": 25,
@@ -2401,7 +2621,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/bourbon-steak-eggs.jpg",
     "price": 11.24,
     "leanPrice": 11.24,
-    "bulkPrice": 14.49,
+    "bulkPrice": 13.74,
     "calories": 330,
     "protein": 36,
     "carbs": 31,
@@ -2434,7 +2654,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 14.49,
+        "price": 13.74,
         "calories": 462,
         "protein": 52,
         "carbs": 37,
@@ -2459,7 +2679,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/omega-mac-cheese.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
-    "bulkPrice": 11.49,
+    "bulkPrice": 11.99,
     "calories": 390,
     "protein": 31,
     "carbs": 29,
@@ -2490,7 +2710,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.49,
+        "price": 11.99,
         "calories": 546,
         "protein": 45,
         "carbs": 35,
@@ -2515,6 +2735,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/cheddar-egg-bites.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 320,
     "protein": 19,
     "carbs": 19,
@@ -2542,6 +2763,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 19,
         "carbs": 19,
         "fat": 18
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 448,
+        "protein": 28,
+        "carbs": 23,
+        "fat": 23
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -2562,6 +2792,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/southwest-salad.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
+    "bulkPrice": 10.99,
     "calories": 380,
     "protein": 40,
     "carbs": 25,
@@ -2585,6 +2816,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 25,
         "fat": 12
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.99,
+        "calories": 532,
+        "protein": 58,
+        "carbs": 30,
+        "fat": 16
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -2664,6 +2904,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/bbq-meatloaf-cauli-mash.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 420,
     "protein": 35,
     "carbs": 34,
@@ -2693,6 +2934,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 35,
         "carbs": 34,
         "fat": 18
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 588,
+        "protein": 51,
+        "carbs": 41,
+        "fat": 23
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -2770,6 +3020,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/blt-wrap-box.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 410,
     "protein": 36,
     "carbs": 37,
@@ -2796,6 +3047,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 36,
         "carbs": 37,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 574,
+        "protein": 52,
+        "carbs": 44,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -2816,6 +3076,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/drumroll-donuts.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -2836,6 +3097,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -2856,7 +3126,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pollo-verde-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 340,
     "protein": 34,
     "carbs": 37,
@@ -2888,7 +3158,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 476,
         "protein": 49,
         "carbs": 44,
@@ -2913,7 +3183,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-turkey-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 350,
     "protein": 25,
     "carbs": 33,
@@ -2945,7 +3215,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 490,
         "protein": 36,
         "carbs": 40,
@@ -2970,6 +3240,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-snack-wrap-box.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 270,
     "protein": 13,
     "carbs": 20,
@@ -2993,6 +3264,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 13,
         "carbs": 20,
         "fat": 16
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 378,
+        "protein": 19,
+        "carbs": 24,
+        "fat": 21
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3013,6 +3293,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/fit-brownie-bite.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 250,
     "protein": 10,
     "carbs": 19,
@@ -3039,6 +3320,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 10,
         "carbs": 19,
         "fat": 20
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 350,
+        "protein": 15,
+        "carbs": 23,
+        "fat": 26
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3059,7 +3349,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pad-thai-noodle-salad.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
-    "bulkPrice": 9.49,
+    "bulkPrice": 10.49,
     "calories": 280,
     "protein": 29,
     "carbs": 15,
@@ -3088,7 +3378,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.49,
+        "price": 10.49,
         "calories": 392,
         "protein": 42,
         "carbs": 18,
@@ -3113,6 +3403,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-bacon-breakfast-burrito.jpg",
     "price": 4.15,
     "leanPrice": 4.15,
+    "bulkPrice": 6.65,
     "calories": 260,
     "protein": 17,
     "carbs": 24,
@@ -3136,6 +3427,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 17,
         "carbs": 24,
         "fat": 11
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.65,
+        "calories": 364,
+        "protein": 25,
+        "carbs": 29,
+        "fat": 14
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3156,7 +3456,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/low-carb-pot-roast.jpg",
     "price": 10.49,
     "leanPrice": 10.49,
-    "bulkPrice": 13.99,
+    "bulkPrice": 12.99,
     "calories": 280,
     "protein": 31,
     "carbs": 16,
@@ -3187,7 +3487,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 13.99,
+        "price": 12.99,
         "calories": 392,
         "protein": 45,
         "carbs": 19,
@@ -3212,6 +3512,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/berry-cheesecake.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 140,
     "protein": 6,
     "carbs": 21,
@@ -3239,6 +3540,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 6,
         "carbs": 21,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 196,
+        "protein": 9,
+        "carbs": 25,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3259,7 +3569,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/mango-habanero-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 300,
     "protein": 38,
     "carbs": 18,
@@ -3294,7 +3604,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 420,
         "protein": 55,
         "carbs": 22,
@@ -3319,7 +3629,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tropical-salmon-bowl.jpg",
     "price": 13.49,
     "leanPrice": 13.49,
-    "bulkPrice": 15.49,
+    "bulkPrice": 15.99,
     "calories": 380,
     "protein": 30,
     "carbs": 31,
@@ -3348,7 +3658,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 15.49,
+        "price": 15.99,
         "calories": 532,
         "protein": 44,
         "carbs": 37,
@@ -3373,6 +3683,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-chorizo-breakfast-tacos.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 370,
     "protein": 35,
     "carbs": 25,
@@ -3398,6 +3709,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 35,
         "carbs": 25,
         "fat": 19
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 518,
+        "protein": 51,
+        "carbs": 30,
+        "fat": 25
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3418,7 +3738,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-katsu.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.99,
     "calories": 350,
     "protein": 28,
     "carbs": 44,
@@ -3450,7 +3770,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.99,
         "calories": 490,
         "protein": 41,
         "carbs": 53,
@@ -3475,6 +3795,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-taco-salad.jpg",
     "price": 9.24,
     "leanPrice": 9.24,
+    "bulkPrice": 11.74,
     "calories": 400,
     "protein": 28,
     "carbs": 26,
@@ -3495,6 +3816,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 28,
         "carbs": 26,
         "fat": 20
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.74,
+        "calories": 560,
+        "protein": 41,
+        "carbs": 31,
+        "fat": 26
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3515,6 +3845,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/ur-watur.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -3533,6 +3864,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3553,7 +3893,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/breakfast-fried-rice.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 330,
     "protein": 35,
     "carbs": 18,
@@ -3585,7 +3925,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 462,
         "protein": 51,
         "carbs": 22,
@@ -3663,6 +4003,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/baja-vida-dried-fruit-mangos.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -3681,6 +4022,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3758,6 +4108,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/foodie-fit-lv-hat.jpg",
     "price": 24.99,
     "leanPrice": 24.99,
+    "bulkPrice": 27.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -3776,6 +4127,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 27.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3796,6 +4156,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/asian-chicken-lettuce-wrap.jpg",
     "price": 8.74,
     "leanPrice": 8.74,
+    "bulkPrice": 11.24,
     "calories": 310,
     "protein": 29,
     "carbs": 17,
@@ -3819,6 +4180,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 29,
         "carbs": 17,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.24,
+        "calories": 434,
+        "protein": 42,
+        "carbs": 20,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3839,7 +4209,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tex-mex-bowl.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 380,
     "protein": 27,
     "carbs": 33,
@@ -3869,7 +4239,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 532,
         "protein": 39,
         "carbs": 40,
@@ -3894,6 +4264,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/luma-cold-pressed-juices.jpg",
     "price": 6.49,
     "leanPrice": 6.49,
+    "bulkPrice": 8.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -3914,6 +4285,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -3934,7 +4314,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chili-mac.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 380,
     "protein": 28,
     "carbs": 32,
@@ -3964,7 +4344,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 532,
         "protein": 41,
         "carbs": 38,
@@ -3989,6 +4369,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/oats-overnight-shake.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -4007,6 +4388,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4027,6 +4417,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/legendary-foods-popped-protein-chips.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -4048,6 +4439,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4121,7 +4521,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/alfredo-chicken-harvest-veggies.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 270,
     "protein": 35,
     "carbs": 11,
@@ -4155,7 +4555,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 378,
         "protein": 51,
         "carbs": 13,
@@ -4180,6 +4580,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-mole-tamale.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 410,
     "protein": 36,
     "carbs": 38,
@@ -4208,6 +4609,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 36,
         "carbs": 38,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 574,
+        "protein": 52,
+        "carbs": 46,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4228,7 +4638,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chilaquiles.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
-    "bulkPrice": 9.99,
+    "bulkPrice": 10.49,
     "calories": 390,
     "protein": 36,
     "carbs": 23,
@@ -4261,7 +4671,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.99,
+        "price": 10.49,
         "calories": 546,
         "protein": 52,
         "carbs": 28,
@@ -4286,6 +4696,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/foodie-cobb-salad.jpg",
     "price": 11.49,
     "leanPrice": 11.49,
+    "bulkPrice": 13.99,
     "calories": 420,
     "protein": 42,
     "carbs": 20,
@@ -4314,6 +4725,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 42,
         "carbs": 20,
         "fat": 20
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.99,
+        "calories": 588,
+        "protein": 61,
+        "carbs": 24,
+        "fat": 26
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4334,6 +4754,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-tacos.jpg",
     "price": 10.49,
     "leanPrice": 10.49,
+    "bulkPrice": 12.99,
     "calories": 400,
     "protein": 40,
     "carbs": 32,
@@ -4367,6 +4788,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 32,
         "fat": 11
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 38,
+        "fat": 14
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4387,6 +4817,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/siete-churro-strips.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -4405,6 +4836,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4425,7 +4865,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/mediterranean-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 11.49,
     "calories": 370,
     "protein": 32,
     "carbs": 41,
@@ -4455,7 +4895,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 11.49,
         "calories": 518,
         "protein": 46,
         "carbs": 49,
@@ -4480,7 +4920,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/steak-and-eggs.jpg",
     "price": 9.15,
     "leanPrice": 9.15,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.65,
     "calories": 290,
     "protein": 38,
     "carbs": 16,
@@ -4505,7 +4945,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.65,
         "calories": 406,
         "protein": 55,
         "carbs": 19,
@@ -4530,7 +4970,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/samurai-salmon-teriyaki.jpg",
     "price": 12.99,
     "leanPrice": 12.99,
-    "bulkPrice": 15.99,
+    "bulkPrice": 15.49,
     "calories": 290,
     "protein": 28,
     "carbs": 15,
@@ -4565,7 +5005,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 15.99,
+        "price": 15.49,
         "calories": 406,
         "protein": 41,
         "carbs": 18,
@@ -4590,7 +5030,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-alfredo.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 12.99,
+    "bulkPrice": 12.49,
     "calories": 410,
     "protein": 47,
     "carbs": 24,
@@ -4624,7 +5064,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.99,
+        "price": 12.49,
         "calories": 574,
         "protein": 68,
         "carbs": 29,
@@ -4649,6 +5089,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/beef-birria-ramen.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 280,
     "protein": 39,
     "carbs": 19,
@@ -4680,6 +5121,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 39,
         "carbs": 19,
         "fat": 6
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 392,
+        "protein": 57,
+        "carbs": 23,
+        "fat": 8
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4759,7 +5209,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/bbq-beef-hash.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 410,
     "protein": 30,
     "carbs": 24,
@@ -4794,7 +5244,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 574,
         "protein": 44,
         "carbs": 29,
@@ -4819,6 +5269,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/banana-chip-power-bites.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 380,
     "protein": 22,
     "carbs": 43,
@@ -4844,6 +5295,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 22,
         "carbs": 43,
         "fat": 14
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 532,
+        "protein": 32,
+        "carbs": 52,
+        "fat": 18
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4921,6 +5381,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/lemon-pepper-salmon-alfredo.jpg",
     "price": 11.99,
     "leanPrice": 11.99,
+    "bulkPrice": 14.49,
     "calories": 420,
     "protein": 34,
     "carbs": 42,
@@ -4949,6 +5410,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 34,
         "carbs": 42,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 14.49,
+        "calories": 588,
+        "protein": 49,
+        "carbs": 50,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -4969,6 +5439,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/cove-soda.jpg",
     "price": 2.79,
     "leanPrice": 2.79,
+    "bulkPrice": 5.29,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -4987,6 +5458,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.29,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5067,6 +5547,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/bbq-chicken-sliders.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 280,
     "protein": 30,
     "carbs": 38,
@@ -5098,6 +5579,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 30,
         "carbs": 38,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 392,
+        "protein": 44,
+        "carbs": 46,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5118,6 +5608,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/1oz-mojo-verde.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -5136,6 +5627,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5156,6 +5656,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pollo-asado-fries.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 430,
     "protein": 36,
     "carbs": 37,
@@ -5184,6 +5685,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 36,
         "carbs": 37,
         "fat": 16
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 602,
+        "protein": 52,
+        "carbs": 44,
+        "fat": 21
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5204,7 +5714,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-barbacoa.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 310,
     "protein": 31,
     "carbs": 30,
@@ -5233,7 +5743,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 434,
         "protein": 45,
         "carbs": 36,
@@ -5258,6 +5768,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/egg-mac-ro-muffin.jpg",
     "price": 5.49,
     "leanPrice": 5.49,
+    "bulkPrice": 7.99,
     "calories": 300,
     "protein": 21,
     "carbs": 24,
@@ -5286,6 +5797,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 21,
         "carbs": 24,
         "fat": 12
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.99,
+        "calories": 420,
+        "protein": 30,
+        "carbs": 29,
+        "fat": 16
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5306,7 +5826,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/salmon-teriyaki.jpg",
     "price": 12.49,
     "leanPrice": 12.49,
-    "bulkPrice": 15.49,
+    "bulkPrice": 14.99,
     "calories": 340,
     "protein": 29,
     "carbs": 27,
@@ -5340,7 +5860,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 15.49,
+        "price": 14.99,
         "calories": 476,
         "protein": 42,
         "carbs": 32,
@@ -5365,7 +5885,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-meatloaf.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.49,
+    "bulkPrice": 11.49,
     "calories": 320,
     "protein": 26,
     "carbs": 32,
@@ -5391,7 +5911,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 11.49,
         "calories": 448,
         "protein": 38,
         "carbs": 38,
@@ -5416,6 +5936,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tomato-bisque-grilled-cheese.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 270,
     "protein": 17,
     "carbs": 12,
@@ -5444,6 +5965,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 17,
         "carbs": 12,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 378,
+        "protein": 25,
+        "carbs": 14,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5464,7 +5994,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-alfredo-zoodles.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
-    "bulkPrice": 9.63,
+    "bulkPrice": 10.49,
     "calories": 330,
     "protein": 43,
     "carbs": 10,
@@ -5491,7 +6021,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.63,
+        "price": 10.49,
         "calories": 462,
         "protein": 62,
         "carbs": 12,
@@ -5516,7 +6046,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/creamy-sichuan-noodles.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 11.49,
     "calories": 360,
     "protein": 36,
     "carbs": 27,
@@ -5549,7 +6079,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 11.49,
         "calories": 504,
         "protein": 52,
         "carbs": 32,
@@ -5574,6 +6104,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/lucky-energy.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -5592,6 +6123,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5669,7 +6209,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/classic-breakfast.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
-    "bulkPrice": 9.49,
+    "bulkPrice": 10.49,
     "calories": 260,
     "protein": 21,
     "carbs": 19,
@@ -5694,7 +6234,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.49,
+        "price": 10.49,
         "calories": 364,
         "protein": 30,
         "carbs": 23,
@@ -5719,6 +6259,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/bbq-chicken-pizza.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 310,
     "protein": 32,
     "carbs": 10,
@@ -5744,6 +6285,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 32,
         "carbs": 10,
         "fat": 14
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 434,
+        "protein": 46,
+        "carbs": 12,
+        "fat": 18
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5764,6 +6314,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/odyssey-functional-energy.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -5782,6 +6333,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -5802,7 +6362,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-gumbo.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 11.49,
     "calories": 270,
     "protein": 26,
     "carbs": 16,
@@ -5834,7 +6394,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 11.49,
         "calories": 378,
         "protein": 38,
         "carbs": 19,
@@ -5859,7 +6419,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/perfy-soda.jpg",
     "price": 2.79,
     "leanPrice": 2.79,
-    "bulkPrice": 29.99,
+    "bulkPrice": 5.29,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -5885,7 +6445,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 29.99,
+        "price": 5.29,
         "calories": 560,
         "protein": 58,
         "carbs": 42,
@@ -5910,7 +6470,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-edamame-noodles.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 320,
     "protein": 33,
     "carbs": 19,
@@ -5943,7 +6503,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 448,
         "protein": 48,
         "carbs": 23,
@@ -5968,6 +6528,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/protein-by-the-pound.jpg",
     "price": 13.99,
     "leanPrice": 13.99,
+    "bulkPrice": 16.490000000000002,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -5986,6 +6547,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 16.490000000000002,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6006,7 +6576,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-caliente-bowl.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.49,
     "calories": 450,
     "protein": 29,
     "carbs": 35,
@@ -6036,7 +6606,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.49,
         "calories": 630,
         "protein": 42,
         "carbs": 42,
@@ -6061,7 +6631,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/roasted-cubano-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 340,
     "protein": 34,
     "carbs": 27,
@@ -6091,7 +6661,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 476,
         "protein": 49,
         "carbs": 32,
@@ -6116,6 +6686,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hot-logic-mini.jpg",
     "price": 39.99,
     "leanPrice": 39.99,
+    "bulkPrice": 42.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -6134,6 +6705,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 42.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6154,7 +6734,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hikari-chicken-bowl.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
-    "bulkPrice": 9.49,
+    "bulkPrice": 10.49,
     "calories": 260,
     "protein": 35,
     "carbs": 18,
@@ -6180,7 +6760,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.49,
+        "price": 10.49,
         "calories": 364,
         "protein": 51,
         "carbs": 22,
@@ -6205,6 +6785,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/e-gift-card-200.jpg",
     "price": 200,
     "leanPrice": 200,
+    "bulkPrice": 202.5,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -6223,6 +6804,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 202.5,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6243,6 +6833,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/joyride-uncommon-candy.jpg",
     "price": 6.29,
     "leanPrice": 6.29,
+    "bulkPrice": 8.79,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -6261,6 +6852,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.79,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6281,7 +6881,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/cauliflower-turkey-lasagna.jpg",
     "price": 10.39,
     "leanPrice": 10.39,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.89,
     "calories": 330,
     "protein": 29,
     "carbs": 15,
@@ -6313,7 +6913,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.89,
         "calories": 462,
         "protein": 42,
         "carbs": 18,
@@ -6338,6 +6938,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/denver-egg-bites.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 280,
     "protein": 17,
     "carbs": 9,
@@ -6362,6 +6963,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 17,
         "carbs": 9,
         "fat": 19
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 392,
+        "protein": 25,
+        "carbs": 11,
+        "fat": 25
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6382,6 +6992,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/cooler-bag.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -6400,6 +7011,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6420,7 +7040,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hungry-planet-enchilada-rolls.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 300,
     "protein": 18,
     "carbs": 44,
@@ -6447,7 +7067,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 420,
         "protein": 26,
         "carbs": 53,
@@ -6472,6 +7092,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/naked-mushroom-burger.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 490,
     "protein": 36,
     "carbs": 35,
@@ -6502,6 +7123,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 36,
         "carbs": 35,
         "fat": 23
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 686,
+        "protein": 52,
+        "carbs": 42,
+        "fat": 30
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6522,7 +7152,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/power-cakes-n-bacon.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
-    "bulkPrice": 7.29,
+    "bulkPrice": 8.49,
     "calories": 230,
     "protein": 22,
     "carbs": 33,
@@ -6549,7 +7179,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 7.29,
+        "price": 8.49,
         "calories": 322,
         "protein": 32,
         "carbs": 40,
@@ -6574,7 +7204,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/country-breakfast.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 11.49,
     "calories": 410,
     "protein": 34,
     "carbs": 24,
@@ -6604,7 +7234,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 11.49,
         "calories": 574,
         "protein": 49,
         "carbs": 29,
@@ -6629,7 +7259,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/southwest-scramble.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
-    "bulkPrice": 9.56,
+    "bulkPrice": 10.49,
     "calories": 340,
     "protein": 25,
     "carbs": 24,
@@ -6656,7 +7286,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.56,
+        "price": 10.49,
         "calories": 476,
         "protein": 36,
         "carbs": 29,
@@ -6681,7 +7311,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-alfredo-pasta.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 350,
     "protein": 36,
     "carbs": 29,
@@ -6712,7 +7342,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 490,
         "protein": 52,
         "carbs": 35,
@@ -6737,6 +7367,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-bacon-delight.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 270,
     "protein": 21,
     "carbs": 25,
@@ -6765,6 +7396,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 21,
         "carbs": 25,
         "fat": 8
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 378,
+        "protein": 30,
+        "carbs": 30,
+        "fat": 10
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6785,6 +7425,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/jamaican-turken-burger.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 370,
     "protein": 44,
     "carbs": 30,
@@ -6817,6 +7458,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 44,
         "carbs": 30,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 518,
+        "protein": 64,
+        "carbs": 36,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6837,7 +7487,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/korean-steak.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
-    "bulkPrice": 13.99,
+    "bulkPrice": 13.49,
     "calories": 290,
     "protein": 33,
     "carbs": 25,
@@ -6869,7 +7519,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 13.99,
+        "price": 13.49,
         "calories": 406,
         "protein": 48,
         "carbs": 30,
@@ -6894,6 +7544,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/my-protein-wafer.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -6914,6 +7565,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6934,6 +7594,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/baja-vida-beef-jerky.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
+    "bulkPrice": 10.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -6954,6 +7615,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -6974,6 +7644,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/e-gift-card-50.jpg",
     "price": 50,
     "leanPrice": 50,
+    "bulkPrice": 52.5,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -6992,6 +7663,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 52.5,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7012,7 +7692,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/blended-burger.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
-    "bulkPrice": 11.49,
+    "bulkPrice": 11.99,
     "calories": 330,
     "protein": 21,
     "carbs": 22,
@@ -7037,7 +7717,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.49,
+        "price": 11.99,
         "calories": 462,
         "protein": 30,
         "carbs": 26,
@@ -7062,6 +7742,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/celsius-energy-drink.jpg",
     "price": 2.79,
     "leanPrice": 2.79,
+    "bulkPrice": 5.29,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -7080,6 +7761,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.29,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7100,6 +7790,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chili-fries.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 450,
     "protein": 34,
     "carbs": 36,
@@ -7129,6 +7820,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 34,
         "carbs": 36,
         "fat": 18
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 630,
+        "protein": 49,
+        "carbs": 43,
+        "fat": 23
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7149,7 +7849,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hikari-bowl.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.49,
     "calories": 310,
     "protein": 33,
     "carbs": 20,
@@ -7175,7 +7875,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.49,
         "calories": 434,
         "protein": 48,
         "carbs": 24,
@@ -7200,7 +7900,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-bolognese.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 400,
     "protein": 29,
     "carbs": 43,
@@ -7231,7 +7931,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 560,
         "protein": 42,
         "carbs": 52,
@@ -7256,6 +7956,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pumpkin-cheesecake.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 120,
     "protein": 4,
     "carbs": 13,
@@ -7279,6 +7980,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 4,
         "carbs": 13,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 168,
+        "protein": 6,
+        "carbs": 16,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7299,7 +8009,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-sausage-skillet.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 350,
     "protein": 24,
     "carbs": 22,
@@ -7332,7 +8042,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 490,
         "protein": 35,
         "carbs": 26,
@@ -7357,7 +8067,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shepherd-s-pie.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.49,
     "calories": 320,
     "protein": 25,
     "carbs": 23,
@@ -7391,7 +8101,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.49,
         "calories": 448,
         "protein": 36,
         "carbs": 28,
@@ -7416,7 +8126,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/red-curry-chicken.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.74,
+    "bulkPrice": 10.99,
     "calories": 340,
     "protein": 31,
     "carbs": 30,
@@ -7442,7 +8152,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.74,
+        "price": 10.99,
         "calories": 476,
         "protein": 45,
         "carbs": 36,
@@ -7467,7 +8177,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/sweet-chili-turkey-bowl.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 320,
     "protein": 28,
     "carbs": 15,
@@ -7504,7 +8214,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 448,
         "protein": 41,
         "carbs": 18,
@@ -7529,6 +8239,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/catalina-crunch-snack-mix.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -7549,6 +8260,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7569,6 +8289,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/margherita-pizza.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 300,
     "protein": 24,
     "carbs": 19,
@@ -7592,6 +8313,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 24,
         "carbs": 19,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 420,
+        "protein": 35,
+        "carbs": 23,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7612,7 +8342,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chinese-bbq-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 360,
     "protein": 35,
     "carbs": 38,
@@ -7645,7 +8375,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 504,
         "protein": 51,
         "carbs": 46,
@@ -7670,7 +8400,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-elote-beef-bowl.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
-    "bulkPrice": 12.49,
+    "bulkPrice": 11.99,
     "calories": 460,
     "protein": 32,
     "carbs": 37,
@@ -7702,7 +8432,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.49,
+        "price": 11.99,
         "calories": 644,
         "protein": 46,
         "carbs": 44,
@@ -7727,6 +8457,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/ham-mac-ro-muffin.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 290,
     "protein": 24,
     "carbs": 27,
@@ -7752,6 +8483,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 24,
         "carbs": 27,
         "fat": 8
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 406,
+        "protein": 35,
+        "carbs": 32,
+        "fat": 10
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7772,6 +8512,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/fajita-breakfast-burrito.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 450,
     "protein": 28,
     "carbs": 36,
@@ -7801,6 +8542,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 28,
         "carbs": 36,
         "fat": 21
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 630,
+        "protein": 41,
+        "carbs": 43,
+        "fat": 27
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7821,6 +8571,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/sherry-chicken-salad.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
+    "bulkPrice": 10.49,
     "calories": 350,
     "protein": 27,
     "carbs": 12,
@@ -7841,6 +8592,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 27,
         "carbs": 12,
         "fat": 22
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.49,
+        "calories": 490,
+        "protein": 39,
+        "carbs": 14,
+        "fat": 29
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -7861,7 +8621,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/peruvian-steak-n-fries.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.49,
+    "bulkPrice": 12.49,
     "calories": 340,
     "protein": 23,
     "carbs": 28,
@@ -7884,7 +8644,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.49,
+        "price": 12.49,
         "calories": 476,
         "protein": 33,
         "carbs": 34,
@@ -7909,6 +8669,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/energy-fruit-bites.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 280,
     "protein": 15,
     "carbs": 31,
@@ -7938,6 +8699,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 15,
         "carbs": 31,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 392,
+        "protein": 22,
+        "carbs": 37,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8012,6 +8782,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/peach-cobbler-power-bites.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 370,
     "protein": 21,
     "carbs": 43,
@@ -8037,6 +8808,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 21,
         "carbs": 43,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 518,
+        "protein": 30,
+        "carbs": 52,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8057,6 +8837,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-caesar-wrap.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
+    "bulkPrice": 10.49,
     "calories": 370,
     "protein": 25,
     "carbs": 27,
@@ -8084,6 +8865,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 25,
         "carbs": 27,
         "fat": 19
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.49,
+        "calories": 518,
+        "protein": 36,
+        "carbs": 32,
+        "fat": 25
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8104,7 +8894,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/asian-chicken-meatballs.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 330,
     "protein": 33,
     "carbs": 30,
@@ -8137,7 +8927,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 462,
         "protein": 48,
         "carbs": 36,
@@ -8162,6 +8952,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/sauce-add-ons.jpg",
     "price": 0.5,
     "leanPrice": 0.5,
+    "bulkPrice": 3,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -8180,6 +8971,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 3,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8255,7 +9055,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/korean-beef-bowl.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
-    "bulkPrice": 11.49,
+    "bulkPrice": 11.99,
     "calories": 330,
     "protein": 25,
     "carbs": 25,
@@ -8287,7 +9087,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.49,
+        "price": 11.99,
         "calories": 462,
         "protein": 36,
         "carbs": 30,
@@ -8312,6 +9112,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/no-boo-tacos.jpg",
     "price": 13.99,
     "leanPrice": 13.99,
+    "bulkPrice": 16.490000000000002,
     "calories": 400,
     "protein": 47,
     "carbs": 27,
@@ -8339,6 +9140,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 47,
         "carbs": 27,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 16.490000000000002,
+        "calories": 560,
+        "protein": 68,
+        "carbs": 32,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8359,7 +9169,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/citrus-chicken-veggies.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 290,
     "protein": 34,
     "carbs": 24,
@@ -8391,7 +9201,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 406,
         "protein": 49,
         "carbs": 29,
@@ -8416,7 +9226,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/korean-stir-fry.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 310,
     "protein": 28,
     "carbs": 28,
@@ -8448,7 +9258,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 434,
         "protein": 41,
         "carbs": 34,
@@ -8473,6 +9283,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/spicy-cheese-pizza.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
+    "bulkPrice": 10.99,
     "calories": 320,
     "protein": 24,
     "carbs": 10,
@@ -8496,6 +9307,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 24,
         "carbs": 10,
         "fat": 20
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.99,
+        "calories": 448,
+        "protein": 35,
+        "carbs": 12,
+        "fat": 26
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8516,7 +9336,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/aloha-chicken-veggies.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 250,
     "protein": 30,
     "carbs": 13,
@@ -8551,7 +9371,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 350,
         "protein": 44,
         "carbs": 16,
@@ -8576,6 +9396,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/keto-french-dip.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 270,
     "protein": 27,
     "carbs": 5,
@@ -8600,6 +9421,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 27,
         "carbs": 5,
         "fat": 16
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 378,
+        "protein": 39,
+        "carbs": 6,
+        "fat": 21
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8678,7 +9508,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/cheesy-mac-beef.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 430,
     "protein": 32,
     "carbs": 24,
@@ -8709,7 +9539,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 602,
         "protein": 46,
         "carbs": 29,
@@ -8734,6 +9564,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/ube-french-toast-stix.jpg",
     "price": 5.49,
     "leanPrice": 5.49,
+    "bulkPrice": 7.99,
     "calories": 380,
     "protein": 19,
     "carbs": 38,
@@ -8759,6 +9590,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 19,
         "carbs": 38,
         "fat": 16
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.99,
+        "calories": 532,
+        "protein": 28,
+        "carbs": 46,
+        "fat": 21
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8779,7 +9619,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tikka-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 310,
     "protein": 33,
     "carbs": 19,
@@ -8813,7 +9653,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 434,
         "protein": 48,
         "carbs": 23,
@@ -8838,6 +9678,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/disposable-utensils.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -8856,6 +9697,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8876,7 +9726,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/beef-broccolini.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
-    "bulkPrice": 12.99,
+    "bulkPrice": 13.49,
     "calories": 270,
     "protein": 27,
     "carbs": 20,
@@ -8912,7 +9762,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.99,
+        "price": 13.49,
         "calories": 378,
         "protein": 39,
         "carbs": 24,
@@ -8937,6 +9787,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/elysian-fried-rice.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
+    "bulkPrice": 10.49,
     "calories": 350,
     "protein": 35,
     "carbs": 27,
@@ -8957,6 +9808,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 35,
         "carbs": 27,
         "fat": 11
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.49,
+        "calories": 490,
+        "protein": 51,
+        "carbs": 32,
+        "fat": 14
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -8977,7 +9837,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/beef-bulgogi-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 320,
     "protein": 27,
     "carbs": 25,
@@ -9009,7 +9869,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 448,
         "protein": 39,
         "carbs": 30,
@@ -9034,7 +9894,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/braised-beef-barbacoa.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 13.49,
+    "bulkPrice": 12.49,
     "calories": 320,
     "protein": 32,
     "carbs": 32,
@@ -9063,7 +9923,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 13.49,
+        "price": 12.49,
         "calories": 448,
         "protein": 46,
         "carbs": 38,
@@ -9088,6 +9948,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/1st-step-pro-wellness-liquid-multivitamin-mineral.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -9106,6 +9967,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9184,7 +10054,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/cajun-shrimp-bowl.jpg",
     "price": 10.49,
     "leanPrice": 10.49,
-    "bulkPrice": 12.49,
+    "bulkPrice": 12.99,
     "calories": 280,
     "protein": 36,
     "carbs": 28,
@@ -9217,7 +10087,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.49,
+        "price": 12.99,
         "calories": 392,
         "protein": 52,
         "carbs": 34,
@@ -9242,6 +10112,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hungry-planet-dumplings.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 210,
     "protein": 22,
     "carbs": 29,
@@ -9263,6 +10134,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 22,
         "carbs": 29,
         "fat": 3
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 294,
+        "protein": 32,
+        "carbs": 35,
+        "fat": 4
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9283,6 +10163,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/dark-moon-coffee.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -9301,6 +10182,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9321,6 +10211,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/flecha-al-pastor-tacos.jpg",
     "price": 14.99,
     "leanPrice": 14.99,
+    "bulkPrice": 17.490000000000002,
     "calories": 540,
     "protein": 44,
     "carbs": 35,
@@ -9351,6 +10242,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 44,
         "carbs": 35,
         "fat": 27
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 17.490000000000002,
+        "calories": 756,
+        "protein": 64,
+        "carbs": 42,
+        "fat": 35
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9371,6 +10271,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/green-tea-pancakes.jpg",
     "price": 6.49,
     "leanPrice": 6.49,
+    "bulkPrice": 8.99,
     "calories": 300,
     "protein": 14,
     "carbs": 38,
@@ -9395,6 +10296,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 14,
         "carbs": 38,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.99,
+        "calories": 420,
+        "protein": 20,
+        "carbs": 46,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9415,7 +10325,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/thai-basil-turkey.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.49,
+    "bulkPrice": 11.49,
     "calories": 330,
     "protein": 25,
     "carbs": 32,
@@ -9446,7 +10356,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 11.49,
         "calories": 462,
         "protein": 36,
         "carbs": 38,
@@ -9471,7 +10381,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-steak-bowl.jpg",
     "price": 10.49,
     "leanPrice": 10.49,
-    "bulkPrice": 12.49,
+    "bulkPrice": 12.99,
     "calories": 460,
     "protein": 40,
     "carbs": 33,
@@ -9494,7 +10404,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.49,
+        "price": 12.99,
         "calories": 644,
         "protein": 58,
         "carbs": 40,
@@ -9519,6 +10429,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/custom-meal.jpg",
     "price": 5.49,
     "leanPrice": 5.49,
+    "bulkPrice": 7.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -9537,6 +10448,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9557,6 +10477,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/flecha-salmon-bowl.jpg",
     "price": 14.99,
     "leanPrice": 14.99,
+    "bulkPrice": 17.490000000000002,
     "calories": 530,
     "protein": 33,
     "carbs": 46,
@@ -9585,6 +10506,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 33,
         "carbs": 46,
         "fat": 24
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 17.490000000000002,
+        "calories": 742,
+        "protein": 48,
+        "carbs": 55,
+        "fat": 31
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9605,6 +10535,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/apple-cobbler.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 210,
     "protein": 10,
     "carbs": 34,
@@ -9626,6 +10557,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 10,
         "carbs": 34,
         "fat": 10
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 294,
+        "protein": 15,
+        "carbs": 41,
+        "fat": 13
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9646,7 +10586,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/honey-garlic-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 330,
     "protein": 30,
     "carbs": 33,
@@ -9682,7 +10622,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 462,
         "protein": 44,
         "carbs": 40,
@@ -9707,7 +10647,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-fried-rice.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.49,
+    "bulkPrice": 11.49,
     "calories": 270,
     "protein": 27,
     "carbs": 17,
@@ -9741,7 +10681,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 11.49,
         "calories": 378,
         "protein": 39,
         "carbs": 20,
@@ -9766,6 +10706,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/mango-chia-pudding.jpg",
     "price": 5.49,
     "leanPrice": 5.49,
+    "bulkPrice": 7.99,
     "calories": 180,
     "protein": 9,
     "carbs": 33,
@@ -9789,6 +10730,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 9,
         "carbs": 33,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.99,
+        "calories": 252,
+        "protein": 13,
+        "carbs": 40,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9809,7 +10759,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-marsala.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.49,
+    "bulkPrice": 11.49,
     "calories": 410,
     "protein": 39,
     "carbs": 25,
@@ -9834,7 +10784,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 11.49,
         "calories": 574,
         "protein": 57,
         "carbs": 30,
@@ -9917,6 +10867,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/oats-overnight.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -9935,6 +10886,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -9955,7 +10915,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-teriyaki.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 9.89,
+    "bulkPrice": 10.99,
     "calories": 330,
     "protein": 37,
     "carbs": 34,
@@ -9980,7 +10940,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.89,
+        "price": 10.99,
         "calories": 462,
         "protein": 54,
         "carbs": 41,
@@ -10005,6 +10965,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/barbacoa-verde-burrito.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 460,
     "protein": 37,
     "carbs": 38,
@@ -10033,6 +10994,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 37,
         "carbs": 38,
         "fat": 19
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 644,
+        "protein": 54,
+        "carbs": 46,
+        "fat": 25
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10281,7 +11251,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-scampi.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 270,
     "protein": 38,
     "carbs": 17,
@@ -10311,7 +11281,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 378,
         "protein": 55,
         "carbs": 20,
@@ -10394,6 +11364,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/sausage-breakfast-burrito.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 260,
     "protein": 17,
     "carbs": 22,
@@ -10417,6 +11388,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 17,
         "carbs": 22,
         "fat": 12
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 364,
+        "protein": 25,
+        "carbs": 26,
+        "fat": 16
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10498,6 +11478,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/outer-aisle-crusts-wraps.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -10520,6 +11501,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10540,6 +11530,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/huel-daily-greens.jpg",
     "price": 3.29,
     "leanPrice": 3.29,
+    "bulkPrice": 5.79,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -10559,6 +11550,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.79,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10579,6 +11579,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/blueberry-parfait.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 300,
     "protein": 23,
     "carbs": 42,
@@ -10604,6 +11605,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 23,
         "carbs": 42,
         "fat": 8
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 420,
+        "protein": 33,
+        "carbs": 50,
+        "fat": 10
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10624,6 +11634,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/like-air-puffcorn.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -10642,6 +11653,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10662,6 +11682,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-ceviche.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 270,
     "protein": 37,
     "carbs": 12,
@@ -10684,6 +11705,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 37,
         "carbs": 12,
         "fat": 7
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 378,
+        "protein": 54,
+        "carbs": 14,
+        "fat": 9
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10704,7 +11734,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/nashville-chicken-n-mac.jpg",
     "price": 8.23,
     "leanPrice": 8.23,
-    "bulkPrice": 10.290000000000001,
+    "bulkPrice": 10.73,
     "calories": 430,
     "protein": 36,
     "carbs": 41,
@@ -10733,7 +11763,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.290000000000001,
+        "price": 10.73,
         "calories": 602,
         "protein": 52,
         "carbs": 49,
@@ -10758,6 +11788,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/al-pastor-chicken-tacos.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 400,
     "protein": 50,
     "carbs": 32,
@@ -10785,6 +11816,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 50,
         "carbs": 32,
         "fat": 12
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 560,
+        "protein": 73,
+        "carbs": 38,
+        "fat": 16
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10805,7 +11845,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/low-carb-chicken-piccata.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 260,
     "protein": 28,
     "carbs": 10,
@@ -10834,7 +11874,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 364,
         "protein": 41,
         "carbs": 12,
@@ -10859,6 +11899,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/blueberry-power-bites.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 240,
     "protein": 12,
     "carbs": 59,
@@ -10887,6 +11928,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 12,
         "carbs": 59,
         "fat": 6
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 336,
+        "protein": 17,
+        "carbs": 71,
+        "fat": 8
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -10965,6 +12015,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/jamaican-turken-sliders.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 480,
     "protein": 38,
     "carbs": 42,
@@ -10993,6 +12044,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 38,
         "carbs": 42,
         "fat": 18
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 672,
+        "protein": 55,
+        "carbs": 50,
+        "fat": 23
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11013,7 +12073,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-chicken-rice.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 300,
     "protein": 32,
     "carbs": 31,
@@ -11044,7 +12104,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 420,
         "protein": 46,
         "carbs": 37,
@@ -11069,7 +12129,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pulled-bbq-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 280,
     "protein": 32,
     "carbs": 24,
@@ -11104,7 +12164,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 392,
         "protein": 46,
         "carbs": 29,
@@ -11129,6 +12189,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/carbs-by-the-pound.jpg",
     "price": 6.49,
     "leanPrice": 6.49,
+    "bulkPrice": 8.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -11147,6 +12208,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11167,7 +12237,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-tex-mex.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.49,
+    "bulkPrice": 11.49,
     "calories": 370,
     "protein": 29,
     "carbs": 34,
@@ -11201,7 +12271,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 11.49,
         "calories": 518,
         "protein": 42,
         "carbs": 41,
@@ -11226,6 +12296,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hungry-planet-supreme-flatbread.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 340,
     "protein": 16,
     "carbs": 32,
@@ -11248,6 +12319,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 16,
         "carbs": 32,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 476,
+        "protein": 23,
+        "carbs": 38,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11268,7 +12348,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/the-heater.jpg",
     "price": 10.49,
     "leanPrice": 10.49,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.99,
     "calories": 460,
     "protein": 36,
     "carbs": 25,
@@ -11293,7 +12373,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.99,
         "calories": 644,
         "protein": 52,
         "carbs": 30,
@@ -11318,6 +12398,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-ranch-pizza.jpg",
     "price": 9.74,
     "leanPrice": 9.74,
+    "bulkPrice": 12.24,
     "calories": 350,
     "protein": 35,
     "carbs": 7,
@@ -11344,6 +12425,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 35,
         "carbs": 7,
         "fat": 19
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.24,
+        "calories": 490,
+        "protein": 51,
+        "carbs": 8,
+        "fat": 25
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11364,6 +12454,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/greek-salad-bowl.jpg",
     "price": 8.24,
     "leanPrice": 8.24,
+    "bulkPrice": 10.74,
     "calories": 430,
     "protein": 34,
     "carbs": 23,
@@ -11384,6 +12475,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 34,
         "carbs": 23,
         "fat": 23
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.74,
+        "calories": 602,
+        "protein": 49,
+        "carbs": 28,
+        "fat": 30
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11404,7 +12504,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/buffalo-mac-cheese.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 340,
     "protein": 28,
     "carbs": 36,
@@ -11433,7 +12533,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 476,
         "protein": 41,
         "carbs": 43,
@@ -11458,6 +12558,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/steak-fajita-quesadilla.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
+    "bulkPrice": 10.99,
     "calories": 380,
     "protein": 19,
     "carbs": 29,
@@ -11480,6 +12581,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 19,
         "carbs": 29,
         "fat": 21
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.99,
+        "calories": 532,
+        "protein": 28,
+        "carbs": 35,
+        "fat": 27
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11500,6 +12610,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pretty-tasty-collagen-tea.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -11520,6 +12631,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11540,7 +12660,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-katsu-curry.jpg",
     "price": 8.24,
     "leanPrice": 8.24,
-    "bulkPrice": 10.24,
+    "bulkPrice": 10.74,
     "calories": 380,
     "protein": 32,
     "carbs": 38,
@@ -11569,7 +12689,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.24,
+        "price": 10.74,
         "calories": 532,
         "protein": 46,
         "carbs": 46,
@@ -11594,7 +12714,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/hungry-planet-penne-meatballs.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 12.24,
+    "bulkPrice": 12.49,
     "calories": 340,
     "protein": 30,
     "carbs": 45,
@@ -11621,7 +12741,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.24,
+        "price": 12.49,
         "calories": 476,
         "protein": 44,
         "carbs": 54,
@@ -11646,6 +12766,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/peach-parfait.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 300,
     "protein": 23,
     "carbs": 39,
@@ -11671,6 +12792,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 23,
         "carbs": 39,
         "fat": 8
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 420,
+        "protein": 33,
+        "carbs": 47,
+        "fat": 10
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11691,7 +12821,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/lo-carb-nara-meatballs.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 330,
     "protein": 42,
     "carbs": 17,
@@ -11723,7 +12853,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 462,
         "protein": 61,
         "carbs": 20,
@@ -11804,6 +12934,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-sausage-breakfast-burrito.jpg",
     "price": 7.49,
     "leanPrice": 7.49,
+    "bulkPrice": 9.99,
     "calories": 330,
     "protein": 22,
     "carbs": 28,
@@ -11829,6 +12960,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 22,
         "carbs": 28,
         "fat": 18
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.99,
+        "calories": 462,
+        "protein": 32,
+        "carbs": 34,
+        "fat": 23
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11849,6 +12989,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/once-upon-a-coconut.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -11869,6 +13010,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11889,6 +13039,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/e-gift-card-25.jpg",
     "price": 25,
     "leanPrice": 25,
+    "bulkPrice": 27.5,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -11907,6 +13058,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 27.5,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -11927,7 +13087,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-elote.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 12.57,
+    "bulkPrice": 12.49,
     "calories": 290,
     "protein": 29,
     "carbs": 27,
@@ -11953,7 +13113,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.57,
+        "price": 12.49,
         "calories": 406,
         "protein": 42,
         "carbs": 32,
@@ -11978,6 +13138,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/foodie-fish-tacos.jpg",
     "price": 12.49,
     "leanPrice": 12.49,
+    "bulkPrice": 14.99,
     "calories": 310,
     "protein": 39,
     "carbs": 28,
@@ -12006,6 +13167,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 39,
         "carbs": 28,
         "fat": 7
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 14.99,
+        "calories": 434,
+        "protein": 57,
+        "carbs": 34,
+        "fat": 9
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12026,6 +13196,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/baja-fish-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 310,
     "protein": 29,
     "carbs": 40,
@@ -12053,6 +13224,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 29,
         "carbs": 40,
         "fat": 4
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 434,
+        "protein": 42,
+        "carbs": 48,
+        "fat": 5
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12073,7 +13253,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/teriyaki-chicken-veggies.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 260,
     "protein": 36,
     "carbs": 15,
@@ -12108,7 +13288,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 364,
         "protein": 52,
         "carbs": 18,
@@ -12133,6 +13313,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/baja-vida-beef-sticks-pack.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -12151,6 +13332,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12229,6 +13419,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-caesar-salad.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 370,
     "protein": 31,
     "carbs": 7,
@@ -12254,6 +13445,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 31,
         "carbs": 7,
         "fat": 26
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 518,
+        "protein": 45,
+        "carbs": 8,
+        "fat": 34
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12274,7 +13474,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-turkey-tacos.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
-    "bulkPrice": 8.99,
+    "bulkPrice": 9.49,
     "calories": 330,
     "protein": 24,
     "carbs": 25,
@@ -12299,7 +13499,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 8.99,
+        "price": 9.49,
         "calories": 462,
         "protein": 35,
         "carbs": 30,
@@ -12324,7 +13524,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/spaghetti-squash-turkey-meatballs.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.49,
     "calories": 280,
     "protein": 25,
     "carbs": 19,
@@ -12358,7 +13558,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.49,
         "calories": 392,
         "protein": 36,
         "carbs": 23,
@@ -12383,7 +13583,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/green-bean-chicken.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 270,
     "protein": 29,
     "carbs": 15,
@@ -12411,7 +13611,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 378,
         "protein": 42,
         "carbs": 18,
@@ -12436,6 +13636,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/blueberry-cheesecake.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 140,
     "protein": 5,
     "carbs": 19,
@@ -12459,6 +13660,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 5,
         "carbs": 19,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 196,
+        "protein": 7,
+        "carbs": 23,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12479,7 +13689,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-fajitas.jpg",
     "price": 9.39,
     "leanPrice": 9.39,
-    "bulkPrice": 11.39,
+    "bulkPrice": 11.89,
     "calories": 280,
     "protein": 33,
     "carbs": 13,
@@ -12509,7 +13719,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.39,
+        "price": 11.89,
         "calories": 392,
         "protein": 48,
         "carbs": 16,
@@ -12534,7 +13744,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/kalua-chicken.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.49,
     "calories": 330,
     "protein": 31,
     "carbs": 35,
@@ -12564,7 +13774,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.49,
         "calories": 462,
         "protein": 45,
         "carbs": 42,
@@ -12589,7 +13799,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/orange-chicken.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 10.49,
+    "bulkPrice": 10.99,
     "calories": 270,
     "protein": 29,
     "carbs": 20,
@@ -12620,7 +13830,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 10.99,
         "calories": 378,
         "protein": 42,
         "carbs": 24,
@@ -12645,7 +13855,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/lemon-perfect.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
-    "bulkPrice": 28.990000000000002,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -12668,7 +13878,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 28.990000000000002,
+        "price": 4.99,
         "calories": 560,
         "protein": 58,
         "carbs": 42,
@@ -12693,6 +13903,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-ramen.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 300,
     "protein": 36,
     "carbs": 19,
@@ -12721,6 +13932,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 36,
         "carbs": 19,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 420,
+        "protein": 52,
+        "carbs": 23,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12741,7 +13961,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-steak-eggs.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
-    "bulkPrice": 13.99,
+    "bulkPrice": 13.49,
     "calories": 390,
     "protein": 38,
     "carbs": 27,
@@ -12773,7 +13993,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 13.99,
+        "price": 13.49,
         "calories": 546,
         "protein": 55,
         "carbs": 32,
@@ -12798,6 +14018,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/halfway-to-thanksgiving.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 370,
     "protein": 35,
     "carbs": 25,
@@ -12821,6 +14042,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 35,
         "carbs": 25,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 518,
+        "protein": 51,
+        "carbs": 30,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12841,7 +14071,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-zen-bowl.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 290,
     "protein": 32,
     "carbs": 32,
@@ -12870,7 +14100,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 406,
         "protein": 46,
         "carbs": 38,
@@ -12888,13 +14118,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "e8b0e71f-254b-4306-9b0f-42535335fa5b",
     "sku": "BWBNG",
     "name": "BLT Wrap Box",
-    "slug": "blt-wrap-box-1",
+    "slug": "blt-wrap-box",
     "category": "active",
     "description": "Indulge in our BLT Wrap Box: juicy roasted turkey breast and crispy turkey bacon, fresh lettuce, mild cheddar cheese, and roasted tomato wedges, all w...",
     "longDescription": "Indulge in our BLT Wrap Box: juicy roasted turkey breast and crispy turkey bacon, fresh lettuce, mild cheddar cheese, and roasted tomato wedges, all wrapped in a flavorful roasted red pepper lavash. This wholesome box comes complete with a side of crunchy baby carrots, and our signature Foodie ranch, crafting the perfect balance of hearty and healthy.",
-    "image": "/images/meals/blt-wrap-box-1.jpg",
+    "image": "/images/meals/blt-wrap-box.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 350,
     "protein": 30,
     "carbs": 29,
@@ -12921,6 +14152,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 30,
         "carbs": 29,
         "fat": 14
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 490,
+        "protein": 44,
+        "carbs": 35,
+        "fat": 18
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12941,6 +14181,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/apple-cobbler-parfait.jpg",
     "price": 6.49,
     "leanPrice": 6.49,
+    "bulkPrice": 8.99,
     "calories": 340,
     "protein": 29,
     "carbs": 31,
@@ -12966,6 +14207,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 29,
         "carbs": 31,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.99,
+        "calories": 476,
+        "protein": 42,
+        "carbs": 37,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -12986,6 +14236,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-tamale.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 320,
     "protein": 36,
     "carbs": 25,
@@ -13006,6 +14257,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 36,
         "carbs": 25,
         "fat": 8
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 448,
+        "protein": 52,
+        "carbs": 30,
+        "fat": 10
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13026,6 +14286,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/strawberry-parfait.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 250,
     "protein": 25,
     "carbs": 31,
@@ -13051,6 +14312,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 25,
         "carbs": 31,
         "fat": 6
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 350,
+        "protein": 36,
+        "carbs": 37,
+        "fat": 8
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13071,6 +14341,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/slate-ultra-filtered-milk.jpg",
     "price": 4.29,
     "leanPrice": 4.29,
+    "bulkPrice": 6.79,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -13091,6 +14362,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.79,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13111,7 +14391,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/lemon-pepper-salmon.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
-    "bulkPrice": 12.790000000000001,
+    "bulkPrice": 13.49,
     "calories": 280,
     "protein": 27,
     "carbs": 8,
@@ -13138,7 +14418,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.790000000000001,
+        "price": 13.49,
         "calories": 392,
         "protein": 39,
         "carbs": 10,
@@ -13163,6 +14443,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/custom-breakfast.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -13181,6 +14462,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13201,7 +14491,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/tuscan-chicken.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 290,
     "protein": 30,
     "carbs": 16,
@@ -13236,7 +14526,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 406,
         "protein": 44,
         "carbs": 19,
@@ -13261,7 +14551,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/smoked-filet-cauli-gratin.jpg",
     "price": 11.99,
     "leanPrice": 11.99,
-    "bulkPrice": 14.99,
+    "bulkPrice": 14.49,
     "calories": 350,
     "protein": 43,
     "carbs": 12,
@@ -13293,7 +14583,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 14.99,
+        "price": 14.49,
         "calories": 490,
         "protein": 62,
         "carbs": 14,
@@ -13318,6 +14608,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/banana-chocolate-muffins.jpg",
     "price": 5.49,
     "leanPrice": 5.49,
+    "bulkPrice": 7.99,
     "calories": 230,
     "protein": 13,
     "carbs": 39,
@@ -13345,6 +14636,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 13,
         "carbs": 39,
         "fat": 7
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.99,
+        "calories": 322,
+        "protein": 19,
+        "carbs": 47,
+        "fat": 9
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13365,7 +14665,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/al-pastor-chicken-bowl.jpg",
     "price": 8.74,
     "leanPrice": 8.74,
-    "bulkPrice": 10.49,
+    "bulkPrice": 11.24,
     "calories": 280,
     "protein": 34,
     "carbs": 24,
@@ -13392,7 +14692,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.49,
+        "price": 11.24,
         "calories": 392,
         "protein": 49,
         "carbs": 29,
@@ -13417,6 +14717,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-rancheros-breakfast-burrito.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 400,
     "protein": 27,
     "carbs": 35,
@@ -13446,6 +14747,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 27,
         "carbs": 35,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 560,
+        "protein": 39,
+        "carbs": 42,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13466,7 +14776,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/miso-salmon.jpg",
     "price": 12.99,
     "leanPrice": 12.99,
-    "bulkPrice": 15.99,
+    "bulkPrice": 15.49,
     "calories": 360,
     "protein": 32,
     "carbs": 21,
@@ -13502,7 +14812,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 15.99,
+        "price": 15.49,
         "calories": 504,
         "protein": 46,
         "carbs": 25,
@@ -13527,6 +14837,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/barbacoa-enchiladas-old.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 360,
     "protein": 24,
     "carbs": 30,
@@ -13550,6 +14861,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 24,
         "carbs": 30,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 504,
+        "protein": 35,
+        "carbs": 36,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13570,6 +14890,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pricklee-cactus-water.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -13590,6 +14911,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13671,6 +15001,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/breakfast-pepperoni-flatbread.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 260,
     "protein": 18,
     "carbs": 27,
@@ -13694,6 +15025,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 18,
         "carbs": 27,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 364,
+        "protein": 26,
+        "carbs": 32,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13714,6 +15054,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/magic-mind-productivity-shot.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -13732,6 +15073,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13752,6 +15102,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/elote-shrimp-mac-cheese.jpg",
     "price": 10.49,
     "leanPrice": 10.49,
+    "bulkPrice": 12.99,
     "calories": 500,
     "protein": 45,
     "carbs": 40,
@@ -13780,6 +15131,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 45,
         "carbs": 40,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.99,
+        "calories": 700,
+        "protein": 65,
+        "carbs": 48,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13800,7 +15160,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/philly-cheesesteak-fries.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.49,
     "calories": 360,
     "protein": 29,
     "carbs": 28,
@@ -13825,7 +15185,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.49,
         "calories": 504,
         "protein": 42,
         "carbs": 34,
@@ -13850,6 +15210,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-fried-rice.jpg",
     "price": 9.49,
     "leanPrice": 9.49,
+    "bulkPrice": 11.99,
     "calories": 310,
     "protein": 39,
     "carbs": 21,
@@ -13873,6 +15234,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 39,
         "carbs": 21,
         "fat": 8
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.99,
+        "calories": 434,
+        "protein": 57,
+        "carbs": 25,
+        "fat": 10
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13893,6 +15263,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/e-gift-card-100.jpg",
     "price": 100,
     "leanPrice": 100,
+    "bulkPrice": 102.5,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -13911,6 +15282,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 102.5,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13931,6 +15311,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/huel.jpg",
     "price": 5.49,
     "leanPrice": 5.49,
+    "bulkPrice": 7.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -13951,6 +15332,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -13971,6 +15361,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/spicy-chicken-sandwich.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
+    "bulkPrice": 10.49,
     "calories": 250,
     "protein": 36,
     "carbs": 25,
@@ -14002,6 +15393,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 36,
         "carbs": 25,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.49,
+        "calories": 350,
+        "protein": 52,
+        "carbs": 30,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14022,7 +15422,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pumpkin-spice-muffins.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
-    "bulkPrice": 8.99,
+    "bulkPrice": 7.49,
     "calories": 110,
     "protein": 5,
     "carbs": 16,
@@ -14052,7 +15452,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 8.99,
+        "price": 7.49,
         "calories": 154,
         "protein": 7,
         "carbs": 19,
@@ -14077,6 +15477,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-wet-burrito.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 390,
     "protein": 35,
     "carbs": 36,
@@ -14105,6 +15506,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 35,
         "carbs": 36,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 546,
+        "protein": 51,
+        "carbs": 43,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14125,6 +15535,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pro-granola.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14145,6 +15556,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14165,6 +15585,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/elite-sweets-protein-donut.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14186,6 +15607,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14206,7 +15636,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-adobo.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
-    "bulkPrice": 10.99,
+    "bulkPrice": 11.49,
     "calories": 360,
     "protein": 30,
     "carbs": 41,
@@ -14235,7 +15665,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.99,
+        "price": 11.49,
         "calories": 504,
         "protein": 44,
         "carbs": 49,
@@ -14260,6 +15690,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/g2g-protein-bar.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14280,6 +15711,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14300,7 +15740,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/surf-n-turf.jpg",
     "price": 11.32,
     "leanPrice": 11.32,
-    "bulkPrice": 14.790000000000001,
+    "bulkPrice": 13.82,
     "calories": 270,
     "protein": 32,
     "carbs": 11,
@@ -14325,7 +15765,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 14.790000000000001,
+        "price": 13.82,
         "calories": 378,
         "protein": 46,
         "carbs": 13,
@@ -14350,7 +15790,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/impossible-ravioli.jpg",
     "price": 8.23,
     "leanPrice": 8.23,
-    "bulkPrice": 11.42,
+    "bulkPrice": 10.73,
     "calories": 200,
     "protein": 10,
     "carbs": 23,
@@ -14377,7 +15817,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.42,
+        "price": 10.73,
         "calories": 280,
         "protein": 15,
         "carbs": 28,
@@ -14402,6 +15842,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/rip-van-wafels.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14420,6 +15861,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14440,6 +15890,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/koios-fit-soda.jpg",
     "price": 2.79,
     "leanPrice": 2.79,
+    "bulkPrice": 5.29,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14460,6 +15911,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.29,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14480,6 +15940,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/joyride-zero-sugar-uncommon-candy.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14500,6 +15961,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14520,6 +15990,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/poppi-prebiotic-soda.jpg",
     "price": 2.79,
     "leanPrice": 2.79,
+    "bulkPrice": 5.29,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14538,6 +16009,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.29,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14558,6 +16038,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/321glo-collagen-cookies.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14576,6 +16057,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14589,14 +16079,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "3ed0057c-e928-4cdb-a917-33b5557e2d59",
     "sku": "KPB",
     "name": "Kung Pao Beef",
-    "slug": "kung-pao-beef-1",
+    "slug": "kung-pao-beef",
     "category": "low-carb",
     "description": "A balanced blast of sweet heat, the clean way.",
     "longDescription": "A balanced blast of sweet heat, the clean way.",
-    "image": "/images/meals/kung-pao-beef-1.jpg",
+    "image": "/images/meals/kung-pao-beef.jpg",
     "price": 10.74,
     "leanPrice": 10.74,
-    "bulkPrice": 12.99,
+    "bulkPrice": 13.24,
     "calories": 260,
     "protein": 24,
     "carbs": 15,
@@ -14624,7 +16114,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.99,
+        "price": 13.24,
         "calories": 364,
         "protein": 35,
         "carbs": 18,
@@ -14649,7 +16139,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/miso-salmon-old.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
-    "bulkPrice": 12.790000000000001,
+    "bulkPrice": 13.49,
     "calories": 410,
     "protein": 33,
     "carbs": 35,
@@ -14675,7 +16165,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.790000000000001,
+        "price": 13.49,
         "calories": 574,
         "protein": 48,
         "carbs": 42,
@@ -14700,6 +16190,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/blk-water.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14718,6 +16209,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14738,6 +16238,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/red-velvet-donuts.jpg",
     "price": 5.99,
     "leanPrice": 5.99,
+    "bulkPrice": 8.49,
     "calories": 240,
     "protein": 13,
     "carbs": 37,
@@ -14761,6 +16262,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 13,
         "carbs": 37,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.49,
+        "calories": 336,
+        "protein": 19,
+        "carbs": 44,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14781,6 +16291,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/snap-protein-ridges.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14799,6 +16310,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14819,6 +16339,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/barnana-bites.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14837,6 +16358,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14857,6 +16387,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/dummy-product.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14875,6 +16406,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14888,13 +16428,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "4c84c690-9ca0-4106-8451-210fb0e22349",
     "sku": "ID",
     "name": "Impossible Dumplings",
-    "slug": "impossible-dumplings-1",
+    "slug": "impossible-dumplings",
     "category": "snack-dessert",
     "description": "description",
     "longDescription": "description",
-    "image": "https://mmaswcloud.blob.core.windows.net/mptimagecontainer/89734705-a490-e5ae-be86-ff49b41180f2LargeSize?sv=2017-04-17&sr=b&sig=ciKI987UrRv0UTKAkj62hPada%2F6RcfzMTR4fvjeonMk%3D&se=2026-08-13T02%3A15%3A17Z&sp=r",
+    "image": "/images/meals/impossible-dumplings.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 0,
     "protein": 0,
     "carbs": 0,
@@ -14911,6 +16452,15 @@ export const MEALS_DATA: Meal[] = [
         "id": "lean",
         "name": "Lean Portion",
         "price": 10.99,
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
         "calories": 0,
         "protein": 0,
         "carbs": 0,
@@ -14935,6 +16485,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/protein-donuts.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -14953,6 +16504,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -14973,6 +16533,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/holy-mole-tamale.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 320,
     "protein": 37,
     "carbs": 24,
@@ -14995,6 +16556,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 37,
         "carbs": 24,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 448,
+        "protein": 54,
+        "carbs": 29,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15015,7 +16585,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/cakes-n-links.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
-    "bulkPrice": 8.49,
+    "bulkPrice": 9.49,
     "calories": 320,
     "protein": 25,
     "carbs": 41,
@@ -15041,7 +16611,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 8.49,
+        "price": 9.49,
         "calories": 448,
         "protein": 36,
         "carbs": 49,
@@ -15066,6 +16636,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pizza-muffin-bites.jpg",
     "price": 6.24,
     "leanPrice": 6.24,
+    "bulkPrice": 8.74,
     "calories": 320,
     "protein": 23,
     "carbs": 26,
@@ -15088,6 +16659,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 23,
         "carbs": 26,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.74,
+        "calories": 448,
+        "protein": 33,
+        "carbs": 31,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15108,6 +16688,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/sol-ti.jpg",
     "price": 6.49,
     "leanPrice": 6.49,
+    "bulkPrice": 8.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15126,6 +16707,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15146,6 +16736,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/smoked-filet-cheddar-sandwich.jpg",
     "price": 12.99,
     "leanPrice": 12.99,
+    "bulkPrice": 15.49,
     "calories": 330,
     "protein": 38,
     "carbs": 11,
@@ -15174,6 +16765,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 38,
         "carbs": 11,
         "fat": 14
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 15.49,
+        "calories": 462,
+        "protein": 55,
+        "carbs": 13,
+        "fat": 18
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15194,7 +16794,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-chorizo-tacos.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
-    "bulkPrice": 10.21,
+    "bulkPrice": 10.49,
     "calories": 360,
     "protein": 31,
     "carbs": 22,
@@ -15217,7 +16817,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.21,
+        "price": 10.49,
         "calories": 504,
         "protein": 45,
         "carbs": 26,
@@ -15242,6 +16842,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/built-bar.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15262,6 +16863,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15282,6 +16892,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/ooh-snap-crispy-protein-bars.jpg",
     "price": 2.29,
     "leanPrice": 2.29,
+    "bulkPrice": 4.79,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15300,6 +16911,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.79,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15313,13 +16933,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "603b39ec-aa74-4a7a-b230-69ce971a25e7",
     "sku": "SPR",
     "name": "Snap Protein Ridges",
-    "slug": "snap-protein-ridges-1",
+    "slug": "snap-protein-ridges",
     "category": "snack-dessert",
     "description": "Crisp snacks that pack a lot of protein and taste delicious – bet you didn’t think that could ever be a possibility. Each bag contains 15g of proteins...",
     "longDescription": "Crisp snacks that pack a lot of protein and taste delicious – bet you didn’t think that could ever be a possibility. Each bag contains 15g of proteins and 3-4g of sugar only!",
-    "image": "/images/meals/snap-protein-ridges-1.jpg",
+    "image": "/images/meals/snap-protein-ridges.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15338,6 +16959,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15358,6 +16988,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/legendary-foods-sweet-rolls.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 20,
     "carbs": 5,
@@ -15376,6 +17007,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 20,
         "carbs": 5,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 29,
+        "carbs": 6,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15396,6 +17036,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/100-coconuts-pure-coconut-water.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15414,6 +17055,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15427,14 +17077,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "628c5c5f-81a2-4ef0-a1ee-b2ac7932a9a9",
     "sku": "DE",
     "name": "Deconstructed Enchiladas",
-    "slug": "deconstructed-enchiladas-1",
+    "slug": "deconstructed-enchiladas",
     "category": "active",
     "description": "Corn tortillas layered with marinated shredded chicken, red enchilada sauce, salsa verde, topped with cheddar and cotija cheese.  Great enchilada tast...",
     "longDescription": "Corn tortillas layered with marinated shredded chicken, red enchilada sauce, salsa verde, topped with cheddar and cotija cheese.  Great enchilada taste with half the carbs!",
-    "image": "/images/meals/deconstructed-enchiladas-1.jpg",
+    "image": "/images/meals/deconstructed-enchiladas.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 9.99,
+    "bulkPrice": 10.99,
     "calories": 380,
     "protein": 40,
     "carbs": 29,
@@ -15459,7 +17109,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.99,
+        "price": 10.99,
         "calories": 532,
         "protein": 58,
         "carbs": 35,
@@ -15484,6 +17134,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/legendary-foods-tasty-pastry.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 170,
     "protein": 9,
     "carbs": 4,
@@ -15504,6 +17155,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 9,
         "carbs": 4,
         "fat": 13
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 238,
+        "protein": 13,
+        "carbs": 5,
+        "fat": 17
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15524,6 +17184,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/itoen-tea-shots.jpg",
     "price": 2,
     "leanPrice": 2,
+    "bulkPrice": 4.5,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15542,6 +17203,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.5,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15562,6 +17232,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/the-brew-theory-cold-brew-coffee.jpg",
     "price": 4.99,
     "leanPrice": 4.99,
+    "bulkPrice": 7.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15580,6 +17251,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 7.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15593,13 +17273,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "666d711d-3bfd-4d23-aa53-2ec55fa7048d",
     "sku": "G2G",
     "name": "G2G Protein Bar",
-    "slug": "g2g-protein-bar-1",
+    "slug": "g2g-protein-bar",
     "category": "snack-dessert",
     "description": "The Good2Go protein bars are made with 100% natural and organic ingredients. With 18g of all-natural protein and 4g of fiber in each bar, it's the per...",
     "longDescription": "The Good2Go protein bars are made with 100% natural and organic ingredients. With 18g of all-natural protein and 4g of fiber in each bar, it's the perfect gluten-free snack to take on-the-go!",
-    "image": "/images/meals/g2g-protein-bar-1.jpg",
+    "image": "/images/meals/g2g-protein-bar.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15620,6 +17301,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15640,6 +17330,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/catalina-crunch-keto-cookies.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
+    "bulkPrice": 12.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15661,6 +17352,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15681,6 +17381,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/built-bar-do-not-use.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15701,6 +17402,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15721,6 +17431,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/foodie-flan.jpg",
     "price": 4.49,
     "leanPrice": 4.49,
+    "bulkPrice": 6.99,
     "calories": 150,
     "protein": 5,
     "carbs": 24,
@@ -15742,6 +17453,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 5,
         "carbs": 24,
         "fat": 11
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.99,
+        "calories": 210,
+        "protein": 7,
+        "carbs": 29,
+        "fat": 14
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15762,6 +17482,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/vitastic-vitamins-liquid-multi-vitamin-shot.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15782,6 +17503,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15802,6 +17532,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/koios-nootropic-drink.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15820,6 +17551,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15840,6 +17580,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pathwater-purified-water.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15858,6 +17599,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15878,6 +17628,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/project-7-low-sugar-gum.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15896,6 +17647,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15916,6 +17676,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/power-crunch-protein-bars.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -15934,6 +17695,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -15954,7 +17724,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/beyond-sausage-pesto-pasta.jpg",
     "price": 9.82,
     "leanPrice": 9.82,
-    "bulkPrice": 12.6,
+    "bulkPrice": 12.32,
     "calories": 360,
     "protein": 23,
     "carbs": 32,
@@ -15982,7 +17752,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 12.6,
+        "price": 12.32,
         "calories": 504,
         "protein": 33,
         "carbs": 38,
@@ -16007,6 +17777,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/catalina-crunch-cereal.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16027,6 +17798,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16047,6 +17827,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/odyssey-revive.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16065,6 +17846,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16085,6 +17875,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/arrezzio-parmesan-cheese-packets.jpg",
     "price": 0.19,
     "leanPrice": 0.19,
+    "bulkPrice": 2.69,
     "calories": 15,
     "protein": 1,
     "carbs": 0,
@@ -16102,6 +17893,15 @@ export const MEALS_DATA: Meal[] = [
         "name": "Lean Portion",
         "price": 0.19,
         "calories": 15,
+        "protein": 1,
+        "carbs": 0,
+        "fat": 1
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 2.69,
+        "calories": 21,
         "protein": 1,
         "carbs": 0,
         "fat": 1
@@ -16125,6 +17925,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/crave-protein-bars.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16143,6 +17944,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16163,6 +17973,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-steak-burrito.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 320,
     "protein": 26,
     "carbs": 29,
@@ -16185,6 +17996,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 26,
         "carbs": 29,
         "fat": 11
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 448,
+        "protein": 38,
+        "carbs": 35,
+        "fat": 14
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16205,6 +18025,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/la-colombe.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16223,6 +18044,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16243,6 +18073,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/iconic-protein-shake.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16261,6 +18092,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16281,6 +18121,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/impossible-burger.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 450,
     "protein": 23,
     "carbs": 41,
@@ -16305,6 +18146,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 23,
         "carbs": 41,
         "fat": 21
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 630,
+        "protein": 33,
+        "carbs": 49,
+        "fat": 27
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16325,6 +18175,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/proud-source-spring-water.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16343,6 +18194,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16363,6 +18223,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/optimum-nutrition-protein-wafers.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16381,6 +18242,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16401,6 +18271,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/oatmega-protein-cookies.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16419,6 +18290,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16432,13 +18312,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "aca8e47f-6dbc-4871-a967-56314beb30b6",
     "sku": "G2G",
     "name": "G2G Protein Bar",
-    "slug": "g2g-protein-bar-2",
+    "slug": "g2g-protein-bar",
     "category": "snack-dessert",
     "description": "The Good2Go protein bars are made with 100% natural and organic ingredients. With 18g of all-natural protein and 4g of fiber in each bar, it's the per...",
     "longDescription": "The Good2Go protein bars are made with 100% natural and organic ingredients. With 18g of all-natural protein and 4g of fiber in each bar, it's the perfect gluten-free snack to take on-the-go!",
-    "image": "/images/meals/g2g-protein-bar-2.jpg",
+    "image": "/images/meals/g2g-protein-bar.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16459,6 +18340,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16479,7 +18369,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/shrimp-tikka-masala-old.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 11.99,
+    "bulkPrice": 12.49,
     "calories": 290,
     "protein": 32,
     "carbs": 16,
@@ -16508,7 +18398,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.99,
+        "price": 12.49,
         "calories": 406,
         "protein": 46,
         "carbs": 19,
@@ -16533,6 +18423,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/vermont-smoke-cure.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16553,6 +18444,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16573,7 +18473,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/philly-cheese-casserole.jpg",
     "price": 9.66,
     "leanPrice": 9.66,
-    "bulkPrice": 11.4,
+    "bulkPrice": 12.16,
     "calories": 430,
     "protein": 41,
     "carbs": 8,
@@ -16598,7 +18498,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 11.4,
+        "price": 12.16,
         "calories": 602,
         "protein": 59,
         "carbs": 10,
@@ -16623,7 +18523,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/salmon-pastor.jpg",
     "price": 12.1,
     "leanPrice": 12.1,
-    "bulkPrice": 15.83,
+    "bulkPrice": 14.6,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16648,7 +18548,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 15.83,
+        "price": 14.6,
         "calories": 560,
         "protein": 58,
         "carbs": 42,
@@ -16666,13 +18566,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "b81234c6-1881-4339-ad27-ffa01a25729b",
     "sku": "CCKC14",
     "name": "Catalina Crunch Keto Cookies",
-    "slug": "catalina-crunch-keto-cookies-1",
+    "slug": "catalina-crunch-keto-cookies",
     "category": "snack-dessert",
     "description": "Your favorite sandwich cookies is now 100% plant-based made with no artificial ingredients! These tasty cookies are packed with 4g protein, 3g fiber, ...",
     "longDescription": "Your favorite sandwich cookies is now 100% plant-based made with no artificial ingredients! These tasty cookies are packed with 4g protein, 3g fiber, and 5g net carbs.",
-    "image": "/images/meals/catalina-crunch-keto-cookies-1.jpg",
+    "image": "/images/meals/catalina-crunch-keto-cookies.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16692,6 +18593,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16712,6 +18622,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/la-colombe-draft-latte-coffee.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16730,6 +18641,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16750,6 +18670,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/on-protein-almonds.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16768,6 +18689,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16788,6 +18718,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/iconic-immunity-coffee.jpg",
     "price": 3.99,
     "leanPrice": 3.99,
+    "bulkPrice": 6.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16806,6 +18737,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 6.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16826,7 +18766,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/butter-chicken-bowl.jpg",
     "price": 8.24,
     "leanPrice": 8.24,
-    "bulkPrice": 10.24,
+    "bulkPrice": 10.74,
     "calories": 360,
     "protein": 34,
     "carbs": 18,
@@ -16854,7 +18794,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 10.24,
+        "price": 10.74,
         "calories": 504,
         "protein": 49,
         "carbs": 22,
@@ -16879,6 +18819,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/red-velvet-pancakes.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 340,
     "protein": 19,
     "carbs": 45,
@@ -16904,6 +18845,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 19,
         "carbs": 45,
         "fat": 9
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 476,
+        "protein": 28,
+        "carbs": 54,
+        "fat": 12
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16924,6 +18874,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/celsius-energy-drink-vibe-variety-pack.jpg",
     "price": 23.99,
     "leanPrice": 23.99,
+    "bulkPrice": 26.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16942,6 +18893,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 26.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -16962,6 +18922,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/outer-aisle-sandwich-thins.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
+    "bulkPrice": 9.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -16984,6 +18945,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 9.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17004,7 +18974,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/eggs-benedict.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
-    "bulkPrice": 9.99,
+    "bulkPrice": 9.49,
     "calories": 310,
     "protein": 16,
     "carbs": 14,
@@ -17030,7 +19000,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.99,
+        "price": 9.49,
         "calories": 434,
         "protein": 23,
         "carbs": 17,
@@ -17055,7 +19025,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/mongolian-beef-roasted-veggies.jpg",
     "price": 9.99,
     "leanPrice": 9.99,
-    "bulkPrice": 13.49,
+    "bulkPrice": 12.49,
     "calories": 300,
     "protein": 31,
     "carbs": 15,
@@ -17090,7 +19060,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 13.49,
+        "price": 12.49,
         "calories": 420,
         "protein": 45,
         "carbs": 18,
@@ -17115,7 +19085,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chicken-tostada.jpg",
     "price": 8.49,
     "leanPrice": 8.49,
-    "bulkPrice": 9.99,
+    "bulkPrice": 10.99,
     "calories": 310,
     "protein": 39,
     "carbs": 14,
@@ -17143,7 +19113,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.99,
+        "price": 10.99,
         "calories": 434,
         "protein": 57,
         "carbs": 17,
@@ -17168,6 +19138,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/custom-breakfast-old.jpg",
     "price": 7.99,
     "leanPrice": 7.99,
+    "bulkPrice": 10.49,
     "calories": 210,
     "protein": 1,
     "carbs": 35,
@@ -17186,6 +19157,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 1,
         "carbs": 35,
         "fat": 10
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 10.49,
+        "calories": 294,
+        "protein": 1,
+        "carbs": 42,
+        "fat": 13
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17206,6 +19186,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/turkey-pepperoni-pizza.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 290,
     "protein": 23,
     "carbs": 10,
@@ -17229,6 +19210,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 23,
         "carbs": 10,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 406,
+        "protein": 33,
+        "carbs": 12,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17249,6 +19239,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/baja-vida-beef-sticks.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17267,6 +19258,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17287,6 +19287,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/wolo-protein-wanderbar.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17306,6 +19307,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17326,6 +19336,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/nooma-electrolyte-drink.jpg",
     "price": 2.75,
     "leanPrice": 2.75,
+    "bulkPrice": 5.25,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17346,6 +19357,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.25,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17359,13 +19379,14 @@ export const MEALS_DATA: Meal[] = [
     "id": "df466906-70d6-4fd5-bf1a-a1730e9223d0",
     "sku": "G2G",
     "name": "G2G Protein Bar",
-    "slug": "g2g-protein-bar-3",
+    "slug": "g2g-protein-bar",
     "category": "snack-dessert",
     "description": "The Good2Go protein bars are made with 100% natural and organic ingredients. With 18g of all-natural protein and 4g of fiber in each bar, it's the per...",
     "longDescription": "The Good2Go protein bars are made with 100% natural and organic ingredients. With 18g of all-natural protein and 4g of fiber in each bar, it's the perfect gluten-free snack to take on-the-go!",
-    "image": "/images/meals/g2g-protein-bar-3.jpg",
+    "image": "/images/meals/g2g-protein-bar.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17386,6 +19407,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17406,7 +19436,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/protein-waffles-n-gravy.jpg",
     "price": 6.99,
     "leanPrice": 6.99,
-    "bulkPrice": 9.67,
+    "bulkPrice": 9.49,
     "calories": 240,
     "protein": 20,
     "carbs": 14,
@@ -17434,7 +19464,7 @@ export const MEALS_DATA: Meal[] = [
       {
         "id": "bulk",
         "name": "Bulk Portion (+50% Meat)",
-        "price": 9.67,
+        "price": 9.49,
         "calories": 336,
         "protein": 29,
         "carbs": 17,
@@ -17459,6 +19489,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipmonk-protein-cookies.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17479,6 +19510,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17499,6 +19539,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/clean-cause-organic-sparkling-yerba-mate.jpg",
     "price": 3.49,
     "leanPrice": 3.49,
+    "bulkPrice": 5.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17517,6 +19558,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17537,6 +19587,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/la-colombe-draft-coffee.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17555,6 +19606,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17575,6 +19635,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/smart-sweets.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17593,6 +19654,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17613,6 +19683,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/pressed-juicery.jpg",
     "price": 6.49,
     "leanPrice": 6.49,
+    "bulkPrice": 8.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17631,6 +19702,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 8.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17651,6 +19731,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/munk-pack-keto-bar.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17671,6 +19752,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17691,6 +19781,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/buff-bake-protein-cookies.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17709,6 +19800,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17729,6 +19829,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/barbacoa-enchiladas.jpg",
     "price": 10.99,
     "leanPrice": 10.99,
+    "bulkPrice": 13.49,
     "calories": 420,
     "protein": 42,
     "carbs": 43,
@@ -17760,6 +19861,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 42,
         "carbs": 43,
         "fat": 17
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 13.49,
+        "calories": 588,
+        "protein": 61,
+        "carbs": 52,
+        "fat": 22
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17780,6 +19890,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/do-not-use.jpg",
     "price": 8.99,
     "leanPrice": 8.99,
+    "bulkPrice": 11.49,
     "calories": 310,
     "protein": 31,
     "carbs": 41,
@@ -17807,6 +19918,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 31,
         "carbs": 41,
         "fat": 3
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 11.49,
+        "calories": 434,
+        "protein": 45,
+        "carbs": 49,
+        "fat": 4
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17827,6 +19947,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/keto-bar.jpg",
     "price": 2.49,
     "leanPrice": 2.49,
+    "bulkPrice": 4.99,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17848,6 +19969,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.99,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17868,6 +19998,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/kor-shots.jpg",
     "price": 2.99,
     "leanPrice": 2.99,
+    "bulkPrice": 5.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17886,6 +20017,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 5.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17906,6 +20046,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/siete-tortilla-chips.jpg",
     "price": 1.99,
     "leanPrice": 1.99,
+    "bulkPrice": 4.49,
     "calories": 400,
     "protein": 40,
     "carbs": 35,
@@ -17924,6 +20065,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 40,
         "carbs": 35,
         "fat": 15
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 4.49,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 42,
+        "fat": 20
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
@@ -17944,6 +20094,7 @@ export const MEALS_DATA: Meal[] = [
     "image": "/images/meals/chipotle-turkey-pizza.jpg",
     "price": 9.82,
     "leanPrice": 9.82,
+    "bulkPrice": 12.32,
     "calories": 390,
     "protein": 34,
     "carbs": 8,
@@ -17967,6 +20118,15 @@ export const MEALS_DATA: Meal[] = [
         "protein": 34,
         "carbs": 8,
         "fat": 23
+      },
+      {
+        "id": "bulk",
+        "name": "Bulk Portion (+50% Meat)",
+        "price": 12.32,
+        "calories": 546,
+        "protein": 49,
+        "carbs": 10,
+        "fat": 30
       }
     ],
     "heatingInstructions": "Microwave: Vent lid, heat on High for 90-120 seconds. Oven: Transfer to oven-safe tray, 350°F for 10-12 mins.",
