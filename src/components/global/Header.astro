@@ -1,5 +1,6 @@
 ---
 import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+import MegaMenu from './MegaMenu.astro';
 
 const orderUrl = ExternalCommerceAdapter.getOrderUrl();
 const accountUrl = ExternalCommerceAdapter.getAccountUrl();
@@ -7,7 +8,7 @@ const accountUrl = ExternalCommerceAdapter.getAccountUrl();
 const pathname = Astro.url.pathname;
 
 const navLinks = [
-  { name: 'Menu', href: '/menu/' },
+  { name: 'Menu', href: '/menu/', isMega: true },
   { name: 'How It Works', href: '/how-it-works/' },
   { name: 'Locations', href: '/locations/' },
   { name: 'Corporate Meals', href: '/corporate-meals/' },
@@ -17,8 +18,8 @@ const navLinks = [
 ---
 
 <header class="sticky top-0 z-40 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-gray-200 dark:border-dark-border transition-colors">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-    <!-- Clean Real Logo Image Only (Text logo removed as requested) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+    <!-- Clean Real Logo Image Only -->
     <a href="/" class="flex items-center group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1" aria-label="Foodie Fit Homepage">
       <img src="/images/foodiefit-logo.png" alt="Foodie Fit Logo" class="brand-logo-img h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
     </a>
@@ -27,6 +28,27 @@ const navLinks = [
     <nav class="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
       {navLinks.map((link) => {
         const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+        if (link.isMega) {
+          return (
+            <div class="relative py-6">
+              <a
+                id="nav-mega-trigger"
+                href={link.href}
+                class={`text-sm font-semibold transition-colors hover:text-brand-500 py-2 border-b-2 inline-flex items-center gap-1.5 ${
+                  isActive ? 'text-brand-500 border-brand-500' : 'text-slate-700 dark:text-gray-300 border-transparent'
+                }`}
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="mega-menu-panel"
+              >
+                <span>{link.name}</span>
+                <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+            </div>
+          );
+        }
         return (
           <a
             href={link.href}
@@ -46,7 +68,7 @@ const navLinks = [
       <button
         id="theme-toggle-btn"
         type="button"
-        class="p-2.5 rounded-xl text-slate-600 dark:text-gray-300 hover:text-brand-500 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-dark-surface focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+        class="p-2.5 rounded-xl text-slate-600 dark:text-gray-300 hover:text-brand-500 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-dark-surface focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors cursor-pointer"
         aria-label="Toggle dark/light mode"
         title="Toggle Light/Dark Theme"
       >
@@ -84,7 +106,7 @@ const navLinks = [
         aria-label="Toggle dark/light mode"
       >
         <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
         <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -114,6 +136,10 @@ const navLinks = [
         </svg>
       </button>
     </div>
+
+    <!-- Page-Width Mega Menu Dropdown -->
+    <MegaMenu />
+
   </div>
 </header>
 

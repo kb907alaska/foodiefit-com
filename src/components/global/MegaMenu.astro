@@ -1,0 +1,254 @@
+---
+import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+
+const categories = [
+  {
+    id: 'low-carb',
+    title: 'Low-Carb Meals',
+    desc: 'Under 15g net carbs per portion for fat loss & keto goals.',
+    href: '/menu/?category=low-carb',
+    badge: 'Keto Friendly',
+    badgeColor: 'bg-red-500/10 text-red-600 dark:text-red-400 border-red-500/30',
+    image: '/images/meals/korean-steak.jpg',
+    previewTitle: 'Grilled Sirloin Steak & Asparagus',
+    previewMacros: '410 Cal • 48g Protein • 8g Carbs',
+    previewDesc: 'Juicy sirloin steak served with roasted asparagus and house herb butter.'
+  },
+  {
+    id: 'active',
+    title: 'Active Energy Meals',
+    desc: 'Balanced complex carbs & lean protein for peak performance.',
+    href: '/menu/?category=active',
+    badge: 'Popular',
+    badgeColor: 'bg-brand-500/10 text-brand-600 dark:text-brand-400 border-brand-500/30',
+    image: '/images/meals/impossible-dumplings.jpg',
+    previewTitle: 'Impossible Pan-Seared Dumplings',
+    previewMacros: '410 Cal • 28g Protein • 44g Carbs',
+    previewDesc: 'Plant-based dumplings served with steamed edamame and sesame soy dip.'
+  },
+  {
+    id: 'breakfast',
+    title: 'High-Protein Breakfasts',
+    desc: 'Protein pancakes, turkey bacon scrambles & breakfast burritos.',
+    href: '/menu/?category=breakfast',
+    badge: 'Morning Fuel',
+    badgeColor: 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30',
+    image: '/images/meals/red-velvet-pancakes.jpg',
+    previewTitle: 'Protein Red Velvet Pancakes',
+    previewMacros: '420 Cal • 34g Protein • 48g Carbs',
+    previewDesc: 'Fluffy protein pancakes with real cream cheese glaze and turkey sausage.'
+  },
+  {
+    id: 'snack-dessert',
+    title: 'Healthy Snacks & Desserts',
+    desc: 'Protein donuts, artisanal flan, and macro-friendly bites.',
+    href: '/menu/?category=snack-dessert',
+    badge: 'Guilt-Free',
+    badgeColor: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30',
+    image: '/images/meals/red-velvet-donuts.jpg',
+    previewTitle: 'Glazed Protein Donuts (2-Pack)',
+    previewMacros: '210 Cal • 18g Protein • 24g Carbs',
+    previewDesc: 'Baked fresh daily with whey protein isolate and zero artificial dyes.'
+  },
+  {
+    id: 'custom-meals',
+    title: 'Custom Meal Prep Builder',
+    desc: 'Choose your exact protein, carb, and veggie ounces.',
+    href: '/custom-meals/',
+    badge: 'Build Your Own',
+    badgeColor: 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30',
+    image: '/images/meals/custom-breakfast.jpg',
+    previewTitle: 'Custom Macro Bowl Builder',
+    previewMacros: 'Your Exact Grams & Ounces',
+    previewDesc: 'Select 4oz, 6oz, or 8oz grilled chicken, steak, jasmine rice, or broccoli.'
+  }
+];
+---
+
+<!-- Page-Width Desktop Mega Menu Dropdown Container -->
+<div
+  id="mega-menu-panel"
+  class="absolute left-0 right-0 top-full hidden opacity-0 translate-y-2 transition-all duration-200 z-50 pointer-events-none"
+  role="region"
+  aria-label="Menu Categories Mega Menu"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl shadow-2xl p-6 sm:p-8 pointer-events-auto transition-colors">
+      
+      <!-- Top Grid: Left Links + Right Live Preview -->
+      <div class="grid grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Navigation Category Links -->
+        <div class="col-span-7 space-y-2">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-gray-400 block mb-3">
+            Explore Menu Categories
+          </span>
+
+          {categories.map((cat, idx) => (
+            <a
+              href={cat.href}
+              class={`mega-menu-link group flex items-start gap-4 p-3 rounded-2xl border border-transparent hover:border-gray-200 dark:hover:border-dark-border hover:bg-gray-50 dark:hover:bg-dark-surface transition-all ${idx === 0 ? 'is-active bg-gray-50 dark:bg-dark-surface border-gray-200 dark:border-dark-border' : ''}`}
+              data-preview-id={cat.id}
+            >
+              <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 flex-shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-display font-bold text-sm text-slate-900 dark:text-white group-hover:text-brand-500 dark:group-hover:text-brand-400 transition-colors">
+                    {cat.title}
+                  </span>
+                  <span class={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${cat.badgeColor}`}>
+                    {cat.badge}
+                  </span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-gray-400 leading-snug mt-0.5">
+                  {cat.desc}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <!-- Right Column: Interactive Category Visual Preview -->
+        <div class="col-span-5 relative">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-gray-400 block mb-3">
+            Featured Highlight
+          </span>
+
+          {categories.map((cat, idx) => (
+            <div
+              id={`mega-preview-${cat.id}`}
+              class={`mega-preview-card bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-2xl overflow-hidden p-4 space-y-4 shadow-sm ${idx === 0 ? 'block' : 'hidden'}`}
+            >
+              <div class="relative aspect-[4/3] rounded-xl overflow-hidden">
+                <img src={cat.image} alt={cat.previewTitle} class="w-full h-full object-cover" />
+                <div class="absolute bottom-2 left-2 right-2 bg-slate-950/80 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1.5 rounded-lg">
+                  {cat.previewMacros}
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white uppercase mb-1">
+                  {cat.previewTitle}
+                </h4>
+                <p class="text-xs text-slate-600 dark:text-gray-300 leading-relaxed mb-4">
+                  {cat.previewDesc}
+                </p>
+                <a
+                  href={cat.href}
+                  class="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 px-4 py-2 rounded-xl shadow-glow-red transition-all"
+                >
+                  Shop {cat.title} &rarr;
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+      <!-- Bottom Action Bar Across Mega Menu -->
+      <div class="mt-6 pt-6 border-t border-gray-200 dark:border-dark-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-xs text-slate-700 dark:text-gray-300 font-medium">
+          <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+          <span>Order by <strong>6:00 PM</strong> for Next-Day Las Vegas & Henderson Delivery</span>
+          <span class="hidden sm:inline text-slate-400">•</span>
+          <span class="hidden sm:inline">3 Local Stores Open Daily 8 AM – 8 PM</span>
+        </div>
+
+        <a
+          href={orderUrl}
+          class="px-5 py-2.5 rounded-xl font-display text-xs font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red whitespace-nowrap transition-all"
+        >
+          Start Order Now &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function setupMegaMenu() {
+    const trigger = document.getElementById('nav-mega-trigger');
+    const panel = document.getElementById('mega-menu-panel');
+    const links = document.querySelectorAll('.mega-menu-link');
+    const previews = document.querySelectorAll('.mega-preview-card');
+
+    if (!trigger || !panel) return;
+
+    let isHovered = false;
+
+    const openMenu = () => {
+      panel.classList.remove('hidden');
+      setTimeout(() => {
+        panel.classList.remove('opacity-0', 'translate-y-2');
+        panel.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        trigger.setAttribute('aria-expanded', 'true');
+      }, 10);
+    };
+
+    const closeMenu = () => {
+      panel.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      panel.classList.add('opacity-0', 'translate-y-2');
+      trigger.setAttribute('aria-expanded', 'false');
+      setTimeout(() => {
+        if (!isHovered) panel.classList.add('hidden');
+      }, 200);
+    };
+
+    trigger.addEventListener('mouseenter', () => { isHovered = true; openMenu(); });
+    trigger.addEventListener('mouseleave', () => {
+      isHovered = false;
+      setTimeout(() => { if (!isHovered) closeMenu(); }, 150);
+    });
+
+    panel.addEventListener('mouseenter', () => { isHovered = true; });
+    panel.addEventListener('mouseleave', () => {
+      isHovered = false;
+      setTimeout(() => { if (!isHovered) closeMenu(); }, 150);
+    });
+
+    // Keyboard Accessibility
+    trigger.addEventListener('focus', openMenu);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Outside Click Close
+    document.addEventListener('click', (e) => {
+      const target = e.target as Node | null;
+      if (target && !panel.contains(target) && !trigger.contains(target)) {
+        isHovered = false;
+        closeMenu();
+      }
+    });
+
+    // Interactive Preview Switching
+    links.forEach(link => {
+      link.addEventListener('mouseenter', (e) => {
+        const currentTarget = e.currentTarget as HTMLElement | null;
+        if (!currentTarget) return;
+        const targetId = currentTarget.getAttribute('data-preview-id');
+        
+        links.forEach(l => l.classList.remove('is-active', 'bg-gray-50', 'dark:bg-dark-surface', 'border-gray-200', 'dark:border-dark-border'));
+        currentTarget.classList.add('is-active', 'bg-gray-50', 'dark:bg-dark-surface', 'border-gray-200', 'dark:border-dark-border');
+
+        previews.forEach(p => p.classList.add('hidden'));
+        if (targetId) {
+          const targetPreview = document.getElementById(`mega-preview-${targetId}`);
+          if (targetPreview) targetPreview.classList.remove('hidden');
+        }
+      });
+    });
+  }
+
+  setupMegaMenu();
+  document.addEventListener('astro:after-swap', setupMegaMenu);
+</script>
