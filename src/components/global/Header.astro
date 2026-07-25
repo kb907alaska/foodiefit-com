@@ -16,18 +16,16 @@ const navLinks = [
 ];
 ---
 
-<header class="sticky top-0 z-40 bg-dark-bg/90 backdrop-blur-md border-b border-dark-border transition-colors">
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-dark-bg/90 backdrop-blur-md border-b border-gray-200 dark:border-dark-border transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center shadow-glow-green group-hover:scale-105 transition-transform">
-        <span class="font-display font-black text-xl text-white tracking-tighter">FF</span>
-      </div>
+    <a href="/" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1">
+      <img src="/images/foodiefit-logo.png" alt="Foodie Fit Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
       <div class="flex flex-col">
-        <span class="font-display text-2xl tracking-wide uppercase text-white font-black leading-none">
+        <span class="font-display text-2xl tracking-wide uppercase text-slate-900 dark:text-white font-black leading-none">
           FOODIE <span class="text-brand-500">FIT</span>
         </span>
-        <span class="text-[10px] uppercase font-bold tracking-widest text-dark-muted leading-tight">
+        <span class="text-[10px] uppercase font-bold tracking-widest text-slate-500 dark:text-dark-muted leading-tight">
           LAS VEGAS MEAL PREP
         </span>
       </div>
@@ -40,8 +38,8 @@ const navLinks = [
         return (
           <a
             href={link.href}
-            class={`text-sm font-semibold transition-colors hover:text-brand-400 py-2 border-b-2 ${
-              isActive ? 'text-brand-500 border-brand-500' : 'text-gray-300 border-transparent'
+            class={`text-sm font-semibold transition-colors hover:text-brand-500 py-2 border-b-2 ${
+              isActive ? 'text-brand-500 border-brand-500' : 'text-slate-700 dark:text-gray-300 border-transparent'
             }`}
           >
             {link.name}
@@ -52,22 +50,54 @@ const navLinks = [
 
     <!-- Desktop Actions -->
     <div class="hidden lg:flex items-center gap-4">
+      <!-- Dark / Light Theme Toggle Button -->
+      <button
+        id="theme-toggle-btn"
+        type="button"
+        class="p-2.5 rounded-xl text-slate-600 dark:text-gray-300 hover:text-brand-500 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-dark-surface focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors"
+        aria-label="Toggle dark/light mode"
+      >
+        <!-- Sun Icon (shown in dark mode) -->
+        <svg id="theme-sun-icon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Moon Icon (shown in light mode) -->
+        <svg id="theme-moon-icon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
+
       <a
         href={accountUrl}
-        class="text-sm font-semibold text-gray-300 hover:text-white px-3 py-2 rounded-lg hover:bg-dark-surface transition-colors"
+        class="text-sm font-semibold text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-surface transition-colors"
       >
         Account
       </a>
       <a
         href={orderUrl}
-        class="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-display text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-green hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
+        class="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-display text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
       >
         Order Now
       </a>
     </div>
 
-    <!-- Mobile Hamburger Control -->
-    <div class="flex lg:hidden items-center gap-3">
+    <!-- Mobile Controls -->
+    <div class="flex lg:hidden items-center gap-2">
+      <!-- Mobile Theme Toggle -->
+      <button
+        id="theme-toggle-btn-mobile"
+        type="button"
+        class="p-2 rounded-lg text-slate-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-surface"
+        aria-label="Toggle dark/light mode"
+      >
+        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </button>
+
       <a
         href={orderUrl}
         class="inline-flex items-center justify-center px-4 py-2 rounded-lg font-display text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 transition-colors"
@@ -78,7 +108,7 @@ const navLinks = [
       <button
         id="mobile-menu-toggle"
         type="button"
-        class="p-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-dark-surface focus:outline-none focus:ring-2 focus:ring-brand-500"
+        class="p-2.5 rounded-lg text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-dark-surface focus:outline-none focus:ring-2 focus:ring-brand-500"
         aria-label="Toggle mobile menu"
         aria-expanded="false"
         aria-controls="mobile-drawer"
@@ -93,3 +123,21 @@ const navLinks = [
     </div>
   </div>
 </header>
+
+<script>
+  function setupThemeToggle() {
+    const btn = document.getElementById('theme-toggle-btn');
+    const btnMobile = document.getElementById('theme-toggle-btn-mobile');
+
+    const toggleTheme = () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('foodiefit_theme', isDark ? 'dark' : 'light');
+    };
+
+    if (btn) btn.addEventListener('click', toggleTheme);
+    if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
+  }
+
+  setupThemeToggle();
+  document.addEventListener('astro:after-swap', setupThemeToggle);
+</script>
