@@ -44,7 +44,7 @@ const rankedMeals = MEALS_DATA.map((meal) => {
             <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Meal Name</th>
             <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Category</th>
             <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Price</th>
-            <th scope="col" class="py-4 px-4 font-bold text-emerald-400 uppercase text-xs">Protein</th>
+            <th scope="col" class="py-4 px-4 font-bold text-brand-400 uppercase text-xs">Protein</th>
             <th scope="col" class="py-4 px-4 font-bold text-brand-400 uppercase text-xs">Protein / Dollar</th>
             <th scope="col" class="py-4 px-4 font-bold text-white uppercase text-xs">Action</th>
           </tr>
@@ -59,7 +59,7 @@ const rankedMeals = MEALS_DATA.map((meal) => {
               </td>
               <td class="py-4 px-4 text-xs font-semibold uppercase">{m.category}</td>
               <td class="py-4 px-4 font-bold text-white">${m.price.toFixed(2)}</td>
-              <td class="py-4 px-4 font-extrabold text-emerald-400 text-base">{m.protein}g</td>
+              <td class="py-4 px-4 font-extrabold text-brand-400 text-base">{m.protein}g</td>
               <td class="py-4 px-4 font-black text-brand-400 text-base bg-brand-500/10">
                 {m.proteinPerDollar.toFixed(2)}g / $
               </td>

@@ -5,17 +5,17 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
-          accent: '#16a34a',
+          50: '#fff1f2',
+          100: '#ffe4e6',
+          200: '#fecdd3',
+          300: '#fda4af',
+          400: '#fb7185',
+          500: '#ef5454',
+          600: '#e11d48',
+          700: '#be123c',
+          800: '#9f1239',
+          900: '#881337',
+          accent: '#e11d48',
         },
         dark: {
           bg: '#0F1115',
@@ -32,10 +32,10 @@ export default {
             text: '#FCA5A5',
           },
           active: {
-            DEFAULT: '#22C55E',
-            bg: 'rgba(34, 197, 94, 0.15)',
-            border: '#4ADE80',
-            text: '#86EFAC',
+            DEFAULT: '#EF5454',
+            bg: 'rgba(239, 84, 84, 0.15)',
+            border: '#FB7185',
+            text: '#FDA4AF',
           },
           breakfast: {
             DEFAULT: '#F59E0B',
@@ -57,7 +57,8 @@ export default {
         mono: ['JetBrains Mono', 'Courier New', 'monospace'],
       },
       boxShadow: {
-        'glow-green': '0 0 25px rgba(34, 197, 94, 0.25)',
+        'glow-red': '0 0 25px rgba(239, 84, 84, 0.35)',
+        'glow-green': '0 0 25px rgba(239, 84, 84, 0.35)',
         'glow-subtle': '0 4px 20px rgba(0, 0, 0, 0.4)',
       },
     },

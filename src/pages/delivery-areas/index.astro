@@ -95,7 +95,7 @@ const areas = [
       e.preventDefault();
       const zip = input.value.trim();
       if (zip.length === 5 && validPrefixes.some(p => zip.startsWith(p))) {
-        result.className = 'mt-4 p-4 rounded-xl text-xs font-bold text-center bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
+        result.className = 'mt-4 p-4 rounded-xl text-xs font-bold text-center bg-brand-500/20 text-brand-300 border border-brand-500/40';
         result.innerHTML = `✓ ZIP Code <strong>${zip}</strong> is eligible for next-day Foodie Fit delivery!`;
       } else {
         result.className = 'mt-4 p-4 rounded-xl text-xs font-bold text-center bg-amber-500/20 text-amber-300 border border-amber-500/40';
