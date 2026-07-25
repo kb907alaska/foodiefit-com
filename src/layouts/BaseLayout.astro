@@ -1,11 +1,13 @@
 ---
 import '../styles/global.css';
 import '../styles/accessibility.css';
+import OrderStartBar from '../components/commerce/OrderStartBar.astro';
 import AnnouncementBar from '../components/global/AnnouncementBar.astro';
 import Header from '../components/global/Header.astro';
 import MobileNav from '../components/global/MobileNav.astro';
 import Footer from '../components/global/Footer.astro';
 import AccessibilityPanel from '../components/global/AccessibilityPanel.astro';
+import MacroComparisonDrawer from '../components/menu/MacroComparisonDrawer.astro';
 import SEO from '../components/seo/SEO.astro';
 import StructuredData from '../components/seo/StructuredData.astro';
 
@@ -57,6 +59,7 @@ const { title, description, image, canonical, noindex = false } = Astro.props;
       Skip to main content
     </a>
 
+    <OrderStartBar />
     <AnnouncementBar />
     <Header />
 
@@ -67,5 +70,6 @@ const { title, description, image, canonical, noindex = false } = Astro.props;
     <Footer />
     <MobileNav />
     <AccessibilityPanel />
+    <MacroComparisonDrawer />
   </body>
 </html>

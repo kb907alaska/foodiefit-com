@@ -1,0 +1,179 @@
+---
+---
+
+<!-- Macro Comparison Floating Badge -->
+<button
+  id="macro-compare-badge"
+  type="button"
+  class="fixed bottom-24 right-6 z-40 hidden px-4 py-2.5 rounded-full bg-slate-900 text-white border-2 border-brand-500 shadow-2xl items-center gap-2 text-xs font-bold hover:scale-105 transition-all cursor-pointer"
+  aria-label="View pinned macro comparison"
+>
+  <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+  </svg>
+  <span>Compare Meals (<strong id="compare-count" class="text-brand-400">0</strong>)</span>
+</button>
+
+<!-- Macro Comparison Slide-Up Drawer Dialog -->
+<div
+  id="macro-compare-drawer"
+  class="fixed inset-x-0 bottom-0 z-50 transform translate-y-full transition-transform duration-300 ease-out bg-white dark:bg-dark-card border-t-2 border-brand-500 shadow-2xl p-6 rounded-t-3xl max-h-[85vh] overflow-y-auto"
+  aria-hidden="true"
+>
+  <div class="max-w-7xl mx-auto space-y-6">
+    <div class="flex items-center justify-between border-b border-gray-200 dark:border-dark-border pb-4">
+      <div>
+        <h3 class="font-display font-black text-xl text-slate-900 dark:text-white uppercase">
+          Side-By-Side Macro Comparison
+        </h3>
+        <p class="text-xs text-slate-500 dark:text-gray-400">
+          Comparing up to 4 pinned meals.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button
+          id="clear-compare-btn"
+          type="button"
+          class="text-xs font-bold text-slate-500 dark:text-gray-400 hover:text-red-500 transition-colors"
+        >
+          Clear All
+        </button>
+        <button
+          id="close-compare-btn"
+          type="button"
+          class="p-2 rounded-xl text-slate-500 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white"
+          aria-label="Close comparison drawer"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Comparison Grid Container -->
+    <div id="compare-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+</div>
+
+<script>
+  class MacroComparator {
+    private pinned: any[] = [];
+    private badge = document.getElementById('macro-compare-badge');
+    private drawer = document.getElementById('macro-compare-drawer');
+    private grid = document.getElementById('compare-grid');
+    private countEl = document.getElementById('compare-count');
+    private closeBtn = document.getElementById('close-compare-btn');
+    private clearBtn = document.getElementById('clear-compare-btn');
+
+    constructor() {
+      this.init();
+    }
+
+    init() {
+      if (!this.badge || !this.drawer) return;
+
+      this.badge.addEventListener('click', () => this.open());
+      if (this.closeBtn) this.closeBtn.addEventListener('click', () => this.close());
+      if (this.clearBtn) this.clearBtn.addEventListener('click', () => this.clear());
+
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement | null;
+        if (target && target.closest('.pin-meal-btn')) {
+          const btn = target.closest('.pin-meal-btn') as HTMLElement;
+          const mealData = btn.getAttribute('data-meal');
+          if (mealData) {
+            this.togglePin(JSON.parse(mealData));
+          }
+        }
+      });
+    }
+
+    togglePin(meal: any) {
+      const idx = this.pinned.findIndex(m => m.id === meal.id);
+      if (idx > -1) {
+        this.pinned.splice(idx, 1);
+      } else if (this.pinned.length < 4) {
+        this.pinned.push(meal);
+      }
+
+      this.updateUI();
+    }
+
+    updateUI() {
+      if (this.countEl) this.countEl.innerText = this.pinned.length.toString();
+
+      if (this.pinned.length > 0) {
+        this.badge?.classList.remove('hidden');
+        this.badge?.classList.add('flex');
+      } else {
+        this.badge?.classList.add('hidden');
+        this.badge?.classList.remove('flex');
+        this.close();
+      }
+
+      this.renderGrid();
+    }
+
+    renderGrid() {
+      if (!this.grid) return;
+      this.grid.innerHTML = this.pinned.map(m => `
+        <div class="bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-2xl p-4 space-y-3 relative">
+          <img src="${m.image}" alt="${m.name}" class="w-full h-32 object-cover rounded-xl" />
+          <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white uppercase truncate">${m.name}</h4>
+          
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="bg-white dark:bg-dark-card p-2 rounded-lg border border-gray-200 dark:border-dark-border">
+              <span class="text-[10px] text-slate-400 uppercase font-semibold block">Calories</span>
+              <span class="font-bold text-slate-900 dark:text-white">${m.calories} cal</span>
+            </div>
+            <div class="bg-white dark:bg-dark-card p-2 rounded-lg border border-gray-200 dark:border-dark-border">
+              <span class="text-[10px] text-brand-500 uppercase font-semibold block">Protein</span>
+              <span class="font-bold text-brand-500">${m.protein}g</span>
+            </div>
+            <div class="bg-white dark:bg-dark-card p-2 rounded-lg border border-gray-200 dark:border-dark-border">
+              <span class="text-[10px] text-amber-500 uppercase font-semibold block">Carbs</span>
+              <span class="font-bold text-slate-900 dark:text-white">${m.carbs}g</span>
+            </div>
+            <div class="bg-white dark:bg-dark-card p-2 rounded-lg border border-gray-200 dark:border-dark-border">
+              <span class="text-[10px] text-blue-500 uppercase font-semibold block">Fat</span>
+              <span class="font-bold text-slate-900 dark:text-white">${m.fat}g</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-dark-border text-xs font-bold">
+            <span class="text-slate-900 dark:text-white">$${m.price?.toFixed(2) || '11.99'}</span>
+            <a href="/menu/${m.slug}/" class="text-brand-500 hover:underline">View Page &rarr;</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    open() {
+      this.drawer?.classList.remove('translate-y-full');
+      this.drawer?.classList.add('translate-y-0');
+      this.drawer?.setAttribute('aria-hidden', 'false');
+    }
+
+    close() {
+      this.drawer?.classList.remove('translate-y-0');
+      this.drawer?.classList.add('translate-y-full');
+      this.drawer?.setAttribute('aria-hidden', 'true');
+    }
+
+    clear() {
+      this.pinned = [];
+      this.updateUI();
+    }
+  }
+
+  function initComparator() {
+    new MacroComparator();
+  }
+
+  initComparator();
+  document.addEventListener('astro:after-swap', initComparator);
+</script>

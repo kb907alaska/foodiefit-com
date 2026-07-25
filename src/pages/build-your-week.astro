@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import { MEALS_DATA } from '../data/meals';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const mealSlots = ['Breakfast', 'Lunch', 'Dinner', 'Snack'];
+---
+
+<BaseLayout
+  title="Build Your Week Meal Planner | Foodie Fit Las Vegas"
+  description="Slot fresh prepared meals into Monday through Sunday breakfast, lunch, dinner, and snack slots. Automatically calculate weekly protein and calories."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Build Your Week Planner' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Weekly Meal Scheduling
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
+        Build Your Week Planner
+      </h1>
+      <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed">
+        Plan your entire week's nutrition in 60 seconds. Slot high-protein meals into daily routines and hit your exact weekly macro goals.
+      </p>
+    </div>
+
+    <!-- Summary Macro Target Bar -->
+    <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 mb-12 shadow-xl sticky top-24 z-20 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full md:w-auto">
+        <div class="bg-gray-50 dark:bg-dark-surface p-3 rounded-2xl border border-gray-200 dark:border-dark-border">
+          <span class="text-[10px] text-slate-500 dark:text-gray-400 font-bold uppercase block">Total Meals</span>
+          <span id="plan-total-meals" class="text-xl font-bold text-slate-900 dark:text-white">0 Meals</span>
+        </div>
+        <div class="bg-gray-50 dark:bg-dark-surface p-3 rounded-2xl border border-gray-200 dark:border-dark-border">
+          <span class="text-[10px] text-brand-500 font-bold uppercase block">Total Protein</span>
+          <span id="plan-total-protein" class="text-xl font-bold text-brand-500">0g</span>
+        </div>
+        <div class="bg-gray-50 dark:bg-dark-surface p-3 rounded-2xl border border-gray-200 dark:border-dark-border">
+          <span class="text-[10px] text-amber-500 font-bold uppercase block">Avg Calories</span>
+          <span id="plan-avg-calories" class="text-xl font-bold text-slate-900 dark:text-white">0 cal/day</span>
+        </div>
+        <div class="bg-gray-50 dark:bg-dark-surface p-3 rounded-2xl border border-gray-200 dark:border-dark-border">
+          <span class="text-[10px] text-slate-500 dark:text-gray-400 font-bold uppercase block">Estimated Total</span>
+          <span id="plan-total-cost" class="text-xl font-bold text-slate-900 dark:text-white">$0.00</span>
+        </div>
+      </div>
+
+      <a
+        href={orderUrl}
+        class="w-full md:w-auto px-8 py-3.5 rounded-2xl font-display font-bold text-sm text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red text-center transition-all"
+      >
+        Lock In Weekly Plan &rarr;
+      </a>
+    </div>
+
+    <!-- 7-Day Grid Matrix -->
+    <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+      {days.map((day) => (
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-2xl p-4 space-y-4 shadow-sm">
+          <h2 class="font-display font-bold text-base text-slate-900 dark:text-white uppercase text-center border-b border-gray-200 dark:border-dark-border pb-2">
+            {day}
+          </h2>
+
+          <div class="space-y-3">
+            {mealSlots.map((slot) => (
+              <div
+                class="weekly-slot bg-gray-50 dark:bg-dark-surface border border-dashed border-gray-300 dark:border-dark-border rounded-xl p-3 text-center transition-colors cursor-pointer hover:border-brand-500 group"
+                data-day={day}
+                data-slot={slot}
+              >
+                <span class="text-[10px] font-bold uppercase text-slate-400 block group-hover:text-brand-500">
+                  + {slot}
+                </span>
+                <span class="slot-title font-display font-bold text-xs text-slate-900 dark:text-white block mt-1">
+                  Select Meal
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline define:vars={{ MEALS_DATA }}>
+  // Weekly Planner State
+  const planState = {};
+
+  document.addEventListener('click', (e) => {
+    const slotEl = e.target.closest('.weekly-slot');
+    if (slotEl) {
+      const day = slotEl.getAttribute('data-day');
+      const slot = slotEl.getAttribute('data-slot');
+      
+      // Select random featured meal for demonstration
+      const randomMeal = MEALS_DATA[Math.floor(Math.random() * MEALS_DATA.length)];
+      const key = `${day}-${slot}`;
+      
+      planState[key] = randomMeal;
+
+      const titleEl = slotEl.querySelector('.slot-title');
+      if (titleEl) {
+        titleEl.innerText = randomMeal.name;
+      }
+      slotEl.classList.remove('border-dashed', 'bg-gray-50', 'dark:bg-dark-surface');
+      slotEl.classList.add('bg-brand-500/10', 'border-solid', 'border-brand-500');
+
+      updateTotals();
+    }
+  });
+
+  function updateTotals() {
+    const meals = Object.values(planState);
+    const count = meals.length;
+    const totalProtein = meals.reduce((sum, m) => sum + (m.protein || 0), 0);
+    const totalCalories = meals.reduce((sum, m) => sum + (m.calories || 0), 0);
+    const totalCost = meals.reduce((sum, m) => sum + (m.price || 11.99), 0);
+
+    document.getElementById('plan-total-meals').innerText = `${count} Meals`;
+    document.getElementById('plan-total-protein').innerText = `${totalProtein}g`;
+    document.getElementById('plan-avg-calories').innerText = count > 0 ? `${Math.round(totalCalories / 7)} cal/day` : '0 cal/day';
+    document.getElementById('plan-total-cost').innerText = `$${totalCost.toFixed(2)}`;
+  }
+</script>

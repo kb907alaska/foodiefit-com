@@ -1,0 +1,129 @@
+---
+import { COMMERCE_CONFIG } from '../../config/commerce';
+
+const stores = COMMERCE_CONFIG.storeLocations;
+---
+
+<div class="bg-slate-900 text-white border-b border-slate-800 py-2.5 px-4 sm:px-6 transition-colors">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 text-xs">
+    
+    <!-- Left: Live Ordering Deadline Countdown -->
+    <div class="flex items-center gap-2 font-semibold text-slate-300">
+      <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+      <span>Next-Day Cutoff:</span>
+      <span id="live-order-countdown" class="text-white font-bold bg-slate-800 px-2 py-0.5 rounded border border-slate-700">
+        Calculating...
+      </span>
+      <span class="hidden sm:inline text-slate-400">• Order by 6:00 PM PST</span>
+    </div>
+
+    <!-- Right: Universal Start Your Order Form -->
+    <form id="order-start-form" action="/menu/" method="GET" class="flex flex-wrap items-center gap-2 w-full lg:w-auto">
+      
+      <!-- Delivery / Pickup Toggle -->
+      <div class="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700">
+        <button
+          type="button"
+          id="btn-mode-delivery"
+          class="order-mode-btn px-2.5 py-1 rounded-md font-bold text-[11px] bg-brand-600 text-white transition-colors"
+          data-mode="delivery"
+        >
+          Delivery
+        </button>
+        <button
+          type="button"
+          id="btn-mode-pickup"
+          class="order-mode-btn px-2.5 py-1 rounded-md font-bold text-[11px] text-slate-400 hover:text-white transition-colors"
+          data-mode="pickup"
+        >
+          Pickup
+        </button>
+      </div>
+
+      <!-- ZIP Code Input (Delivery Mode) -->
+      <div id="wrapper-zip" class="relative">
+        <input
+          type="text"
+          name="zip"
+          placeholder="Enter ZIP (e.g. 89101)"
+          pattern="[0-9]{5}"
+          class="bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 w-36"
+        />
+      </div>
+
+      <!-- Store Dropdown (Pickup Mode - Hidden by default) -->
+      <div id="wrapper-store" class="hidden">
+        <select
+          name="store"
+          class="bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-xs text-white focus:outline-none focus:border-brand-500"
+        >
+          {stores.map(s => (
+            <option value={s.id}>{s.name} Store</option>
+          ))}
+        </select>
+      </div>
+
+      <!-- Start Shopping CTA -->
+      <button
+        type="submit"
+        class="px-3 py-1 rounded-lg font-display font-bold text-xs text-white bg-brand-600 hover:bg-brand-500 transition-colors shadow-glow-red cursor-pointer"
+      >
+        Start Order &rarr;
+      </button>
+
+    </form>
+  </div>
+</div>
+
+<script>
+  // 1. Live Countdown Timer to 6:00 PM PST
+  function updateOrderCountdown() {
+    const countdownEl = document.getElementById('live-order-countdown');
+    if (!countdownEl) return;
+
+    const now = new Date();
+    const cutoff = new Date();
+    cutoff.setHours(18, 0, 0, 0); // 6:00 PM
+
+    if (now > cutoff) {
+      cutoff.setDate(cutoff.getDate() + 1);
+    }
+
+    const diff = cutoff.getTime() - now.getTime();
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    countdownEl.innerText = `${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateOrderCountdown, 1000);
+  updateOrderCountdown();
+
+  // 2. Delivery / Pickup Toggle Handler
+  function setupOrderBarToggle() {
+    const btnDelivery = document.getElementById('btn-mode-delivery');
+    const btnPickup = document.getElementById('btn-mode-pickup');
+    const wrapZip = document.getElementById('wrapper-zip');
+    const wrapStore = document.getElementById('wrapper-store');
+
+    if (!btnDelivery || !btnPickup || !wrapZip || !wrapStore) return;
+
+    btnDelivery.addEventListener('click', () => {
+      btnDelivery.className = 'order-mode-btn px-2.5 py-1 rounded-md font-bold text-[11px] bg-brand-600 text-white transition-colors';
+      btnPickup.className = 'order-mode-btn px-2.5 py-1 rounded-md font-bold text-[11px] text-slate-400 hover:text-white transition-colors';
+      wrapZip.classList.remove('hidden');
+      wrapStore.classList.add('hidden');
+    });
+
+    btnPickup.addEventListener('click', () => {
+      btnPickup.className = 'order-mode-btn px-2.5 py-1 rounded-md font-bold text-[11px] bg-brand-600 text-white transition-colors';
+      btnDelivery.className = 'order-mode-btn px-2.5 py-1 rounded-md font-bold text-[11px] text-slate-400 hover:text-white transition-colors';
+      wrapStore.classList.remove('hidden');
+      wrapZip.classList.add('hidden');
+    });
+  }
+
+  setupOrderBarToggle();
+  document.addEventListener('astro:after-swap', setupOrderBarToggle);
+</script>
