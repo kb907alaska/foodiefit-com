@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import DirectAnswer from '../components/seo/DirectAnswer.astro';
+import { ExternalCommerceAdapter } from '../lib/commerce/external-adapter';
+
+const orderUrl = ExternalCommerceAdapter.getOrderUrl();
+
+const BUNDLES = [
+  {
+    id: 'workday-lunches',
+    name: '5 Workday Lunches',
+    badge: 'Popular for Office',
+    price: 57.95,
+    savings: 'Save $5.00',
+    description: '5 high-protein, calorie-controlled lunches ready to heat and eat at work Monday through Friday.',
+    items: ['Teriyaki Chicken Power Plate', 'Classic Steak & Hash', 'Chimichurri Chicken Bowl', 'Barbacoa Beef Bowl', 'Turkey Bacon Ranch Wrap'],
+    calories: '450 - 550 cal/meal',
+    protein: '42g - 58g/meal',
+    image: '/images/meals/korean-steak.jpg'
+  },
+  {
+    id: 'high-protein-week',
+    name: 'High-Protein Performance Box (10 Meals)',
+    badge: 'Athlete Favorite',
+    price: 114.90,
+    savings: 'Save $12.00',
+    description: '10 heavy-hitting muscle building meals packed with at least 50g of protein per container.',
+    items: ['Surf & Turf Power Combo', 'Double Steak Hash', 'High-Protein Chili', 'Kung Pao Beef', 'Miso Salmon Bowl (x2)', 'Teriyaki Chicken (x2)', 'Chicken Adobo (x2)'],
+    calories: '550 - 680 cal/meal',
+    protein: '52g - 72g/meal',
+    image: '/images/meals/surf-n-turf.jpg'
+  },
+  {
+    id: 'low-carb-week',
+    name: 'Keto & Low-Carb Essentials (10 Meals)',
+    badge: 'Under 15g Net Carbs',
+    price: 114.90,
+    savings: 'Save $12.00',
+    description: '10 chef-prepared low carb meals with cauliflower rice, roasted asparagus, and zucchini ribbons.',
+    items: ['Smoked Filet & Veggies', 'Baja Shrimp Cauliflower Bowl', 'Chipotle Chicken Salad', 'Turkey Chorizo Skillet (x2)', 'Cheesy Beef Casserole (x2)', 'Philly Steak Plate (x3)'],
+    calories: '420 - 520 cal/meal',
+    protein: '45g - 60g/meal',
+    image: '/images/meals/impossible-dumplings.jpg'
+  },
+  {
+    id: 'first-time-box',
+    name: 'First-Time Foodie Starter Pack (6 Meals)',
+    badge: 'New Customer Special',
+    price: 64.95,
+    savings: 'Includes Free Snack',
+    description: 'Our top 6 overall best-selling breakfasts, lunches, and desserts for first-time customers.',
+    items: ['Cinnamon Roll Pancakes', 'Teriyaki Chicken Power Plate', 'Classic Steak Hash', 'Elote Shrimp Mac', 'Fudge Brownie Bites', 'Protein Waffles'],
+    calories: '400 - 600 cal/meal',
+    protein: '38g - 54g/meal',
+    image: '/images/meals/red-velvet-pancakes.jpg'
+  }
+];
+---
+
+<BaseLayout
+  title="Smart Meal Bundles | Prebuilt Meal Packs | Foodie Fit Las Vegas"
+  description="Order prebuilt meal bundles in Las Vegas: 5 Workday Lunches, High-Protein Athlete Box, Low-Carb Essentials, and First-Time Foodie Starter Pack."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Smart Meal Bundles' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-12">
+      <span class="text-brand-600 dark:text-brand-400 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Prebuilt Curated Collections
+      </span>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
+        Smart Meal Bundles
+      </h1>
+      <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed">
+        Skip meal-by-meal decisions. Choose curated meal bundles tailored for office lunches, muscle growth, low-carb keto, or first-time trial box.
+      </p>
+    </div>
+
+    <DirectAnswer 
+      question="What are the benefits of ordering Foodie Fit Smart Meal Bundles?"
+      answer="Smart Meal Bundles save time and money by grouping our top-rated customer favorite meals into convenient 5-meal or 10-meal prebuilt boxes with automatic bundle savings."
+    />
+
+    <!-- Bundles Grid Matrix -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+      {BUNDLES.map((bundle) => (
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl flex flex-col justify-between hover:border-brand-500 transition-colors">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-4">
+              <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/30 text-xs font-bold uppercase">
+                {bundle.badge}
+              </span>
+              <span class="text-xs font-bold text-green-600 dark:text-green-400 bg-green-500/10 px-2.5 py-1 rounded-lg">
+                {bundle.savings}
+              </span>
+            </div>
+
+            <div class="flex items-start justify-between gap-4">
+              <h2 class="font-display font-black text-2xl text-slate-900 dark:text-white uppercase">
+                {bundle.name}
+              </h2>
+              <span class="font-display font-bold text-2xl text-brand-600 dark:text-brand-400">
+                ${bundle.price.toFixed(2)}
+              </span>
+            </div>
+
+            <p class="text-sm text-slate-600 dark:text-gray-300 leading-relaxed">
+              {bundle.description}
+            </p>
+
+            <div class="grid grid-cols-2 gap-2 text-xs font-bold pt-2 border-t border-gray-100 dark:border-dark-border">
+              <div class="bg-gray-50 dark:bg-dark-surface p-2.5 rounded-xl text-slate-900 dark:text-white">
+                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Calories</span>
+                {bundle.calories}
+              </div>
+              <div class="bg-gray-50 dark:bg-dark-surface p-2.5 rounded-xl text-brand-500">
+                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Protein</span>
+                {bundle.protein}
+              </div>
+            </div>
+
+            <!-- Included Meals List -->
+            <div>
+              <h4 class="text-xs font-bold uppercase text-slate-500 dark:text-gray-400 mb-2">Included Meals:</h4>
+              <ul class="space-y-1 text-xs text-slate-700 dark:text-gray-300">
+                {bundle.items.map((item) => (
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <a
+            href={orderUrl}
+            class="w-full py-4 rounded-2xl font-display font-bold text-sm text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red text-center transition-all block"
+          >
+            Order {bundle.name} &rarr;
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
