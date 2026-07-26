@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import { COMMERCE_CONFIG } from '../config/commerce';
+
+const stores = COMMERCE_CONFIG.storeLocations;
+---
+
+<BaseLayout
+  title="Checkout | Foodie Fit Las Vegas"
+  description="Complete your fresh meal prep order with local Las Vegas delivery or store pickup."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={[{ name: 'Checkout' }]} />
+
+    <div class="text-center max-w-3xl mx-auto my-8">
+      <span class="text-brand-600 dark:text-brand-400 font-bold uppercase tracking-widest text-xs mb-2 block">
+        Secure Checkout
+      </span>
+      <h1 class="font-display font-black text-3xl sm:text-5xl text-slate-900 dark:text-white uppercase tracking-tight mb-4">
+        Complete Your Order
+      </h1>
+      <p class="text-slate-600 dark:text-gray-300 text-base">
+        Review your meal items, select your delivery or pickup window, and finalize your order.
+      </p>
+    </div>
+
+    <!-- Checkout Grid Matrix -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
+      
+      <!-- Left: Form Inputs (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- 1. Customer Information Card -->
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+          <h2 class="font-display font-bold text-lg text-slate-900 dark:text-white uppercase flex items-center gap-2 border-b border-gray-200 dark:border-dark-border pb-3">
+            <span class="w-6 h-6 rounded-full bg-brand-500 text-white text-xs font-bold flex items-center justify-center">1</span>
+            Contact Information
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="chk-first-name" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">First Name</label>
+              <input type="text" id="chk-first-name" required placeholder="Alex" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500" />
+            </div>
+            <div>
+              <label for="chk-last-name" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">Last Name</label>
+              <input type="text" id="chk-last-name" required placeholder="Smith" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500" />
+            </div>
+            <div>
+              <label for="chk-email" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">Email Address</label>
+              <input type="email" id="chk-email" required placeholder="alex@example.com" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500" />
+            </div>
+            <div>
+              <label for="chk-phone" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">Phone Number</label>
+              <input type="tel" id="chk-phone" required placeholder="(702) 555-0199" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Fulfillment Details Card -->
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+          <h2 class="font-display font-bold text-lg text-slate-900 dark:text-white uppercase flex items-center gap-2 border-b border-gray-200 dark:border-dark-border pb-3">
+            <span class="w-6 h-6 rounded-full bg-brand-500 text-white text-xs font-bold flex items-center justify-center">2</span>
+            Fulfillment Method
+          </h2>
+
+          <div class="grid grid-cols-2 gap-3">
+            <label class="cursor-pointer border border-brand-500 bg-brand-500/10 rounded-2xl p-4 flex items-center gap-3 font-bold text-sm text-slate-900 dark:text-white">
+              <input type="radio" name="fulfillment" value="delivery" checked class="text-brand-500 focus:ring-brand-500" />
+              <span>Local Delivery ($9.99)</span>
+            </label>
+            <label class="cursor-pointer border border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface rounded-2xl p-4 flex items-center gap-3 font-bold text-sm text-slate-900 dark:text-white">
+              <input type="radio" name="fulfillment" value="pickup" class="text-brand-500 focus:ring-brand-500" />
+              <span>Store Pickup (FREE)</span>
+            </label>
+          </div>
+
+          <div id="checkout-delivery-fields" class="space-y-4 pt-2">
+            <div>
+              <label for="chk-address" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">Street Address</label>
+              <input type="text" id="chk-address" placeholder="123 S Las Vegas Blvd" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500" />
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <div>
+                <label for="chk-city" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">City</label>
+                <input type="text" id="chk-city" value="Las Vegas" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500" />
+              </div>
+              <div>
+                <label for="chk-state" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">State</label>
+                <input type="text" id="chk-state" value="NV" readonly class="w-full bg-gray-100 dark:bg-dark-border border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white" />
+              </div>
+              <div>
+                <label for="chk-zip" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">ZIP Code</label>
+                <input type="text" id="chk-zip" placeholder="89101" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500" />
+              </div>
+            </div>
+          </div>
+
+          <div id="checkout-store-fields" class="hidden space-y-4 pt-2">
+            <label for="chk-store-select" class="block text-xs font-bold text-slate-700 dark:text-gray-300 mb-1 uppercase">Select Pickup Store Location</label>
+            <select id="chk-store-select" class="w-full bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500">
+              {stores.map(s => (
+                <option value={s.id}>{s.name} Store ({s.address})</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <!-- 3. Payment Option Simulation Card -->
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+          <h2 class="font-display font-bold text-lg text-slate-900 dark:text-white uppercase flex items-center gap-2 border-b border-gray-200 dark:border-dark-border pb-3">
+            <span class="w-6 h-6 rounded-full bg-brand-500 text-white text-xs font-bold flex items-center justify-center">3</span>
+            Payment Method
+          </h2>
+
+          <div class="p-4 rounded-2xl bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white uppercase">Credit / Debit Card (Dev Mode Gateway)</span>
+              <span class="text-[10px] bg-green-500/10 text-green-600 dark:text-green-400 font-bold px-2 py-0.5 rounded border border-green-500/30">Encrypted</span>
+            </div>
+            <input type="text" placeholder="Card Number: 4242 •••• •••• 4242" class="w-full bg-white dark:bg-dark-card border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2 text-sm text-slate-900 dark:text-white" />
+            <div class="grid grid-cols-2 gap-3">
+              <input type="text" placeholder="MM / YY" class="bg-white dark:bg-dark-card border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2 text-sm text-slate-900 dark:text-white" />
+              <input type="text" placeholder="CVC" class="bg-white dark:bg-dark-card border border-gray-300 dark:border-dark-border rounded-xl px-4 py-2 text-sm text-slate-900 dark:text-white" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Order Summary (5 Cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl sticky top-28">
+          <h2 class="font-display font-black text-xl text-slate-900 dark:text-white uppercase border-b border-gray-200 dark:border-dark-border pb-4">
+            Order Summary
+          </h2>
+
+          <div id="checkout-items-list" class="space-y-3 max-h-60 overflow-y-auto pr-1">
+            <!-- Injected via JS -->
+          </div>
+
+          <div class="space-y-2 text-xs text-slate-600 dark:text-gray-400 border-t border-gray-200 dark:border-dark-border pt-4">
+            <div class="flex justify-between">
+              <span>Items Subtotal:</span>
+              <strong id="chk-subtotal" class="text-slate-900 dark:text-white">$0.00</strong>
+            </div>
+            <div class="flex justify-between">
+              <span>Fulfillment Fee:</span>
+              <strong id="chk-fulfillment-fee" class="text-slate-900 dark:text-white">$9.99</strong>
+            </div>
+            <div class="flex justify-between">
+              <span>Clark County Tax (8.375%):</span>
+              <span id="chk-tax">$0.00</span>
+            </div>
+            <div class="flex justify-between text-base font-bold text-slate-900 dark:text-white pt-3 border-t border-gray-200 dark:border-dark-border">
+              <span>Total Amount:</span>
+              <span id="chk-total" class="text-brand-600 dark:text-brand-400 text-xl">$0.00</span>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            id="btn-place-order"
+            class="w-full py-4 rounded-2xl font-display font-bold text-base text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red text-center transition-all cursor-pointer"
+          >
+            Confirm & Place Order &rarr;
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<!-- Order Success Modal -->
+<div id="order-success-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-center justify-center p-4">
+  <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-3xl p-8 max-w-lg w-full text-center space-y-4 shadow-2xl">
+    <div class="w-16 h-16 rounded-full bg-green-500/10 border-2 border-green-500 text-green-500 mx-auto flex items-center justify-center">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <h3 class="font-display font-black text-2xl text-slate-900 dark:text-white uppercase">Order Confirmed!</h3>
+    <p class="text-xs text-slate-600 dark:text-gray-300 leading-relaxed">
+      Thank you for ordering with Foodie Fit! Your order has been placed on the dev environment and queued for preparation.
+    </p>
+    <a href="/menu/" class="inline-block px-8 py-3 rounded-xl font-bold text-xs text-white bg-brand-600 hover:bg-brand-500 transition-colors">
+      Back to Menu
+    </a>
+  </div>
+</div>
+
+<script>
+  import { CartManager } from '../scripts/cartState.js';
+
+  function initCheckoutPage() {
+    const itemsList = document.getElementById('checkout-items-list');
+    const subtotalEl = document.getElementById('chk-subtotal');
+    const feeEl = document.getElementById('chk-fulfillment-fee');
+    const taxEl = document.getElementById('chk-tax');
+    const totalEl = document.getElementById('chk-total');
+    const placeBtn = document.getElementById('btn-place-order');
+    const successModal = document.getElementById('order-success-modal');
+
+    if (!itemsList) return;
+
+    let fulfillmentFee = 9.99;
+
+    function renderCheckoutSummary() {
+      const cart = CartManager.getCart();
+      const totals = CartManager.getTotals();
+
+      if (!itemsList) return;
+
+      if (cart.length === 0) {
+        itemsList.innerHTML = `<p class="text-xs text-slate-500 py-4">No items in cart. Add meals before checking out.</p>`;
+        return;
+      }
+
+      itemsList.innerHTML = cart.map((item: any) => `
+        <div class="flex justify-between items-center text-xs py-1 border-b border-gray-100 dark:border-dark-border">
+          <div>
+            <strong class="text-slate-900 dark:text-white font-bold block">${item.name}</strong>
+            <span class="text-[10px] text-slate-500">${item.portion} • Qty: ${item.quantity}</span>
+          </div>
+          <span class="font-bold text-slate-900 dark:text-white">$${(item.price * item.quantity).toFixed(2)}</span>
+        </div>
+      `).join('');
+
+      const grandTotal = totals.subtotal + totals.tax + fulfillmentFee;
+
+      if (subtotalEl) subtotalEl.innerText = `$${totals.subtotal.toFixed(2)}`;
+      if (feeEl) feeEl.innerText = `$${fulfillmentFee.toFixed(2)}`;
+      if (taxEl) taxEl.innerText = `$${totals.tax.toFixed(2)}`;
+      if (totalEl) totalEl.innerText = `$${grandTotal.toFixed(2)}`;
+    }
+
+    renderCheckoutSummary();
+
+    // Toggle Delivery vs Pickup fields
+    document.querySelectorAll('input[name="fulfillment"]').forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        const val = (e.target as HTMLInputElement).value;
+        const delFields = document.getElementById('checkout-delivery-fields');
+        const storeFields = document.getElementById('checkout-store-fields');
+
+        if (val === 'pickup') {
+          fulfillmentFee = 0;
+          delFields?.classList.add('hidden');
+          storeFields?.classList.remove('hidden');
+        } else {
+          fulfillmentFee = 9.99;
+          storeFields?.classList.add('hidden');
+          delFields?.classList.remove('hidden');
+        }
+        renderCheckoutSummary();
+      });
+    });
+
+    placeBtn?.addEventListener('click', () => {
+      CartManager.clearCart();
+      if (successModal) {
+        successModal.classList.remove('hidden');
+        successModal.classList.add('flex');
+      }
+    });
+  }
+
+  initCheckoutPage();
+  document.addEventListener('astro:after-swap', initCheckoutPage);
+</script>

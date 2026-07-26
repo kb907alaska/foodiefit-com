@@ -1,9 +1,4 @@
 ---
-import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
-
-const orderUrl = ExternalCommerceAdapter.getOrderUrl();
-const accountUrl = ExternalCommerceAdapter.getAccountUrl();
-
 const navLinks = [
   { name: 'Full Menu', href: '/menu/' },
   { name: 'Smart Meal Bundles', href: '/bundles/' },
@@ -64,13 +59,13 @@ const navLinks = [
     <!-- Drawer Footer Actions -->
     <div class="p-6 border-t border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface space-y-3 pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
       <a
-        href={orderUrl}
+        href="/checkout/"
         class="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-xl font-display font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red text-center text-sm"
       >
         Start Online Order
       </a>
       <a
-        href={accountUrl}
+        href="/account/"
         class="w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-semibold text-slate-700 dark:text-gray-300 bg-white dark:bg-dark-bg border border-gray-200 dark:border-dark-border hover:bg-gray-100 dark:hover:bg-dark-card text-center text-sm"
       >
         Customer Account Log In
@@ -92,7 +87,7 @@ const navLinks = [
       Browse Menu
     </a>
     <a
-      href={orderUrl}
+      href="/checkout/"
       class="inline-flex items-center justify-center py-3 px-4 rounded-xl font-display text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-red text-center"
     >
       Order Now

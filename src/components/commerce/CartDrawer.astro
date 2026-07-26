@@ -1,0 +1,245 @@
+---
+---
+
+<!-- Floating Native Cart Trigger Button -->
+<button
+  id="floating-cart-btn"
+  type="button"
+  class="fixed bottom-6 right-6 z-40 px-4 py-3 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-bold shadow-2xl border-2 border-white/20 flex items-center gap-2.5 text-xs transition-all hover:scale-105 active:scale-95 cursor-pointer"
+  aria-label="View Shopping Cart"
+  aria-controls="native-cart-drawer"
+>
+  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z" />
+  </svg>
+  <span>Cart (<strong id="floating-cart-count" class="text-white">0</strong>)</span>
+  <span id="floating-cart-total" class="bg-brand-700/80 px-2 py-0.5 rounded-md text-[11px] font-extrabold">$0.00</span>
+</button>
+
+<!-- Backdrop Overlay -->
+<div
+  id="cart-drawer-overlay"
+  class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-xs transition-opacity duration-300 opacity-0 pointer-events-none"
+  aria-hidden="true"
+></div>
+
+<!-- Native Slide-Out Cart Drawer Panel -->
+<aside
+  id="native-cart-drawer"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="cart-drawer-title"
+  class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-[420px] bg-white dark:bg-dark-card text-slate-900 dark:text-gray-100 shadow-2xl border-l border-gray-200 dark:border-dark-border flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out pointer-events-none"
+>
+  <!-- Drawer Header -->
+  <div class="p-6 border-b border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface flex items-center justify-between sticky top-0 z-10">
+    <div class="flex items-center gap-2">
+      <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      </svg>
+      <h2 id="cart-drawer-title" class="font-display font-black text-xl text-slate-900 dark:text-white uppercase tracking-tight">
+        Your Order Cart
+      </h2>
+    </div>
+
+    <button
+      id="close-cart-drawer-btn"
+      type="button"
+      class="p-2 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-dark-border transition-colors cursor-pointer"
+      aria-label="Close cart drawer"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Cart Items List Container -->
+  <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+    <!-- Injected dynamically via JavaScript -->
+  </div>
+
+  <!-- Cart Summary & Checkout Footer -->
+  <div class="p-6 border-t border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-surface space-y-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
+    
+    <!-- Macro Summary Badges -->
+    <div class="grid grid-cols-2 gap-2 text-xs">
+      <div class="bg-white dark:bg-dark-card p-2.5 rounded-xl border border-gray-200 dark:border-dark-border flex items-center justify-between">
+        <span class="text-slate-500 dark:text-gray-400 font-medium">Total Protein:</span>
+        <strong id="cart-summary-protein" class="text-brand-500 font-bold">0g</strong>
+      </div>
+      <div class="bg-white dark:bg-dark-card p-2.5 rounded-xl border border-gray-200 dark:border-dark-border flex items-center justify-between">
+        <span class="text-slate-500 dark:text-gray-400 font-medium">Total Calories:</span>
+        <strong id="cart-summary-calories" class="text-slate-900 dark:text-white font-bold">0 cal</strong>
+      </div>
+    </div>
+
+    <!-- Pricing Summary -->
+    <div class="space-y-1.5 text-xs text-slate-600 dark:text-gray-400 border-t border-gray-200 dark:border-dark-border pt-3">
+      <div class="flex justify-between">
+        <span>Subtotal:</span>
+        <strong id="cart-summary-subtotal" class="text-slate-900 dark:text-white">$0.00</strong>
+      </div>
+      <div class="flex justify-between">
+        <span>Est. Clark County Tax (8.375%):</span>
+        <span id="cart-summary-tax">$0.00</span>
+      </div>
+      <div class="flex justify-between text-sm font-bold text-slate-900 dark:text-white pt-2 border-t border-gray-200 dark:border-dark-border">
+        <span>Estimated Total:</span>
+        <span id="cart-summary-total" class="text-brand-600 dark:text-brand-400 text-lg">$0.00</span>
+      </div>
+    </div>
+
+    <!-- Proceed to On-Site Checkout Button -->
+    <a
+      href="/checkout/"
+      id="cart-checkout-btn"
+      class="w-full py-4 rounded-2xl font-display font-bold text-sm text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 shadow-glow-red text-center block transition-all"
+    >
+      Proceed to Checkout &rarr;
+    </a>
+  </div>
+</aside>
+
+<script>
+  import { CartManager } from '../../scripts/cartState.js';
+
+  function initCartDrawer() {
+    const triggerBtn = document.getElementById('floating-cart-btn');
+    const closeBtn = document.getElementById('close-cart-drawer-btn');
+    const drawer = document.getElementById('native-cart-drawer');
+    const overlay = document.getElementById('cart-drawer-overlay');
+
+    if (!triggerBtn || !drawer || !overlay) return;
+
+    function openDrawer() {
+      if (!drawer || !overlay) return;
+      drawer.classList.remove('translate-x-full', 'pointer-events-none');
+      drawer.classList.add('translate-x-0', 'pointer-events-auto');
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      drawer.setAttribute('aria-hidden', 'false');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeDrawer() {
+      if (!drawer || !overlay) return;
+      drawer.classList.remove('translate-x-0', 'pointer-events-auto');
+      drawer.classList.add('translate-x-full', 'pointer-events-none');
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      drawer.setAttribute('aria-hidden', 'true');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+
+    triggerBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+
+    function renderCartUI() {
+      const cart = CartManager.getCart();
+      const totals = CartManager.getTotals();
+
+      // Floating Badge Updates
+      const countEl = document.getElementById('floating-cart-count');
+      const totalEl = document.getElementById('floating-cart-total');
+      if (countEl) countEl.innerText = totals.totalItems.toString();
+      if (totalEl) totalEl.innerText = `$${totals.subtotal.toFixed(2)}`;
+
+      // Summary Panel Updates
+      const subtotalEl = document.getElementById('cart-summary-subtotal');
+      const taxEl = document.getElementById('cart-summary-tax');
+      const finalTotalEl = document.getElementById('cart-summary-total');
+      const proteinEl = document.getElementById('cart-summary-protein');
+      const caloriesEl = document.getElementById('cart-summary-calories');
+
+      if (subtotalEl) subtotalEl.innerText = `$${totals.subtotal.toFixed(2)}`;
+      if (taxEl) taxEl.innerText = `$${totals.tax.toFixed(2)}`;
+      if (finalTotalEl) finalTotalEl.innerText = `$${totals.total.toFixed(2)}`;
+      if (proteinEl) proteinEl.innerText = `${totals.totalProtein}g`;
+      if (caloriesEl) caloriesEl.innerText = `${totals.totalCalories} cal`;
+
+      // Drawer Items List Render
+      const container = document.getElementById('cart-drawer-items');
+      if (!container) return;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 space-y-3">
+            <svg class="w-12 h-12 text-slate-300 dark:text-gray-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <p class="text-sm font-semibold text-slate-600 dark:text-gray-400">Your cart is currently empty.</p>
+            <a href="/menu/" class="inline-block text-xs font-bold text-brand-500 hover:underline">Explore Menu &rarr;</a>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map((item: any) => `
+        <div class="bg-gray-50 dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-2xl p-3 flex gap-3 items-center">
+          <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-xl flex-shrink-0" />
+          
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-bold text-xs text-slate-900 dark:text-white uppercase truncate">${item.name}</h4>
+            <span class="text-[10px] text-slate-500 dark:text-gray-400 block">${item.portion} Portion • ${item.protein}g Protein</span>
+            <span class="font-bold text-xs text-slate-900 dark:text-white block mt-0.5">$${(item.price * item.quantity).toFixed(2)}</span>
+          </div>
+
+          <div class="flex items-center gap-1.5 bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-lg p-1">
+            <button
+              type="button"
+              class="btn-cart-minus px-1.5 py-0.5 text-xs font-bold text-slate-500 hover:text-brand-500"
+              data-id="${item.id}"
+              data-portion="${item.portion}"
+              data-qty="${item.quantity - 1}"
+            >
+              -
+            </button>
+            <span class="text-xs font-bold px-1">${item.quantity}</span>
+            <button
+              type="button"
+              class="btn-cart-plus px-1.5 py-0.5 text-xs font-bold text-slate-500 hover:text-brand-500"
+              data-id="${item.id}"
+              data-portion="${item.portion}"
+              data-qty="${item.quantity + 1}"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderCartUI();
+
+    window.addEventListener('foodiefit:cart-updated', renderCartUI);
+
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+
+      if (target.classList.contains('btn-cart-minus') || target.classList.contains('btn-cart-plus')) {
+        const id = target.getAttribute('data-id');
+        const portion = target.getAttribute('data-portion');
+        const qty = parseInt(target.getAttribute('data-qty') || '0');
+        if (id && portion) {
+          CartManager.updateQuantity(id, portion, qty);
+        }
+      }
+
+      if (target.closest('.btn-add-to-cart')) {
+        const btn = target.closest('.btn-add-to-cart') as HTMLElement;
+        const mealData = btn.getAttribute('data-meal');
+        if (mealData) {
+          CartManager.addItem(JSON.parse(mealData));
+          openDrawer();
+        }
+      }
+    });
+  }
+
+  initCartDrawer();
+  document.addEventListener('astro:after-swap', initCartDrawer);
+</script>

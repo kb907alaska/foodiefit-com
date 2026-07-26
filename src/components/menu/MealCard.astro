@@ -2,7 +2,6 @@
 import type { Meal } from '../../lib/commerce/types';
 import CategoryBadge from './CategoryBadge.astro';
 import DietaryBadge from './DietaryBadge.astro';
-import { ExternalCommerceAdapter } from '../../lib/commerce/external-adapter';
 
 export interface Props {
   meal: Meal;
@@ -11,7 +10,15 @@ export interface Props {
 const { meal } = Astro.props;
 
 const hasBulk = meal.portionOptions && meal.portionOptions.some(p => p.id === 'bulk');
-const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
+const jsonMeal = JSON.stringify({
+  id: meal.id,
+  name: meal.name,
+  slug: meal.slug,
+  image: meal.image,
+  price: meal.price,
+  calories: meal.calories,
+  protein: meal.protein
+});
 ---
 
 <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-2xl overflow-hidden flex flex-col card-hover-effect group shadow-sm transition-colors">
@@ -91,18 +98,21 @@ const orderUrl = ExternalCommerceAdapter.getOrderUrl(meal.sku);
       </div>
 
       <div class="flex items-center gap-2">
-        <a
-          href={`/menu/${meal.slug}/`}
-          class="px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white bg-gray-100 dark:bg-dark-surface hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"
+        <button
+          type="button"
+          class="pin-meal-btn p-2 rounded-xl text-xs text-slate-500 hover:text-brand-500 bg-gray-100 dark:bg-dark-surface cursor-pointer"
+          data-meal={jsonMeal}
+          title="Pin for Macro Comparison"
         >
-          Details
-        </a>
-        <a
-          href={orderUrl}
-          class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-red transition-all"
+          📌
+        </button>
+        <button
+          type="button"
+          class="btn-add-to-cart px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-red transition-all cursor-pointer"
+          data-meal={jsonMeal}
         >
-          Order Now
-        </a>
+          + Add
+        </button>
       </div>
     </div>
   </div>
