@@ -17,7 +17,7 @@ const mealSlots = ['Breakfast', 'Lunch', 'Dinner', 'Snack'];
     <Breadcrumbs items={[{ name: 'Build Your Week Planner' }]} />
 
     <div class="text-center max-w-3xl mx-auto my-12">
-      <span class="text-brand-500 font-bold uppercase tracking-widest text-xs mb-2 block">
+      <span class="text-brand-600 dark:text-brand-400 font-bold uppercase tracking-widest text-xs mb-2 block">
         Weekly Meal Scheduling
       </span>
       <h1 class="font-display font-black text-4xl sm:text-6xl text-slate-900 dark:text-white uppercase tracking-tight mb-6">
@@ -58,7 +58,7 @@ const mealSlots = ['Breakfast', 'Lunch', 'Dinner', 'Snack'];
     </div>
 
     <!-- 7-Day Grid Matrix -->
-    <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
       {days.map((day) => (
         <div class="bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-2xl p-4 space-y-4 shadow-sm">
           <h2 class="font-display font-bold text-base text-slate-900 dark:text-white uppercase text-center border-b border-gray-200 dark:border-dark-border pb-2">
