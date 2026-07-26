@@ -55,6 +55,17 @@
     </button>
   </div>
 
+  <!-- Cart Progress Bar & Protein Goal -->
+  <div class="px-6 py-3 bg-brand-500/10 border-b border-gray-200 dark:border-dark-border text-xs space-y-1.5">
+    <div class="flex justify-between items-center font-bold">
+      <span class="text-slate-900 dark:text-white">Daily Protein Goal Progress:</span>
+      <span id="protein-progress-text" class="text-brand-600 dark:text-brand-400">0g / 150g</span>
+    </div>
+    <div class="w-full h-2 bg-gray-200 dark:bg-dark-surface rounded-full overflow-hidden">
+      <div id="protein-progress-bar" class="h-full bg-gradient-to-r from-brand-600 to-brand-500 transition-all duration-500 w-0"></div>
+    </div>
+  </div>
+
   <!-- Cart Items List Container -->
   <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-6 space-y-4">
     <!-- Injected dynamically via JavaScript -->
@@ -73,6 +84,23 @@
         <span class="text-slate-500 dark:text-gray-400 font-medium">Total Calories:</span>
         <strong id="cart-summary-calories" class="text-slate-900 dark:text-white font-bold">0 cal</strong>
       </div>
+    </div>
+
+    <!-- Promo Code Entry -->
+    <div class="flex gap-2 text-xs">
+      <input
+        type="text"
+        id="cart-promo-code"
+        placeholder="Promo Code (e.g. FOODIE10)"
+        class="flex-1 bg-white dark:bg-dark-card border border-gray-300 dark:border-dark-border rounded-xl px-3 py-2 text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
+      />
+      <button
+        type="button"
+        id="btn-apply-promo"
+        class="px-3 py-2 bg-slate-900 dark:bg-dark-border text-white font-bold rounded-xl hover:bg-brand-600 transition-colors"
+      >
+        Apply
+      </button>
     </div>
 
     <!-- Pricing Summary -->
@@ -153,12 +181,20 @@
       const finalTotalEl = document.getElementById('cart-summary-total');
       const proteinEl = document.getElementById('cart-summary-protein');
       const caloriesEl = document.getElementById('cart-summary-calories');
+      const progressText = document.getElementById('protein-progress-text');
+      const progressBar = document.getElementById('protein-progress-bar');
 
       if (subtotalEl) subtotalEl.innerText = `$${totals.subtotal.toFixed(2)}`;
       if (taxEl) taxEl.innerText = `$${totals.tax.toFixed(2)}`;
       if (finalTotalEl) finalTotalEl.innerText = `$${totals.total.toFixed(2)}`;
       if (proteinEl) proteinEl.innerText = `${totals.totalProtein}g`;
       if (caloriesEl) caloriesEl.innerText = `${totals.totalCalories} cal`;
+
+      // Protein Progress Goal calculation (target: 150g)
+      const targetProtein = 150;
+      const pct = Math.min(100, Math.round((totals.totalProtein / targetProtein) * 100));
+      if (progressText) progressText.innerText = `${totals.totalProtein}g / ${targetProtein}g`;
+      if (progressBar) progressBar.style.width = `${pct}%`;
 
       // Drawer Items List Render
       const container = document.getElementById('cart-drawer-items');
